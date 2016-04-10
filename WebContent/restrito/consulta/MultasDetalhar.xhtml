@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/templates/principal.xhtml">
+
+	<ui:define name="conteudo">
+
+		<h:form>
+
+			<div class="panel-main row">
+				<div class="col-md-12">
+					<div class="panel-default">
+
+						<div class="panel-heading bg-panel">
+							<h3 class="panel-title">
+								<strong>Visualizar Dados da Multa </strong>
+							</h3>
+						</div>
+
+
+						<div class="tabcordion" style="margin-top: 20px; width: 900px;">
+							<ul id="myTab" class="nav nav-tabs">
+								<li class="active"><a href="#tab1_1" data-toggle="tab">Dados
+										do Veículo</a></li>
+								<li class=""><a href="#tab1_2" data-toggle="tab">Dados
+										do Proprietário</a></li>
+								<li class=""><a href="#tab1_3" data-toggle="tab">Dados
+										do Auto de Infração</a></li>
+								<li class=""><a href="#tab1_4" data-toggle="tab">Trâmite do Processo</a></li>
+							</ul>
+							<div class="tab-content" style="padding: 20px;">
+								
+								<div class="tab-pane fade active in" id="tab1_1">
+
+									<h:panelGrid columns="3" cellpadding="5"
+										columnClasses="td150, td150, td150">
+
+										<h:panelGroup>
+											<h:outputLabel value="Placa: " />
+											<h:inputText styleClass="form-control" readonly="true"
+												value="#{multaController.multa.veiculo.placa}" />
+										</h:panelGroup>
+										<h:panelGroup>
+											<h:outputLabel value="Chassi: " />
+											<h:inputText styleClass="form-control"
+												value="#{multaController.multa.veiculo.chassi}" readonly="true" />
+										</h:panelGroup>
+										<h:panelGroup>
+											<h:outputLabel value="Ano: " />
+											<h:inputText styleClass="form-control" value="#{multaController.multa.veiculo.ano}" readonly="true" />
+										</h:panelGroup>
+
+									</h:panelGrid>
+
+									<h:panelGrid columns="1" cellpadding="5" style="width:430px;">
+
+										<h:panelGroup>
+										<h:outputLabel value="Modelo: " />
+											<h:inputText styleClass="form-control"
+												value="#{multaController.multa.veiculo.modelo}" readonly="true" />
+										</h:panelGroup>
+
+									</h:panelGrid>
+
+								</div>
+								
+								<div class="tab-pane fade" id="tab1_2">
+
+									<h:panelGrid columns="2" cellpadding="5"
+										columnClasses="td60, td300">
+
+										<h:outputLabel value="Nome " />
+											<h:inputText styleClass="form-control" readonly="true" style="width:300px;"
+												value="#{multaController.multa.veiculo.pessoa.nome}" />
+											
+											<h:outputLabel value="CPF " style="margin-top:10px;" />
+											<h:inputText styleClass="form-control" readonly="true" style="width:300px; margin-top:10px;"
+												value="#{multaController.multa.veiculo.pessoa.cpf}" />
+										
+
+									</h:panelGrid>
+
+
+									<fieldset style="margin-top: 20px; width: 600px;">
+
+										<legend>Endereço</legend>
+
+										<h:panelGrid columns="2" cellpadding="5"
+											columnClasses="td300, td300">
+
+											<h:panelGroup>
+												<h:outputLabel value="Logradouro: " />
+												<h:inputText styleClass="form-control" readonly="true"
+													value="#{multaController.multa.veiculo.pessoa.endereco.endereco}" />
+
+												<h:outputLabel value="Município: " />
+												<h:inputText styleClass="form-control" readonly="true"
+													value="#{multaController.multa.veiculo.pessoa.endereco.municipio}" />
+											</h:panelGroup>
+
+											<h:panelGroup>
+												<h:outputLabel value="Bairro: " />
+												<h:inputText styleClass="form-control" readonly="true"
+													value="#{multaController.multa.veiculo.pessoa.endereco.bairro}" />
+
+												<h:outputLabel value="CEP: " />
+												<h:inputText styleClass="form-control" readonly="true"
+													value="#{multaController.multa.veiculo.pessoa.endereco.cep}" />
+											</h:panelGroup>
+
+										</h:panelGrid>
+
+									</fieldset>
+
+								</div>
+								
+								<div class="tab-pane fade" id="tab1_3">
+
+									<h:panelGrid columns="3" cellpadding="5" columnClasses="td150, td150, td150">
+									
+										<h:panelGroup>
+										
+										<h:outputLabel value="Número do AIT: " />
+											<h:inputText styleClass="form-control" readonly="true"
+												value="#{multaController.multa.infracao.idAutoInfracao}" />
+										</h:panelGroup>
+										
+										<h:panelGroup>
+											<h:outputLabel value="Data da Infração: " />
+												<h:inputText styleClass="form-control" readonly="true"
+													value="#{multaController.multa.infracao.dataInfracao}">
+														<f:convertDateTime locale="pt_BR" dateStyle="long" timeZone="GMT-3" pattern="dd/MM/yyyy" />
+											</h:inputText>
+										</h:panelGroup>
+										
+										<h:panelGroup>
+											<h:outputLabel value="Hora da Infração: " />
+											<h:inputText styleClass="form-control" readonly="true"
+												value="#{multaController.multa.infracao.horaInfracao}" />
+										</h:panelGroup>
+										
+									</h:panelGrid>
+									
+									
+									<h:panelGrid columns="1" cellpadding="5" columnClasses="td600">
+											
+										<h:outputLabel value="Local da Infração: " />
+										<h:inputText styleClass="form-control" readonly="true"
+											value="#{multaController.multa.infracao.localInfracao}" />
+											
+										<h:outputLabel value="Codigo do enquadramento: " />
+										<h:inputText styleClass="form-control" style="width:130px;" readonly="true"
+											value="#{multaController.multa.infracao.codigoInfracao}" />
+
+										<h:outputLabel value="Enquadramento: " />
+										<h:inputTextarea styleClass="form-control" readonly="true"
+											value="#{multaController.multa.infracao.descricaoInfracao}" />
+
+									</h:panelGrid>
+
+								</div>
+
+								<div class="tab-pane fade" id="tab1_4">
+
+									<div class="table-responsive table-red filter-right">
+
+										<h:dataTable var="user" id="tramites"
+											styleClass="table table-striped table-hover table-dynamic"
+											value="">
+
+											<h:column>
+												<f:facet name="header">Status</f:facet>
+												<h:outputText value="#{tramite.divida.status}" />
+											</h:column>
+
+											<h:column>
+												<f:facet name="header">Responsável</f:facet>
+												<h:outputText value="#{tramite.user.username}" />
+											</h:column>
+
+											<h:column>
+												<f:facet name="header">Data</f:facet>
+												<h:outputText value="#{tramite.data}" />
+											</h:column>
+
+										</h:dataTable>
+
+									</div>
+
+								</div>
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="div-botoes" style="float: left;">
+				<h:commandButton id="btnVoltar" styleClass="btn btn-success" value="Voltar" action="#{redirectorBean.multasVencidas}" />
+			</div>
+
+		</h:form>
+
+	</ui:define>
+
+</ui:composition>
+
+</html>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<ui:composition template="/templates/principal.xhtml">
+
+		<!-- BEGIN PAGE LEVEL STYLE -->
+			<link rel="stylesheet" href="${ctx}/bootstrap/resources/css/dataTables.css" />
+		<!-- END PAGE LEVEL STYLE -->
+
+	<ui:define name="conteudo">
+
+		<h:form id="formUsuario">
+		
+		<h:panelGrid id="panelUsuario" rendered="false">		
+
+		</h:panelGrid>
+		
+
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-default">
+						<div class="panel-heading bg-panel">
+							<h3 class="panel-title">
+								<strong>Lista de Usuários </strong>
+							</h3>
+						</div>
+
+						<div class="div-botoes">
+
+							<h:commandButton id="btnNovo" styleClass="btn btn-success" value="Novo"
+								action="#{usuarioController.novo}" />
+
+							<h:commandButton id="btnExcluir" styleClass="btn btn-success" value="Excluir"
+								action="#{usuarioController.excluirSelecao}"
+								rendered="#{usuarioController.acesso}"
+								onclick="return confirm('Confirmar exclusao?');" />
+
+							<h:commandButton id="btnConsultar" value="Consultar"
+								action="#{usuarioController.consultar}"
+								styleClass="btn btn-success"
+								rendered="#{usuarioController.acesso}"
+								reRender="listaDeUsuarios" />
+						</div>
+
+						<div class="panel-body">
+							<div class="row">
+								<div
+									class="col-md-12 col-sm-12 col-xs-12 table-responsive table-red filter-right">
+
+									<h:dataTable var="user" id="listaDeUsuarios"
+										styleClass="table table-striped table-hover table-dynamic"
+										value="#{usuarioController.listaUsuarios}">
+
+										<h:column>
+											<f:facet name="header">
+												<input type="checkbox" id="selecctall" />
+											</f:facet>
+											<h:selectBooleanCheckbox class="checkbox1"
+												value="#{user.checkboxSelecao}" />
+										</h:column>
+
+										<h:column>
+											<f:facet name="header">Nome</f:facet>
+											<h:outputText value="#{user.nome}" />
+										</h:column>
+
+										<h:column>
+											<f:facet name="header">CPF</f:facet>
+											<h:outputText value="#{user.cpf}" />
+										</h:column>
+
+										<h:column>
+											<f:facet name="header">Login</f:facet>
+											<h:outputText value="#{user.username}" />
+										</h:column>
+
+										<h:column>
+											<f:facet name="header">Telefone</f:facet>
+											<h:outputText value="#{user.telefone}" />
+										</h:column>
+										
+										<h:column>
+											<f:facet name="header">Status</f:facet>
+											<h:outputText value="#{user.status}" />
+										</h:column>
+
+										<h:column>
+											<f:facet name="header">Ativo</f:facet>
+											<h:outputText value="#{user.ativo}" />
+										</h:column>
+
+										<h:column>
+											<f:facet name="header">Acões</f:facet>
+
+											<h:commandLink value="Editar" action="#{usuarioController.editar}">
+												<i class="fa fa-pencil f-18" />
+												<f:setPropertyActionListener value="#{user}" target="#{usuarioController.user}" />
+											</h:commandLink>
+
+											<h:commandLink value="Excluir" action="#{usuarioController.excluir}"
+												onclick="return confirm('Confirmar exclusao?');">
+												<i class="fa fa-times f-18" />
+												<f:setPropertyActionListener value="#{user}" target="#{usuarioController.user}" />
+											</h:commandLink>
+											
+										</h:column>
+
+									</h:dataTable>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<script>
+				$(document).ready(function() {
+					$('#selecctall').click(function(event) { //on click 
+						if (this.checked) { // check select status
+							$('.checkbox1').each(function() { //loop through each checkbox
+								this.checked = true; //select all checkboxes with class "checkbox1"               
+							});
+						} else {
+							$('.checkbox1').each(function() { //loop through each checkbox
+								this.checked = false; //deselect all checkboxes with class "checkbox1"                       
+							});
+						}
+					});
+
+				});
+			</script>
+
+
+		</h:form>
+
+		<!-- BEGIN PAGE LEVEL SCRIPTS -->
+		<script	src="#{request.contextPath}/bootstrap/resources/js/bootstrap-switch.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/bootstrap-progressbar.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/jquery.dataTables.min.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/dataTables.bootstrap.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/dataTables.tableTools.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/table.editable.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/table_dynamic.js" />
+		<!-- END  PAGE LEVEL SCRIPTS -->
+
+		</ui:define>
+	</ui:composition>
+</html>

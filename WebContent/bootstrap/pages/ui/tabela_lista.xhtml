@@ -1,0 +1,204 @@
+<ui:composition lang="pt_br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="/bootstrap/templates/principal.xhtml">
+
+	<ui:define name="conteudo">
+
+		<div class="page-title">
+			<i class="icon-custom-left"></i>
+			<h3>
+				<strong>Nestable</strong> list
+			</h3>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">
+							<strong>Nestable</strong> list
+						</h3>
+						<p>Here is a useful sortable list that can be grouped and
+							sorted by simply dragging and dropping even on a touch device</p>
+					</div>
+					<div class="panel-body sortable-panel">
+						<div class="row">
+							<div class="col-md-6">
+								<h3>
+									<strong>White</strong> style
+								</h3>
+								<br />
+								<div class="dd nestable">
+									<ol class="dd-list">
+										<li class="dd-item" data-id="1">
+											<div class="dd-handle">Item 1</div>
+										</li>
+										<li class="dd-item" data-id="2">
+											<div class="dd-handle">Item 2</div>
+											<ol class="dd-list">
+												<li class="dd-item" data-id="3">
+													<div class="dd-handle">Item 3</div>
+												</li>
+												<li class="dd-item" data-id="4">
+													<div class="dd-handle">Item 4</div>
+												</li>
+												<li class="dd-item" data-id="5">
+													<div class="dd-handle">Item 5</div>
+													<ol class="dd-list">
+														<li class="dd-item" data-id="6">
+															<div class="dd-handle">Item 6</div>
+														</li>
+														<li class="dd-item" data-id="7">
+															<div class="dd-handle">Item 7</div>
+														</li>
+														<li class="dd-item" data-id="8">
+															<div class="dd-handle">Item 8</div>
+														</li>
+													</ol>
+												</li>
+												<li class="dd-item" data-id="9">
+													<div class="dd-handle">Item 9</div>
+												</li>
+												<li class="dd-item" data-id="10">
+													<div class="dd-handle">Item 10</div>
+												</li>
+											</ol>
+										</li>
+										<li class="dd-item" data-id="11">
+											<div class="dd-handle">Item 11</div>
+										</li>
+										<li class="dd-item" data-id="12">
+											<div class="dd-handle">Item 12</div>
+										</li>
+									</ol>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<h3>
+									<strong>Dark</strong> style
+								</h3>
+								<br />
+								<div class="dd nestable">
+									<ol class="dd-list nestable-dark">
+										<li class="dd-item" data-id="13">
+											<div class="dd-handle">Item 13</div>
+										</li>
+										<li class="dd-item" data-id="14">
+											<div class="dd-handle">Item 14</div>
+										</li>
+										<li class="dd-item" data-id="15">
+											<div class="dd-handle">Item 15</div>
+											<ol class="dd-list">
+												<li class="dd-item" data-id="16">
+													<div class="dd-handle">Item 16</div>
+												</li>
+												<li class="dd-item" data-id="17">
+													<div class="dd-handle">Item 17</div>
+												</li>
+												<li class="dd-item" data-id="18">
+													<div class="dd-handle">Item 18</div>
+												</li>
+											</ol>
+										</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">
+							<strong>Sortable</strong> list
+						</h3>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-md-12">
+								<h3>
+									Sorting <strong>Tables</strong>
+								</h3>
+								<p>You can select row or column. Here is an example.</p>
+								<br />
+								<table class="table table-bordered sortable_table">
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>First Name</th>
+											<th>Last Name</th>
+											<th>Username</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>Fred</td>
+											<td>Otto</td>
+											<td>@mdo</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>Mark</td>
+											<td>Aron</td>
+											<td>@TwBootstrap</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>Jacob</td>
+											<td>Thornton</td>
+											<td>@fat</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>Larry the Bird</td>
+											<td>Beatles</td>
+											<td>@twitter</td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td>Fred</td>
+											<td>Otto</td>
+											<td>@mdo</td>
+										</tr>
+										<tr>
+											<td>6</td>
+											<td>Mark</td>
+											<td>Aron</td>
+											<td>@TwBootstrap</td>
+										</tr>
+										<tr>
+											<td>7</td>
+											<td>Jacob</td>
+											<td>Thornton</td>
+											<td>@fat</td>
+										</tr>
+										<tr>
+											<td>8</td>
+											<td>Larry the Bird</td>
+											<td>Beatles</td>
+											<td>@twitter</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- BEGIN PAGE LEVEL SCRIPTS -->
+		<script	src="#{request.contextPath}/bootstrap/resources/js/jquery.nestable.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/jquery-sortable.js" />
+		<!-- END  PAGE LEVEL SCRIPTS -->
+
+	</ui:define>
+
+</ui:composition>

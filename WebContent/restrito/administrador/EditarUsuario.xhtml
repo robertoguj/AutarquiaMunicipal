@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	template="/templates/principal.xhtml">
+
+	<ui:define name="conteudo">
+
+		<h:form id="cadastroUsuario">
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-default">
+
+						<div class="panel-heading bg-panel">
+							<h3 class="panel-title">
+								<strong>Editar Usuário </strong>
+							</h3>
+						</div>
+
+
+						<h:messages styleClass="alert fade in" errorClass="alert-danger"
+							infoClass="alert-info" warnClass="alert-warning" />
+
+
+						<h:panelGrid columns="1" cellspacing="2" style="width: 600px; margin-top:20px;"
+							styleClass="form-panel-grupo">
+							<h:outputLabel>
+								<strong>Nome</strong> <span class="asterisk">*</span>
+								<span class="tips"> Digite seu nome completo</span>
+							</h:outputLabel>
+							
+							<h:inputText styleClass="form-control" required="true"
+								requiredMessage="#{msg.nome_obrigatorio}"
+								value="#{usuarioController.user.nome}" />
+
+						</h:panelGrid>
+
+						<h:panelGrid columns="2" cellspacing="2"
+							styleClass="form-panel-grupo"
+							columnClasses="column1, column2, column3">
+
+							<h:panelGroup>
+
+								<h:outputLabel>
+									<strong>CPF</strong> <span class="asterisk">*</span>
+									<span class="tips"> Digite seu CPF</span>
+								</h:outputLabel>
+								
+								<p:inputMask id="cpf" styleClass="form-control" value="#{usuarioController.user.cpf}" mask="999.999.999-99" />
+								
+								<h:outputLabel>
+									<strong>Email</strong> <span class="asterisk">*</span>
+									<span class="tips"> Digite seu email</span>
+								</h:outputLabel>
+								<h:inputText styleClass="form-control" required="true"
+									requiredMessage="#{msg.email_obrigatorio}"
+									value="#{usuarioController.user.email}" />
+
+								<h:outputLabel>
+									<strong>Telefone</strong>
+								</h:outputLabel>
+							
+								<p:inputMask id="telefone" styleClass="form-control" value="#{usuarioController.user.telefone}" mask="(99) 99999-9999" />
+								
+
+							</h:panelGroup>
+
+
+							<h:panelGroup>
+
+								<h:outputLabel>
+									<strong>Perfil</strong><span class="asterisk">*</span>
+								</h:outputLabel>
+								<h:selectOneMenu id="cbxPerfil" required="true"
+									requiredMessage="#{msg.perfil_obrigatorio}"
+									value="#{usuarioController.user.roles}" converter="genericConverter">
+									<f:selectItem itemLabel="Selecione" itemValue="#{null}" />
+									<f:selectItems itemLabel="teste"
+										value="#{usuarioController.listaPerfilSelect}" />
+									<f:ajax render="cbxPerfil" event="valueChange"/>
+								</h:selectOneMenu>
+								
+								<h:outputLabel>
+									<strong>Status da Conta</strong><span class="asterisk">*</span>
+								</h:outputLabel>
+								<h:selectOneMenu id="status" required="true"
+									requiredMessage="#{msg.status_obrigatorio}"
+									value="#{usuarioController.user.ativo}">
+									<f:selectItem itemLabel="Selecione" itemValue="#{null}" />
+									<f:selectItem itemLabel="Ativo" itemValue="Ativo" />
+									<f:selectItem itemLabel="Inativo" itemValue="Inativo" />
+								</h:selectOneMenu>
+
+							</h:panelGroup>
+
+
+						</h:panelGrid>
+
+						<div class="div-botoes">
+							<h:commandButton id="btnSalvar" styleClass="btn btn-success"
+								value="Salvar" actionListener="#{usuarioController.atualizar}" />
+							<h:commandButton id="btnLimpar" styleClass="btn btn-success"
+								immediate="true" type="reset" value="Limpar" />
+							<h:commandButton id="btnCancelar" styleClass="btn btn-success"
+								immediate="true" value="Cancelar"
+								action="#{usuarioController.cancelar}" />
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</h:form>
+
+	</ui:define>
+
+
+</ui:composition>

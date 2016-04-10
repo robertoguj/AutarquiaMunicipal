@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+	<ui:composition template="/templates/principal.xhtml">
+
+	<!-- BEGIN PAGE LEVEL STYLE -->
+	<link rel="stylesheet" href="${ctx}/bootstrap/resources/css/dataTables.css" />
+	<!-- END PAGE LEVEL STYLE -->
+
+	<ui:define name="conteudo">
+
+
+		<h:form id="formDashboardMultasVencidas">
+
+			<div class="panel-main row">
+				<div class="col-md-12">
+					<div class="panel">
+
+						<div class="panel-heading bg-panel">
+							<h3 class="panel-title">
+								<strong>Dashboard de Multas</strong>
+							</h3>
+						</div>
+						
+						
+						<div class="panel-group panel-accordion" id="accordion">
+						
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#multasVencidas"> Multas vencidas não pagas </a>
+									</h4>
+								</div>
+								<div id="multasVencidas" class="panel-collapse collapse in">
+									<div class="col-md-12 table-responsive table-red filter-right">
+										<h:dataTable styleClass="table-striped table-hover table-dynamic"
+											id="multasVencidas" var="multa" value="#{multaController.naoPagas}">
+
+											<h:column headerClass="tdCheck">
+												<f:facet name="header">
+													<input type="checkbox" id="selectallMultasVencidas" />
+												</f:facet>
+												<h:selectBooleanCheckbox class="multasVencidas" value="#{multa.checkboxSelecao}" />
+											</h:column>
+											
+											<h:column>
+												<f:facet name="header">ID</f:facet>
+												<h:outputText value="#{multa.id}" />
+											</h:column>
+											
+											<h:column>
+												<f:facet name="header">Placa do Veículo</f:facet>
+												<h:outputText value="#{multa.veiculo.placa}" />
+											</h:column>
+
+											<h:column>
+												<f:facet name="header">Proprietário</f:facet>
+												<h:outputText value="#{multa.veiculo.pessoa.nome}" />
+											</h:column>
+											
+											<h:column>
+												<f:facet name="header">Data da infração</f:facet>
+												<h:outputText value="#{multa.infracao.dataInfracao}">
+													<f:convertDateTime locale="pt_BR" dateStyle="long" timeZone="GMT-3" pattern="dd/MM/yyyy" />
+												</h:outputText>
+											</h:column>
+											
+											<h:column>
+												<f:facet name="header">Data de vencimento</f:facet>
+												<h:outputText value="#{multa.dataVencimento}">
+													<f:convertDateTime locale="pt_BR" dateStyle="long" timeZone="GMT-3" pattern="dd/MM/yyyy" />
+												</h:outputText>
+											</h:column>
+
+											<h:column>
+												<f:facet name="header">Valor</f:facet>
+												<h:outputText value="#{multa.valor}">
+													<f:convertNumber pattern="R$ #,##0.00" />
+												</h:outputText>
+											</h:column>
+
+											<h:column>
+												<f:facet name="header">Detalhar Multa</f:facet>
+												<h:commandLink value="Detalhar" action="#{multaController.detalharMulta}">
+													<i class="fa fa-pencil f-18" />
+													<f:setPropertyActionListener value="#{multa}" target="#{multaController.multa}" />
+												</h:commandLink>
+											</h:column>
+										</h:dataTable>
+									</div>
+								</div>
+							</div>
+							
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<!-- Agrupadas por cpf ; soma o valor total de multas vinculadas ao cpf - valor mínimo R$ 500,00 para incrição em dívida - esperar o primeiro licenciamento após o vencimento e ver o final da placa do veículo -->
+										<a data-toggle="collapse" data-parent="#accordion" href="#prontasParaNotificacao"> Multas prontas para notificação </a>
+									</h4>
+								</div>
+								<div id="prontasParaNotificacao" class="panel-collapse collapse">
+									<div class="col-md-12 table-responsive table-red filter-right">
+										<h:dataTable styleClass="table-striped table-hover table-dynamic"
+											id="prontasParaNotificacao" var="divida" value="#{dividaController.preInscritas}">
+
+											<h:column headerClass="tdCheck">
+												<f:facet name="header">
+													<input type="checkbox" id="selectallProntasParaNotificacao" />
+												</f:facet>
+												<h:selectBooleanCheckbox class="prontasParaNotificacao" value="#{divida.checkboxSelecao}" />
+											</h:column>
+
+											<h:column>
+												<f:facet name="header">ID</f:facet>
+												<h:outputText value="#{divida.pessoa.id}" />
+											</h:column>
+											
+											<h:column>
+												<f:facet name="header">CPF</f:facet>
+												<h:outputText value="#{divida.pessoa.cpf}" />
+											</h:column>
+
+											<h:column>
+												<f:facet name="header">Nome</f:facet>
+												<h:outputText value="#{divida.pessoa.nome}" />
+											</h:column>
+
+											<h:column>
+												<f:facet name="header">Valor</f:facet>
+												<h:outputText value="#{divida.valor}">
+													<f:convertNumber pattern="R$ #,##0.00" />
+												</h:outputText>
+											</h:column>
+
+											<h:column>
+												<f:facet name="header">Data de inscrição</f:facet>
+												<h:outputText value="#{divida.dataInscricao}">
+													<f:convertDateTime locale="pt_BR" dateStyle="long"
+														timeZone="GMT-3" pattern="dd/MM/yyyy" />
+												</h:outputText>
+											</h:column>
+
+											<h:column>
+												<f:facet name="header">Detalhar</f:facet>
+												<h:commandLink value="Detalhar"
+													action="#{dividaController.detalharDivida}">
+													<i class="fa fa-pencil f-18" />
+													<f:setPropertyActionListener value="#{divida}"
+														target="#{dividaController.divida}" />
+												</h:commandLink>
+											</h:column>
+
+										</h:dataTable>
+										
+										<div class="div-botoes">
+											<h:commandButton id="btnNotificar" styleClass="btn btn-success"	value="Notificar" />
+										</div>
+										
+									</div>
+								</div>
+							</div>
+							
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#notificadas"> Multas notificadas </a>
+									</h4>
+								</div>
+								<div id="notificadas" class="panel-collapse collapse">
+									<div class="col-md-12 table-responsive table-red filter-right">
+										<h:dataTable styleClass="table-striped table-hover table-dynamic"
+											id="notificadas" var="divida" value="#{dividaController.preInscritas}">
+
+											<h:column headerClass="tdCheck">
+												<f:facet name="header">
+													<input type="checkbox" id="selectNotificadas" />
+												</f:facet>
+												<h:selectBooleanCheckbox class="notificadas" value="#{divida.checkboxSelecao}" />
+											</h:column>
+											
+											<h:column>
+												<f:facet name="header">CPF</f:facet>
+												<h:outputText value="#{divida.pessoa.cpf}" />
+											</h:column>
+
+											<h:column>
+												<f:facet name="header">Nome</f:facet>
+												<h:outputText value="#{divida.pessoa.nome}" />
+											</h:column>
+
+											<h:column>
+												<f:facet name="header">Valor</f:facet>
+												<h:outputText value="#{divida.valor}">
+													<f:convertNumber pattern="R$ #,##0.00" />
+												</h:outputText>
+											</h:column>
+
+											<h:column>
+												<f:facet name="header">Status</f:facet>
+												<h:outputText value="#{divida.status}" />
+											</h:column>
+
+											<h:column>
+												<f:facet name="header">Detalhar Dívida</f:facet>
+												<h:commandLink value="Detalhar"
+													action="#{dividaController.detalharDivida}">
+													<i class="fa fa-pencil f-18" />
+													<f:setPropertyActionListener value="#{divida}"
+														target="#{dividaController.divida}" />
+												</h:commandLink>
+											</h:column>
+											
+										</h:dataTable>
+									</div>
+								</div>
+							</div>
+							
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#emRecurso"> Multas em recurso </a>
+									</h4>
+								</div>
+								<div id="emRecurso" class="panel-collapse collapse">
+									<div class="col-md-12 table-responsive table-red filter-right">
+										<h:dataTable styleClass="table-striped table-hover table-dynamic"
+											id="emRecurso" var="multa" value="#{multaController.emRecurso}">
+
+											<h:column headerClass="tdCheck">
+												<f:facet name="header">
+													<input type="checkbox" id="selectallEmRecurso" />
+												</f:facet>
+												<h:selectBooleanCheckbox class="emRecurso" value="#{multa.checkboxSelecao}" />
+											</h:column>
+											
+											<h:column>
+												<f:facet name="header">Placa do Veículo</f:facet>
+												<h:outputText value="#{multa.veiculo.placa}" />
+											</h:column>
+
+											<h:column>
+												<f:facet name="header">Proprietário</f:facet>
+												<h:outputText value="#{multa.veiculo.pessoa.nome}" />
+											</h:column>
+											
+											<h:column>
+												<f:facet name="header">Data da infração</f:facet>
+												<h:outputText value="#{multa.infracao.dataInfracao}">
+													<f:convertDateTime locale="pt_BR" dateStyle="long" timeZone="GMT-3" pattern="dd/MM/yyyy" />
+												</h:outputText>
+											</h:column>
+											
+											<h:column>
+												<f:facet name="header">Data de vencimento</f:facet>
+												<h:outputText value="#{multa.dataVencimento}">
+													<f:convertDateTime locale="pt_BR" dateStyle="long" timeZone="GMT-3" pattern="dd/MM/yyyy" />
+												</h:outputText>
+											</h:column>
+
+											<h:column>
+												<f:facet name="header">Valor</f:facet>
+												<h:outputText value="#{multa.valor}">
+													<f:convertNumber pattern="R$ #,##0.00" />
+												</h:outputText>
+											</h:column>
+											
+											<h:column>
+												<f:facet name="header">Detalhar Multa</f:facet>
+												<h:commandLink value="Detalhar" action="#{multaController.detalharMulta}">
+													<i class="fa fa-pencil f-18" />
+													<f:setPropertyActionListener value="#{multa}" target="#{multaController.multa}" />
+												</h:commandLink>
+											</h:column>
+										</h:dataTable>
+									</div>
+								</div>
+							</div>
+							
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#liquidadas"> Multas liquidadas </a>
+									</h4>
+								</div>
+								<div id="liquidadas" class="panel-collapse collapse">
+									<div class="col-md-12 table-responsive table-red filter-right">
+										<h:dataTable styleClass="table-striped table-hover table-dynamic"
+											id="liquidadas" var="multa" value="#{multaController.liquidadas}">
+
+											<h:column headerClass="tdCheck">
+												<f:facet name="header">
+													<input type="checkbox" id="selectallLiquidadas" />
+												</f:facet>
+												<h:selectBooleanCheckbox class="liquidadas" value="#{multa.checkboxSelecao}" />
+											</h:column>
+											
+											<h:column>
+												<f:facet name="header">Placa do Veículo</f:facet>
+												<h:outputText value="#{multa.veiculo.placa}" />
+											</h:column>
+
+											<h:column>
+												<f:facet name="header">Proprietário</f:facet>
+												<h:outputText value="#{multa.veiculo.pessoa.nome}" />
+											</h:column>
+											
+											<h:column>
+												<f:facet name="header">Data da infração</f:facet>
+												<h:outputText value="#{multa.infracao.dataInfracao}">
+													<f:convertDateTime locale="pt_BR" dateStyle="long" timeZone="GMT-3" pattern="dd/MM/yyyy" />
+												</h:outputText>
+											</h:column>
+											
+											<h:column>
+												<f:facet name="header">Data de vencimento</f:facet>
+												<h:outputText value="#{multa.dataVencimento}">
+													<f:convertDateTime locale="pt_BR" dateStyle="long" timeZone="GMT-3" pattern="dd/MM/yyyy" />
+												</h:outputText>
+											</h:column>
+
+											<h:column>
+												<f:facet name="header">Valor</f:facet>
+												<h:outputText value="#{multa.valor}">
+													<f:convertNumber pattern="R$ #,##0.00" />
+												</h:outputText>
+											</h:column>
+											
+											<h:column>
+												<f:facet name="header">Detalhar Multa</f:facet>
+												<h:commandLink value="Detalhar" action="#{multaController.detalharMulta}">
+													<i class="fa fa-pencil f-18" />
+													<f:setPropertyActionListener value="#{multa}" target="#{multaController.multa}" />
+												</h:commandLink>
+											</h:column>
+										</h:dataTable>
+									</div>
+								</div>
+							</div>
+							
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#executadas"> Multas inscritas em dívida </a>
+									</h4>
+								</div>
+								<div id="executadas" class="panel-collapse collapse">
+									<div class="col-md-12 table-responsive table-red filter-right">
+										<h:dataTable styleClass="table-striped table-hover table-dynamic"
+											id="executadas" var="multa" value="#{multaController.executadas}">
+
+											<h:column headerClass="tdCheck">
+												<f:facet name="header">
+													<input type="checkbox" id="selectallExecutadas" />
+												</f:facet>
+												<h:selectBooleanCheckbox class="executadas" value="#{multa.checkboxSelecao}" />
+											</h:column>
+											
+											<h:column>
+												<f:facet name="header">Placa do Veículo</f:facet>
+												<h:outputText value="#{multa.veiculo.placa}" />
+											</h:column>
+
+											<h:column>
+												<f:facet name="header">Proprietário</f:facet>
+												<h:outputText value="#{multa.veiculo.pessoa.nome}" />
+											</h:column>
+											
+											<h:column>
+												<f:facet name="header">Data da infração</f:facet>
+												<h:outputText value="#{multa.infracao.dataInfracao}">
+													<f:convertDateTime locale="pt_BR" dateStyle="long" timeZone="GMT-3" pattern="dd/MM/yyyy" />
+												</h:outputText>
+											</h:column>
+											
+											<h:column>
+												<f:facet name="header">Data de vencimento</f:facet>
+												<h:outputText value="#{multa.dataVencimento}">
+													<f:convertDateTime locale="pt_BR" dateStyle="long" timeZone="GMT-3" pattern="dd/MM/yyyy" />
+												</h:outputText>
+											</h:column>
+
+											<h:column>
+												<f:facet name="header">Valor</f:facet>
+												<h:outputText value="#{multa.valor}">
+													<f:convertNumber pattern="R$ #,##0.00" />
+												</h:outputText>
+											</h:column>
+											
+											<h:column>
+												<f:facet name="header">Detalhar Multa</f:facet>
+												<h:commandLink value="Detalhar" action="#{multaController.detalharMulta}">
+													<i class="fa fa-pencil f-18" />
+													<f:setPropertyActionListener value="#{multa}" target="#{multaController.multa}" />
+												</h:commandLink>
+											</h:column>
+										</h:dataTable>
+									</div>
+								</div>
+							</div>
+							
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#prescritas"> Multas prescritas </a>
+									</h4>
+								</div>
+								<div id="prescritas" class="panel-collapse collapse">
+									<div class="col-md-12 table-responsive table-red filter-right">
+										<h:dataTable styleClass="table-striped table-hover table-dynamic"
+											id="prescritas" var="multa" value="#{multaController.prescritas}">
+											
+											<h:column>
+												<f:facet name="header">Placa do Veículo</f:facet>
+												<h:outputText value="#{multa.veiculo.placa}" />
+											</h:column>
+
+											<h:column>
+												<f:facet name="header">Proprietário</f:facet>
+												<h:outputText value="#{multa.veiculo.pessoa.nome}" />
+											</h:column>
+											
+											<h:column>
+												<f:facet name="header">Data da infração</f:facet>
+												<h:outputText value="#{multa.infracao.dataInfracao}">
+													<f:convertDateTime locale="pt_BR" dateStyle="long" timeZone="GMT-3" pattern="dd/MM/yyyy" />
+												</h:outputText>
+											</h:column>
+											
+											<h:column>
+												<f:facet name="header">Data de vencimento</f:facet>
+												<h:outputText value="#{multa.dataVencimento}">
+													<f:convertDateTime locale="pt_BR" dateStyle="long" timeZone="GMT-3" pattern="dd/MM/yyyy" />
+												</h:outputText>
+											</h:column>
+
+											<h:column>
+												<f:facet name="header">Valor</f:facet>
+												<h:outputText value="#{multa.valor}">
+													<f:convertNumber pattern="R$ #,##0.00" />
+												</h:outputText>
+											</h:column>
+											
+											<h:column>
+												<f:facet name="header">Detalhar Multa</f:facet>
+												<h:commandLink value="Detalhar" action="#{multaController.detalharMulta}">
+													<i class="fa fa-pencil f-18" />
+													<f:setPropertyActionListener value="#{multa}" target="#{multaController.multa}" />
+												</h:commandLink>
+											</h:column>
+										</h:dataTable>
+									</div>
+								</div>
+							</div>
+						
+						</div>
+
+					</div>
+				</div>
+			</div>
+			
+			<script>
+				$(document).ready(function() {
+					$('#selectallMultasVencidas').click(function(event) { //on click 
+						if (this.checked) { // check select status
+							$('.multasVencidas').each(function() { //loop through each checkbox
+								this.checked = true; //select all checkboxes with class "checkbox1"               
+							});
+						} else {
+							$('.multasVencidas').each(function() { //loop through each checkbox
+								this.checked = false; //deselect all checkboxes with class "checkbox1"                       
+							});
+						}
+					});
+					
+					$('#selectallProntasParaNotificacao').click(function(event) { //on click 
+						if (this.checked) { // check select status
+							$('.prontasParaNotificacao').each(function() { //loop through each checkbox
+								this.checked = true; //select all checkboxes with class "checkbox1"               
+							});
+						} else {
+							$('.prontasParaNotificacao').each(function() { //loop through each checkbox
+								this.checked = false; //deselect all checkboxes with class "checkbox1"                       
+							});
+						}
+					});
+					
+					$('#selectallNotificadas').click(function(event) { //on click 
+						if (this.checked) { // check select status
+							$('.notificadas').each(function() { //loop through each checkbox
+								this.checked = true; //select all checkboxes with class "checkbox1"               
+							});
+						} else {
+							$('.notificadas').each(function() { //loop through each checkbox
+								this.checked = false; //deselect all checkboxes with class "checkbox1"                       
+							});
+						}
+					});
+					
+					$('#selectallEmRecurso').click(function(event) { //on click 
+						if (this.checked) { // check select status
+							$('.emRecurso').each(function() { //loop through each checkbox
+								this.checked = true; //select all checkboxes with class "checkbox1"               
+							});
+						} else {
+							$('.emRecurso').each(function() { //loop through each checkbox
+								this.checked = false; //deselect all checkboxes with class "checkbox1"                       
+							});
+						}
+					});
+					
+					$('#selectallLiquidadas').click(function(event) { //on click 
+						if (this.checked) { // check select status
+							$('.liquidadas').each(function() { //loop through each checkbox
+								this.checked = true; //select all checkboxes with class "checkbox1"               
+							});
+						} else {
+							$('.liquidadas').each(function() { //loop through each checkbox
+								this.checked = false; //deselect all checkboxes with class "checkbox1"                       
+							});
+						}
+					});
+					
+				});
+			</script>
+
+
+		</h:form>
+
+		<!-- BEGIN PAGE LEVEL SCRIPTS -->
+		<script	src="#{request.contextPath}/bootstrap/resources/js/bootstrap-switch.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/bootstrap-progressbar.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/jquery.dataTables.min.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/dataTables.bootstrap.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/dataTables.tableTools.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/table.editable.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/table_dynamic.js" />
+		<!-- END  PAGE LEVEL SCRIPTS -->
+
+		</ui:define>
+
+	</ui:composition>
+
+</html>

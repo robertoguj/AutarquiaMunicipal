@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+<head>
+<meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'>
+<title>
+SPU Fortaleza
+</title>
+<link href="/assets/favicon-d8902d94df5ad2b5d1e1bec90315647e.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+<link href="/assets/totem/application-a00b2e686ad1a8a1a186ec5677aa3dc7.css" media="all" rel="stylesheet" />
+<script src="/assets/totem/application-07087a9fe7ae6b36b0da03579220b1f6.js"></script>
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="R9ye7+yMVfDUJ+BAEQTMm00qgWk2ryLEH2f9sCrdZDc=" name="csrf-token" />
+<meta content='errors#not_found' name='page'>
+
+</head>
+<body>
+<div class='navbar navbar-inverse navbar-fixed-top'>
+<div class='navbar-inner'>
+<div class='container-fluid'>
+<div class='pull-left' id='logo-topo'>
+<h1>
+<a href="/">Sistema de Protocolo Único
+
+</a><span>
+Prefeitura Municipal de Fortaleza
+
+</span>
+</h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class='container-fluid'>
+<div class='row-fluid'>
+<div class='row'>
+<div class='span10 offset1' style='min-height: 30em; margin-top: 10%'>
+<div class='span4'>
+<div style='font-size: 23em;text-align: center;'>
+<i class='icon-frown'></i>
+</div>
+</div>
+<div class='span8'>
+<div style='margin: 7% 0'>
+<h1 style='font-size: 100px; margin-bottom: 6%;padding-top: 6%;'>Atencão!</h1>
+<h1 class='muted'>A página solicitada não foi encontrada.</h1>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<footer style='margin-top: 30px;'>
+<hr>
+<div class='text-center'>
+<p>
+<a>Prefeitura Municipal de Fortaleza</a>
+</p>
+<p>
+<a>Copyright © 2013 - COTEC</a>
+</p>
+</div>
+</hr>
+</footer>
+</div>
+
+<div id='modais'>
+
+</div>
+
+<script src="/assets/totem/scripts-bddc61e473c73828f5e97e1d631f7241.js"></script>
+
+
+
+</body>
+</html>

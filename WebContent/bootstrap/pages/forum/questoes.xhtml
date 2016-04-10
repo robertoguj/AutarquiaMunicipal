@@ -1,0 +1,287 @@
+<ui:composition lang="pt_br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="/bootstrap/templates/principal.xhtml">
+
+	<ui:define name="conteudo">
+
+		<link rel="stylesheet" href="${ctx}/bootstrap/resources/css/jquery.datetimepicker.css" />
+
+		<div class="forum-page">
+			<div class="page-title">
+				<i class="icon-custom-left"></i>
+				<h3>
+					<strong>Forums</strong> <small>Questions &amp; Answers</small>
+				</h3>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+					<div class="panel forum-category">
+						<div class="panel-heading no-bd bg-dark">
+							<h3 class="panel-title">Categories</h3>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-12">
+									<ul>
+										<li>General<span class="pull-right badge badge-dark">6</span>
+										</li>
+										<li>Sales<span class="pull-right badge badge-dark">12</span>
+										</li>
+										<li>Design<span class="pull-right badge badge-dark">7</span>
+										</li>
+										<li>Issues<span class="pull-right badge badge-dark">11</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="panel forum-filter">
+						<div class="panel-heading bd-b-dark bg-light">
+							<h3 class="panel-title">Filter results</h3>
+						</div>
+						<div class="panel-body p-b-10">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="input-group transparent">
+										<span class="input-group-addon bg-white"> <i
+											class="fa fa-search"></i>
+										</span> <input type="text" class="form-control"
+											placeholder="Search for a topic..." />
+									</div>
+									<div class="input-group m-t-20">
+										<span class="input-group-addon bg-white"> <i
+											class="fa fa-calendar"></i>
+										</span> <input id="calendar" type="text" class="form-control"
+											placeholder="Search a date..." />
+									</div>
+									<div class="row-fluid">
+										<label> <input type="checkbox" />Unanswered
+										</label>
+									</div>
+									<div class="row-fluid">
+										<label> <input type="checkbox" />Answered
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="panel-footer bg-white text-center p-0">
+							<a href="#">Search</a>
+						</div>
+					</div>
+
+					<div class="panel panel-stat">
+						<div class="panel-heading f-16 text-center p-10 p-b-0 w-600">
+							Questions Stats</div>
+						<div class="panel-body p-0">
+							<div id="chart_1" style="height: 260px; width: 100%"></div>
+						</div>
+					</div>
+
+				</div>
+
+
+				<div class="col-md-9">
+					<div class="panel forum-questions">
+						<div class="panel-heading no-bd bg-dark">
+							<h3 class="panel-title">Questions &amp; Answers</h3>
+						</div>
+						<div class="panel-body p-0">
+							<div class="row-fluid">
+								<div class="message-item">
+									<div class="media">
+										<img src="${ctx}/bootstrap/resources/images/avatar12_big.png"
+											alt="avatar 12" width="50" class="pull-left" /> <span
+											class="badge badge-primary pull-right w-300"> <i
+											class="fa fa-comment p-r-10"></i>3
+										</span>
+										<div class="forum-title">
+											<div class="c-blue pull-left">
+												<strong>How many pages are included in the
+													template?</strong>
+											</div>
+											<span class="label label-success m-l-20 w-300"> <i
+												class="fa fa-check p-r-5"></i>Answered
+											</span>
+										</div>
+										<div>
+											posted by <span class="c-blue">John Smith</span> in <span
+												class="c-blue">General</span> <span> <i
+												class="fa fa-clock-o p-r-10 p-l-20"></i>23 Sept, 12:26 am
+											</span>
+										</div>
+									</div>
+								</div>
+								<p class="f-14 m-t-10">To continue to thrive as a business
+									over the next ten years and beyond, we must look ahead,
+									understand the trends and forces that will shape our business
+									in the future and move swiftly to prepare for what's to come.
+									We must get ready for tomorrow today.</p>
+							</div>
+							<div class="message-item">
+								<div class="media">
+
+									<div class="media-body c-gray">
+										<span class="badge badge-primary pull-right w-300"><i
+											class="fa fa-comment p-r-10"></i>1</span>
+										<div class="forum-title">
+											<div class="c-blue pull-left">
+												<strong>How many cost your theme?</strong>
+											</div>
+											<span class="label label-default m-l-20 w-300">Unread</span>
+										</div>
+										<div>
+											posted by <span class="c-blue">James Miller</span> in <span
+												class="c-blue">Sales</span> <span><i
+												class="fa fa-clock-o p-r-10 p-l-20"></i>22 Sept, 4:65 pm</span>
+										</div>
+									</div>
+								</div>
+								<p class="f-14 m-t-10">To continue to thrive as a business
+									over the next ten years and beyond, we must look ahead,
+									understand the trends and forces that will shape our business
+									in the future and move swiftly to prepare for what's to come.
+									We must get ready for tomorrow today.</p>
+							</div>
+							<div class="message-item">
+								<div class="media">
+									<img src="${ctx}/bootstrap/resources/images/avatar10_big.png"
+										alt="avatar 10" width="50" class="pull-left" />
+
+									<div class="media-body c-gray">
+										<span class="badge badge-primary pull-right w-300"><i
+											class="fa fa-comment p-r-10"></i>1</span>
+										<div class="forum-title">
+											<div class="c-blue pull-left">
+												<strong>Can you make custom pages for me?</strong>
+											</div>
+											<span class="label label-default m-l-20 w-300">Unread</span>
+										</div>
+										<div>
+											posted by <span class="c-blue">Jordan Addams</span> in <span
+												class="c-blue">Webdesign</span> <span><i
+												class="fa fa-clock-o p-r-10 p-l-20"></i>20 Sept, 10:34 am</span>
+										</div>
+									</div>
+								</div>
+								<p class="f-14 m-t-10">To continue to thrive as a business
+									over the next ten years and beyond, we must look ahead,
+									understand the trends and forces that will shape our business
+									in the future and move swiftly to prepare for what's to come.
+									We must get ready for tomorrow today.</p>
+							</div>
+							<div class="message-item">
+								<div class="media">
+									<img src="${ctx}/bootstrap/resources/images/avatar9_big.png"
+										alt="avatar 9" width="50" class="pull-left" />
+
+									<div class="media-body c-gray">
+										<span class="badge badge-primary pull-right w-300"><i
+											class="fa fa-comment p-r-10"></i>5</span>
+										<div class="forum-title">
+											<div class="c-blue pull-left">
+												<strong>Can you make custom pages for me?</strong>
+											</div>
+											<span class="label label-success m-l-20 w-300"><i
+												class="fa fa-check p-r-5"></i>Answered</span>
+										</div>
+										<div>
+											posted by <span class="c-blue">Mike Meyers</span> in <span
+												class="c-blue">General</span> <span><i
+												class="fa fa-clock-o p-r-10 p-l-20"></i>19 Sept, 6:11 am</span>
+										</div>
+									</div>
+								</div>
+								<p class="f-14 m-t-10">To continue to thrive as a business
+									over the next ten years and beyond, we must look ahead,
+									understand the trends and forces that will shape our business
+									in the future and move swiftly to prepare for what's to come.
+									We must get ready for tomorrow today.</p>
+							</div>
+							<div class="message-item">
+								<div class="media">
+									<img src="${ctx}/bootstrap/resources/images/avatar8_big.png"
+										alt="avatar 8" width="50" class="pull-left" />
+
+									<div class="media-body c-gray">
+										<span class="badge badge-primary pull-right w-300"><i
+											class="fa fa-comment p-r-10"></i>2</span>
+										<div class="forum-title">
+											<p class="c-blue pull-left">
+												<strong>Can you make custom pages for me?</strong>
+											</p>
+											<span class="label label-success m-l-20 w-300"><i
+												class="fa fa-check p-r-5"></i>Answered</span>
+										</div>
+										<div>
+											posted by <span class="c-blue">Alexa Johnson</span> in <span
+												class="c-blue">Issues</span> <span><i
+												class="fa fa-clock-o p-r-10 p-l-20"></i>16 July, 8:22 am</span>
+										</div>
+									</div>
+								</div>
+								<p class="f-14 m-t-10">To continue to thrive as a business
+									over the next ten years and beyond, we must look ahead,
+									understand the trends and forces that will shape our business
+									in the future and move swiftly to prepare for what's to come.
+									We must get ready for tomorrow today.</p>
+							</div>
+							<div class="message-item">
+								<div class="media">
+									<img src="${ctx}/bootstrap/resources/images/avatar7_big.png"
+										alt="avatar 7" width="50" class="pull-left" />
+
+									<div class="media-body c-gray">
+										<span class="badge badge-primary pull-right w-300"><i
+											class="fa fa-comment p-r-10"></i>6</span>
+										<div class="forum-title">
+											<p class="c-blue pull-left">
+												<strong>Can you make custom pages for me?</strong>
+											</p>
+											<span class="label label-success m-l-20 w-300"><i
+												class="fa fa-check p-r-5"></i>Answered</span>
+										</div>
+										<div>
+											posted by <span class="c-blue">Fred Bichop</span> in <span
+												class="c-blue">Sales</span> <span><i
+												class="fa fa-clock-o p-r-10 p-l-20"></i>8 July, 4:31 pm</span>
+										</div>
+									</div>
+								</div>
+								<p class="f-14 m-t-10">To continue to thrive as a business
+									over the next ten years and beyond, we must look ahead,
+									understand the trends and forces that will shape our business
+									in the future and move swiftly to prepare for what's to come.
+									We must get ready for tomorrow today.</p>
+							</div>
+						</div>
+						<div class="m-t-30 align-center">
+							<ul class="pagination">
+								<li><span><i class="fa fa-angle-left c-gray-light"></i></span></li>
+								<li class="active"><span>1</span></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><span>...</span></li>
+								<li><a href="#">9</a></li>
+								<li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- BEGIN PAGE LEVEL SCRIPTS -->
+		<script	src="#{request.contextPath}/bootstrap/resources/js/jquery.flot.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/jquery.datetimepicker.js" />
+		<script src="#{request.contextPath}/bootstrap/resources/js/forum.js" />
+		<!-- END  PAGE LEVEL SCRIPTS -->
+
+	</ui:define>
+
+</ui:composition>

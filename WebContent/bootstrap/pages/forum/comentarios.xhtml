@@ -1,0 +1,279 @@
+<ui:composition lang="pt_br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="/bootstrap/templates/principal.xhtml">
+
+	<ui:define name="conteudo">
+
+		<div class="page-title">
+			<i class="icon-custom-left"></i>
+			<h2>
+				Comments <small>from users</small>
+			</h2>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="row m-b-30">
+							<div class="col-md-8">
+								<button type="button" class="btn btn-white m-b-10 m-r-10">All</button>
+								<button type="button" class="btn btn-dark m-b-10 m-r-10">
+									<i class="fa fa-clock-o p-r-10"></i> Waiting approval <span
+										class="badge badge-white m-l-10">36</span>
+								</button>
+								<button type="button" class="btn btn-white m-b-10 m-r-10">
+									<i class="fa fa-check p-r-10"></i> Approved
+								</button>
+								<button type="button" class="btn btn-white m-b-10 m-r-10">
+									<i class="fa fa-trash-o p-r-10"></i> Trashed
+								</button>
+							</div>
+							<div class="col-md-4 align-right">
+								<input type="text" id="member-finder" class="form-control"
+									placeholder="Search a comment..." />
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-6">
+								<select class="form-control" title="Select Comments"
+									data-width="250">
+									<option>Selecione</option>
+									<option>Approve</option>
+									<option>Edit</option>
+									<option>Delete</option>
+								</select>
+							</div>
+							<div class="col-sm-6 align-right hidden-sm hidden-xs">
+								<ul class="pagination m-t-0">
+									<li><span><i class="fa fa-angle-left c-gray-light"></i></span></li>
+									<li class="active"><span>1</span></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><span>...</span></li>
+									<li><a href="#">9</a></li>
+									<li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- BEGIN COMMENTS LIST -->
+					<div class="panel-body comments-list">
+						<div class="row">
+							<div class="col-md-12 p-30 comment m-t-0">
+								<div class="row">
+									<div class="comment-checkbox">
+										<input type="checkbox" />
+									</div>
+									<div class="comment-content">
+										<div class="comment-header f-16 clearfix">
+											<div class="pull-left">
+												<a href="#">John Miller</a> <span class="c-gray">commented
+													on</span> <a href="#">Billy Paul</a>
+											</div>
+											<div class="pull-right f-12">
+												<span class="c-gray">Monday, 04 March - 10:49</span>
+											</div>
+										</div>
+										<p class="comment-text">To continue to thrive as a
+											business over the next ten years and beyond, we must look
+											ahead, understand the trends and forces that will shape our
+											business in the future and move swiftly to prepare for what's
+											to come. We must get ready for tomorrow today. That's what
+											our 2020 Vision is all about. It creates a long-term
+											destination for our business and provides us with a "Roadmap"
+											for winning together with our bottling partners.</p>
+										<div class="comment-footer">
+											<div>
+												<a href="#" class="aprrove btn btn-success m-r-10"
+													data-rel="tooltip" data-original-title="Approve"><i
+													class="fa fa-check"></i></a> <a href="#"
+													class="delete btn btn-danger m-r-10" data-rel="tooltip"
+													data-original-title="Delete"><i class="fa fa-trash-o"></i></a>
+												<a href="#" class="edit btn btn-default" data-rel="tooltip"
+													data-original-title="Edit"> <i class="fa fa-edit"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12 p-30 comment">
+								<div class="row">
+									<div class="comment-checkbox">
+										<input type="checkbox" />
+									</div>
+									<div class="comment-content">
+										<div class="comment-header f-16 clearfix">
+											<div class="pull-left">
+												<a href="#">Mike Raynolds</a> <span class="c-gray">commented
+													on</span> <a href="#">Ecommerce</a>
+											</div>
+											<div class="pull-right f-12">
+												<span class="c-gray">Wednesday, 01 March - 9:28</span>
+											</div>
+										</div>
+										<p class="comment-text">To continue to thrive as a
+											business over the next ten years and beyond, we must look
+											ahead, understand the trends and forces that will shape our
+											business in the future and move swiftly to prepare for what's
+											to come. We must get ready for tomorrow today. That's what
+											our 2020 Vision is all about. It creates a long-term
+											destination for our business and provides us with a "Roadmap"
+											for winning together with our bottling partners.</p>
+										<div class="comment-footer">
+											<div>
+												<a href="#" class="aprrove btn btn-success m-r-10"
+													data-rel="tooltip" data-original-title="Approve"><i
+													class="fa fa-check"></i></a> <a href="#"
+													class="delete btn btn-danger m-r-10" data-rel="tooltip"
+													data-original-title="Delete"><i class="fa fa-trash-o"></i></a>
+												<a href="#" class="edit btn btn-default" data-rel="tooltip"
+													data-original-title="Edit"> <i class="fa fa-edit"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12 p-30 comment">
+								<div class="row">
+									<div class="comment-checkbox">
+										<input type="checkbox" />
+									</div>
+									<div class="comment-content">
+										<div class="comment-header f-16 clearfix">
+											<div class="pull-left">
+												<a href="#">Nicole Smith</a> <span class="c-gray">commented
+													on</span> <a href="#">Weather</a>
+											</div>
+											<div class="pull-right f-12">
+												<span class="c-gray">Tuesday, 30 April - 17:52</span>
+											</div>
+										</div>
+										<p class="comment-text">To continue to thrive as a
+											business over the next ten years and beyond, we must look
+											ahead, understand the trends and forces that will shape our
+											business in the future and move swiftly to prepare for what's
+											to come. We must get ready for tomorrow today. That's what
+											our 2020 Vision is all about. It creates a long-term
+											destination for our business and provides us with a "Roadmap"
+											for winning together with our bottling partners.</p>
+										<div class="comment-footer">
+											<div>
+												<a href="#" class="aprrove btn btn-success m-r-10"
+													data-rel="tooltip" data-original-title="Approve"><i
+													class="fa fa-check"></i></a> <a href="#"
+													class="delete btn btn-danger m-r-10" data-rel="tooltip"
+													data-original-title="Delete"><i class="fa fa-trash-o"></i></a>
+												<a href="#" class="edit btn btn-default" data-rel="tooltip"
+													data-original-title="Edit"> <i class="fa fa-edit"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="m-t-30 align-center">
+							<ul class="pagination">
+								<li><span><i class="fa fa-angle-left c-gray-light"></i></span></li>
+								<li class="active"><span>1</span></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><span>...</span></li>
+								<li><a href="#">9</a></li>
+								<li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- END COMMENTS LIST -->
+					<!-- BEGIN MODAL COMMENT EDIT -->
+					<div class="modal fade in" id="modal-edit-comment"
+						aria-hidden="false">
+						<div class="modal-dialog" style="width: 55%">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal"
+										aria-hidden="true">×</button>
+									<h4 class="modal-title">Edit Comment</h4>
+								</div>
+								<div class="modal-body">
+									<div class="row">
+										<div class="col-sm-2">
+											<a href="#"><img
+												src="${ctx}/bootstrap/resources/images/avatar7_big.png"
+												alt="avatar 7" class="img-responsive" width="150" /></a> <br />
+											<span class="c-gray">Comments:</span> <span>65</span><br />
+											<span class="c-gray">Member since:</span> <span>2009</span>
+										</div>
+										<div class="col-sm-10">
+											<div class="row m-b-20">
+												<div class="col-md-12">
+													<p>
+														Name: <a href="#">Steven Williams</a>
+													</p>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-12">
+													<div class="form-group">
+														<label class="control-label">Comment</label>
+														<textarea class="form-control" style="min-height: 130px">To continue to thrive as a business over the next ten years and beyond, we must look ahead, understand the trends and forces that will shape our business in the future and move swiftly to prepare for what's to come. We must get ready for tomorrow today. That's what our 2020 Vision is all about. It creates a long-term destination for our business and provides us with a "Roadmap" for winning together with our bottling partners.
+                                                            </textarea>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-6">
+													<div class="form-group">
+														<label class="control-label">Date Added</label>
+														<p>
+															<strong>Wednesday, 18 May - 16:23</strong>
+														</p>
+													</div>
+												</div>
+												<div class="col-md-6 align-right">
+													<div class="form-group">
+														<label class="control-label">Article</label>
+														<p>
+															<a href="#"><strong>Ecommerce Tips</strong></a>
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<div class="pull-left">
+										<button type="button" class="btn btn-default"
+											data-dismiss="modal">Close</button>
+										<button type="button" class="btn btn-info">Update</button>
+									</div>
+									<div class="pull-right">
+										<button type="button" class="btn btn-danger"
+											data-dismiss="modal">Delete</button>
+										<button type="button" class="btn btn-success">Approve</button>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- END MODAL COMMENT EDIT -->
+				</div>
+			</div>
+		</div>
+
+		<!-- BEGIN PAGE LEVEL SCRIPTS -->
+		<script	src="#{request.contextPath}/bootstrap/resources/js/comments.js" />
+		<!-- END  PAGE LEVEL SCRIPTS -->
+
+	</ui:define>
+
+</ui:composition>

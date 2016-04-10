@@ -1,0 +1,122 @@
+<ui:composition lang="pt_br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui">
+
+	<div id="main-menu">
+	
+		<h:form id="menu-principal">
+	
+		<ul class="sidebar-nav">
+			<li class="current">
+				<a href="${ctx}/bootstrap/pages/index.jsf"><i class="fa fa-home"></i><span class="sidebar-text">Principal</span></a>
+			</li>
+			
+			<li><a href="#"><i class="fa fa-dashboard"></i><span
+					class="sidebar-text">Dashboard</span><span class="fa arrow"></span></a>
+				<ul class="submenu collapse">
+					<li>
+						<h:commandLink action="#{redirectorBean.usuarios}" rendered="#{request.isUserInRole('ROLE_ADMIN')}" value="Usuários do Sistema" />
+					</li>
+					<li>
+						<h:commandLink action="#{redirectorBean.dividasLegado}" rendered="#{request.isUserInRole('ROLE_ADMIN') or request.isUserInRole('ROLE_PROJUR') or request.isUserInRole('ROLE_USER')}" value="Dividas Ativas Legado" />
+					</li>
+					<li>
+						<h:commandLink action="#{redirectorBean.dividasAtivas}" rendered="#{request.isUserInRole('ROLE_ADMIN') or request.isUserInRole('ROLE_PROJUR') or request.isUserInRole('ROLE_USER')}" value="Dividas Ativas" />
+					</li>
+					<li>
+						<h:commandLink action="#{redirectorBean.multasVencidas}" rendered="#{request.isUserInRole('ROLE_ADMIN') or request.isUserInRole('ROLE_PROJUR') or request.isUserInRole('ROLE_USER')}" value="Multas Vencidas" />
+					</li>
+					<li>
+						<h:commandLink action="#{redirectorBean.multasTramite}" rendered="#{request.isUserInRole('ROLE_ADMIN') or request.isUserInRole('ROLE_PROJUR') or request.isUserInRole('ROLE_USER')}" value="Multas Novo Trâmite" />
+					</li>
+				</ul>
+			</li>
+			
+			<li>
+				<a href="#"><i class="fa fa-cog"></i><span	class="sidebar-text">Operações</span><span class="fa arrow"></span></a>
+				<ul class="submenu collapse">
+					<li>
+						<h:commandLink action="#{redirectorBean.emitirCda}" rendered="#{request.isUserInRole('ROLE_ADMIN') or request.isUserInRole('ROLE_PROJUR')}" value="Emitir CDA" />
+					</li>
+					<li>
+						<h:commandLink action="#{redirectorBean.emitirPeticao}" rendered="#{request.isUserInRole('ROLE_ADMIN') or request.isUserInRole('ROLE_PROJUR')}" value="Emitir Petição Inicial" />
+					</li>
+					<li>
+						<h:commandLink action="#{redirectorBean.emitirCertidao}" rendered="#{request.isUserInRole('ROLE_ADMIN') or request.isUserInRole('ROLE_PROJUR')}" value="Emitir Certidão Negativa" />
+					</li>
+					<li>
+						<h:commandLink action="#{redirectorBean.validarCertidao}" rendered="#{request.isUserInRole('ROLE_ADMIN') or request.isUserInRole('ROLE_PROJUR')}" value="Validar Certidão Negativa" />
+					</li>
+					<li>
+						<h:commandLink action="#{redirectorBean.emitirBoleto}" rendered="#{request.isUserInRole('ROLE_ADMIN') or request.isUserInRole('ROLE_PROJUR')}" value="Emitir Boleto de Dívidas" />
+					</li>
+				</ul>
+			</li>
+			
+			<li><a href="#"><i class="fa fa-search"></i><span
+					class="sidebar-text">Consultas</span><span class="fa arrow"></span></a>
+				<ul class="submenu collapse">
+					<li>
+						<h:commandLink action="#{redirectorBean.consultarDividasAtivas}" rendered="#{request.isUserInRole('ROLE_ADMIN') or request.isUserInRole('ROLE_PROJUR')}" value="Dívidas Ativas" />
+					</li>
+					<li>
+						<h:commandLink action="#{redirectorBean.consultarDividasLegado}" rendered="#{request.isUserInRole('ROLE_ADMIN') or request.isUserInRole('ROLE_PROJUR')}" value="Dívidas Ativas Legado" />
+					</li>
+					<li>
+						<h:commandLink action="#{redirectorBean.consultarMultas}" rendered="#{request.isUserInRole('ROLE_ADMIN') or request.isUserInRole('ROLE_PROJUR')}" value="Multas Vencidas" />
+					</li>
+					<li>
+						<h:commandLink action="#{redirectorBean.historicoDividas}" rendered="#{request.isUserInRole('ROLE_ADMIN') or request.isUserInRole('ROLE_PROJUR')}" value="Histórico de Dívidas" />
+					</li>
+				</ul>
+			</li>
+			
+			<li><a href="#"><i class="glyph-icon flaticon-pages"></i><span
+					class="sidebar-text">Relatórios</span><span class="fa arrow"></span></a>
+				<ul class="submenu collapse">
+					<li>
+						<h:commandLink action="#{redirectorBean.emitirRelDividasAtivas}" rendered="#{request.isUserInRole('ROLE_ADMIN') or request.isUserInRole('ROLE_PROJUR')}" value="Emissão de Dívidas Ativas" />
+					</li>
+					<li>
+						<h:commandLink action="#{redirectorBean.emitirRelMultas}" rendered="#{request.isUserInRole('ROLE_ADMIN') or request.isUserInRole('ROLE_PROJUR')}" value="Emissão de Multas" />
+					</li>
+				</ul>
+			</li>
+
+			<li><a href="#"><i class="glyph-icon flaticon-account"></i><span
+					class="sidebar-text">Minha Conta</span><span class="fa arrow"></span></a>
+				<ul class="submenu collapse">
+					<li>
+						<a href="${ctx}/bootstrap/pages/conta/recuperar_senha.jsf"><span class="sidebar-text">Trocar Senha</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/publico/erro/404.jsf"><span class="sidebar-text">404 Error Page</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/publico/erro/500.jsf"><span class="sidebar-text">500 Error Page</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/publico/session/manutencao.jsf"><span class="sidebar-text">Manutenção</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/publico/session/viewExpired.jsf"><span class="sidebar-text">Session Timeout</span></a>
+					</li>
+				</ul>
+			</li>
+			
+            <li>
+                <a href="${ctx}/publico/session/bloqueio.jsf"><i class="glyph-icon flaticon-lock39"></i><span class="sidebar-text">Bloquear Sessão</span></a>
+            </li>
+            <li>
+                <h:commandLink action="#{authenticator.logout}"> <i class="fa fa-power-off"></i><span class="sidebar-text">Sair do Sistema</span> </h:commandLink>
+            </li>
+		</ul>
+		
+		</h:form>
+
+	</div>
+
+</ui:composition>

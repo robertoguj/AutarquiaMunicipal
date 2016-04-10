@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	template="/templates/principal.xhtml">
+
+	<ui:define name="conteudo">
+	
+	<f:event listener="#{usuarioController.init}" type="preRenderView" />
+
+		<h:form id="cadastroUsuario">
+
+			<div class="panel-main row">
+				<div class="col-md-12">
+					<div class="panel panel-default">
+
+						<div class="panel-heading bg-panel">
+							<h3 class="panel-title">
+								<strong>Cadastrar Usuário </strong>
+							</h3>
+						</div>
+
+
+						<p:messages showDetail="true" />
+
+						<h:panelGrid columns="1" cellspacing="2" style="width: 580px; margin-top:20px;"
+							styleClass="form-panel-grupo">
+							<h:outputLabel>
+								<strong>Nome</strong> <span class="asterisk">*</span>
+								<span class="tips"> Digite seu nome completo</span>
+							</h:outputLabel>
+							
+							<h:inputText styleClass="form-control" required="true"
+								requiredMessage="#{msg.nome_obrigatorio}"
+								value="#{usuarioController.user.nome}" />
+
+						</h:panelGrid>
+
+						<h:panelGrid columns="3" cellspacing="2"
+							styleClass="form-panel-grupo"
+							columnClasses="td300, td300, td200">
+
+							<h:panelGroup>
+
+								<h:outputLabel>
+									<strong>Login</strong> <span class="asterisk">*</span>
+									<span class="tips"> Digite seu login</span>
+								</h:outputLabel>
+								<h:inputText styleClass="form-control" required="true"
+									requiredMessage="#{msg.login_obrigatorio}"
+									value="#{usuarioController.user.username}" />
+
+
+								<h:outputLabel>
+									<strong>Senha</strong> <span class="asterisk">*</span>
+									<span class="tips"> Digite sua senha</span>
+								</h:outputLabel>
+								<h:inputSecret styleClass="form-control" required="true" redisplay="true" size="10" maxlength="10"
+									requiredMessage="#{msg.senha_obrigatorio}" value="#{usuarioController.user.password}" />
+
+								<h:outputLabel>
+									<strong>Confirmar Senha:</strong> <span class="asterisk">*</span>
+								</h:outputLabel>
+								<h:inputSecret styleClass="form-control" required="true" redisplay="true" size="10" maxlength="10"
+									requiredMessage="#{msg.senha_obrigatorio}" value="#{usuarioController.confirmarSenha}" />
+								
+							</h:panelGroup>
+
+
+							<h:panelGroup>
+
+								<h:outputLabel>
+									<strong>CPF</strong> <span class="asterisk">*</span>
+									<span class="tips"> Digite seu CPF</span>
+								</h:outputLabel>
+								
+								<p:inputMask id="cpf" styleClass="form-control" value="#{usuarioController.user.cpf}" mask="999.999.999-99" />
+								
+								<h:outputLabel>
+									<strong>Email</strong> <span class="asterisk">*</span>
+									<span class="tips"> Digite seu email</span>
+								</h:outputLabel>
+								<h:inputText styleClass="form-control" required="true"
+									requiredMessage="#{msg.email_obrigatorio}"
+									value="#{usuarioController.user.email}" />
+
+								<h:outputLabel>
+									<strong>Telefone</strong>
+								</h:outputLabel>
+							
+								<p:inputMask id="telefone" styleClass="form-control" value="#{usuarioController.user.telefone}" mask="(99) 99999-9999" />
+
+
+							</h:panelGroup>
+
+
+							<h:panelGroup>
+
+								<h:outputLabel>
+									<strong>Perfil</strong><span class="asterisk">*</span>
+								</h:outputLabel>
+								<h:selectOneMenu id="cbxPerfil" required="false"
+									requiredMessage="#{msg.perfil_obrigatorio}"
+									value="#{usuarioController.user.roles}" converter="genericConverter">
+									<f:selectItem itemLabel="Selecione" itemValue="#{null}" />
+									<f:selectItems itemLabel="teste"
+										value="#{usuarioController.listaPerfilSelect}" />
+									<f:ajax render="cbxPerfil" event="valueChange"/>
+								</h:selectOneMenu>
+
+							</h:panelGroup>
+
+
+						</h:panelGrid>
+
+						<div class="div-botoes">
+							<h:commandButton id="btnSalvar" styleClass="btn btn-success"
+								value="Salvar" action="#{usuarioController.salvar}" />
+							<h:commandButton id="btnLimpar" styleClass="btn btn-success"
+								immediate="true" type="reset" value="Limpar" />
+							<h:commandButton id="btnCancelar" styleClass="btn btn-success"
+								immediate="true" value="Cancelar"
+								action="#{usuarioController.cancelar}" />
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</h:form>
+
+	</ui:define>
+
+</ui:composition>

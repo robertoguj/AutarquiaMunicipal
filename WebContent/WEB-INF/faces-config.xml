@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+	version="2.0">
+
+	<application>
+		<el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
+	</application>
+
+	<!-- REGRAS DE NAVEGAÇÃO -->
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>index</from-outcome>
+			<to-view-id>/restrito/home.jsf</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>usuarioSucesso</from-outcome>
+			<to-view-id>/publico/usuarioSucesso.jsf</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>successfulPage</from-outcome>
+			<to-view-id>/restrito/home.jsf</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>dashboardUsuarios</from-outcome>
+			<to-view-id>/restrito/administrador/DashboardUsuario.jsf</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>novoUsuario</from-outcome>
+			<to-view-id>/restrito/administrador/CadastrarUsuario.jsf</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>editarUsuario</from-outcome>
+			<to-view-id>/restrito/administrador/EditarUsuario.jsf</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>dashboardDividas</from-outcome>
+			<to-view-id>/restrito/consulta/DashboardDividasAtivas.jsf</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>detalharDivida</from-outcome>
+			<to-view-id>/restrito/consulta/DividasAtivasDetalhar.jsf</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>dashboardDividasLegado</from-outcome>
+			<to-view-id>/restrito/consulta/DashboardDividasLegado.jsf</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>dashboardMultas</from-outcome>
+			<to-view-id>/restrito/consulta/DashboardMultas.jsf</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>detalharMulta</from-outcome>
+			<to-view-id>/restrito/consulta/MultasDetalhar.jsf</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>dashboardMultasVencidas</from-outcome>
+			<to-view-id>/restrito/consulta/DashboardMultasVencidas.jsf</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>emitirCda</from-outcome>
+			<to-view-id>/restrito/operacoes/EmitirCda.jsf</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>emitirPeticao</from-outcome>
+			<to-view-id>/restrito/operacoes/EmitirPeticao.jsf</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>consultaDividaLegado</from-outcome>
+			<to-view-id>/restrito/consulta/DividasAtivasLegado.jsf</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>consultaDividaAtiva</from-outcome>
+			<to-view-id>/restrito/consulta/DividasAtivas.jsf</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>consultaMultas</from-outcome>
+			<to-view-id>/restrito/consulta/Multas.jsf</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>historicoDividas</from-outcome>
+			<to-view-id>/restrito/consulta/DividasAtivasHistorico.jsf</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>relatorioDividasAtivas</from-outcome>
+			<to-view-id>/restrito/relatorios/EmitirDividasAtivas.jsf</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>relatorioMultas</from-outcome>
+			<to-view-id>/restrito/relatorios/EmitirMultas.jsf</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>emitirCertidao</from-outcome>
+			<to-view-id>/publico/usuario/CertidaoNegativaEmissao.jsf</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>validarCertidao</from-outcome>
+			<to-view-id>/publico/usuario/CertidaoNegativaValidacao.jsf</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>emitirBoleto</from-outcome>
+			<to-view-id>/publico/usuario/EmitirBoleto.jsf</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+ 
+	<!-- INTERNACIONALIZAÇÃO -->
+	<application>
+		<resource-bundle>
+			<base-name>amc.scda.idioma.mensagens</base-name>
+			<var>msg</var>
+		</resource-bundle>
+		
+		<locale-config>
+			<default-locale>pt_BR</default-locale>
+			<supported-locale>pt_BR</supported-locale>
+			<supported-locale>es_UN</supported-locale>
+		</locale-config>
+	</application>
+	
+</faces-config>

@@ -1,0 +1,323 @@
+<ui:composition lang="pt_br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="/bootstrap/templates/principal.xhtml">
+
+	<ui:define name="conteudo">
+
+		<div class="page-title">
+			<i class="icon-custom-left"></i>
+			<h2>
+				Pricing Tables <small>samples for your business</small>
+			</h2>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="row">
+							<h3>Take a look to our Plans</h3>
+							<p class="lead c-gray">You certainly find what you are
+								looking for</p>
+							<!-- BEGIN PRICING TABLE 1 -->
+							<div class="row plans pricing-1">
+								<div class="col-sm-12">
+									<div class="plans clearfix">
+										<div class="plan plan-left">
+											<div class="plan-header">
+												<div class="title">Basic</div>
+												<div class="price">
+													<span class="amount">9</span>$/month
+												</div>
+												<div>
+													<span class="offer">Get a free month</span>
+												</div>
+											</div>
+											<div class="description">
+												<div>
+													<p class="plan-item p-t-20">
+														<i class="glyph-icon flaticon-email f-32"></i> 500 emails
+													</p>
+												</div>
+												<div>
+													<p class="plan-item">
+														<i class="glyph-icon flaticon-speedometer3 f-40"></i><b>
+															unlimited</b> data
+													</p>
+												</div>
+												<div>
+													<p class="plan-item">
+														<i class="glyph-icon flaticon-user90 f-32"></i><b> 1</b>
+														users
+													</p>
+												</div>
+												<div>
+													<p class="plan-item no-bd">
+														<i class="glyph-icon flaticon-light28 f-40"></i> first 15
+														day free
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="plan">
+											<div class="plan-header">
+												<div class="title">Professional</div>
+												<div class="price">
+													<span class="amount">29</span>$/month
+												</div>
+												<div>
+													<span class="offer">Get a free month</span>
+												</div>
+											</div>
+											<div class="description">
+												<div>
+													<p class="plan-item p-t-20">
+														<i class="glyph-icon flaticon-email f-32"></i> 2, 000
+														emails
+													</p>
+												</div>
+												<div>
+													<p class="plan-item">
+														<i class="glyph-icon flaticon-speedometer3 f-40"></i><b>
+															unlimited</b> data
+													</p>
+												</div>
+												<div>
+													<p class="plan-item">
+														<i class="glyph-icon flaticon-user90 f-32"></i><b> 10</b>
+														users
+													</p>
+												</div>
+												<div>
+													<p class="plan-item no-bd">
+														<i class="glyph-icon flaticon-light28 f-40"></i> first 30
+														day free
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="plan plan-right">
+											<div class="plan-header">
+												<div class="title">Premium</div>
+												<div class="price">
+													<span class="amount">49</span>$/month
+												</div>
+												<div>
+													<span class="offer">Get a free month</span>
+												</div>
+											</div>
+											<div class="description">
+												<div>
+													<p class="plan-item p-t-20">
+														<i class="glyph-icon flaticon-email f-32"></i> 10, 000
+														emails
+													</p>
+												</div>
+												<div>
+													<p class="plan-item">
+														<i class="glyph-icon flaticon-speedometer3 f-40"></i><b>
+															unlimited</b> data
+													</p>
+												</div>
+												<div>
+													<p class="plan-item">
+														<i class="glyph-icon flaticon-user90 f-32"></i><b>
+															unlimited</b> users
+													</p>
+												</div>
+												<div>
+													<p class="plan-item no-bd">
+														<i class="glyph-icon flaticon-light28 f-40"></i> first 90
+														day free
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- END PRICING TABLE 1 -->
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="row">
+							<!-- BEGIN PRICING TABLE 2 -->
+							<div class="row plans pricing-2">
+								<h3 class="align-center m-b-40">Free trial offer for all
+									plans</h3>
+								<div class="col-sm-4">
+									<div class="plan">
+										<div class="title">Basic</div>
+										<div class="price c-green">9$/month</div>
+										<div class="description">
+											<div class="plan-item">500 email</div>
+											<div class="plan-item">
+												<b>unlimited</b> data
+											</div>
+											<div class="plan-item">
+												<b>unlimited</b> users
+											</div>
+											<div class="plan-item">first 15 day free</div>
+										</div>
+										<a class="btn disabled" href="#">Your Current Plan</a>
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="plan">
+										<div class="title">Professional</div>
+										<div class="price">29$/month</div>
+										<div class="description">
+											<div class="plan-item">1, 000 email</div>
+											<div class="plan-item">
+												<b>unlimited</b> data
+											</div>
+											<div class="plan-item">
+												<b>unlimited</b> users
+											</div>
+											<div class="plan-item">first 30 day free</div>
+										</div>
+										<a class="btn btn-success" href="#">Change to this Plan</a>
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="plan">
+										<div class="title">Premium</div>
+										<div class="price">49$/month</div>
+										<div class="description">
+											<div class="plan-item">5,000 email</div>
+											<div class="plan-item">
+												<b>unlimited</b> data
+											</div>
+											<div class="plan-item">
+												<b>unlimited</b> users
+											</div>
+											<div class="plan-item">first 90 day free</div>
+										</div>
+										<a class="btn btn-success" href="#">Change to this Plan</a>
+									</div>
+								</div>
+							</div>
+							<!-- END PRICING TABLE 2 -->
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="row">
+							<!-- BEGIN PRICING TABLE 3 -->
+							<div class="row plans pricing-3">
+								<div class="col-sm-12">
+									<h3 class="align-center m-b-40">Upgrade now and get all
+										benefits during 1 month</h3>
+									<div class="plans clearfix">
+										<div class="plan plan-left">
+											<div class="plan-header">
+												<img src="${ctx}/bootstrap/resources/images/pricing-1.png"
+													alt="basic" class="img-responsive" />
+												<div class="title">Basic Plan</div>
+												<div class="price">
+													<span class="amount">9</span>$/month
+												</div>
+											</div>
+											<div class="description">
+												<div>
+													<p class="plan-item p-t-20">500 emails</p>
+												</div>
+												<div>
+													<p class="plan-item">
+														<b>unlimited</b> data
+													</p>
+												</div>
+												<div>
+													<p class="plan-item">
+														<b>1</b> users
+													</p>
+												</div>
+												<div>
+													<p class="plan-item no-bd">first 15 day free</p>
+												</div>
+											</div>
+											<a class="btn disabled" href="#">Your Current Plan</a>
+										</div>
+										<div class="plan">
+											<div class="plan-header">
+												<img src="${ctx}/bootstrap/resources/images/pricing-2.png"
+													alt="business" class="img-responsive" />
+												<div class="title">Business Plan</div>
+												<div class="price">
+													<span class="amount">29</span>$/month
+												</div>
+											</div>
+											<div class="description">
+												<div>
+													<p class="plan-item p-t-20">2, 000 emails</p>
+												</div>
+												<div>
+													<p class="plan-item">
+														<b>unlimited</b> data
+													</p>
+												</div>
+												<div>
+													<p class="plan-item">
+														<b>10</b> users
+													</p>
+												</div>
+												<div>
+													<p class="plan-item no-bd">first 30 day free</p>
+												</div>
+											</div>
+											<a class="btn btn-blue" href="#">Change to this Plan</a>
+										</div>
+										<div class="plan plan-right">
+											<div class="plan-header">
+												<img src="${ctx}/bootstrap/resources/images/pricing-3.png"
+													alt="agency" class="img-responsive" />
+												<div class="title">Agency Plan</div>
+												<div class="price">
+													<span class="amount">49</span>$/month
+												</div>
+											</div>
+											<div class="description">
+												<div>
+													<p class="plan-item p-t-20">10, 000 emails</p>
+												</div>
+												<div>
+													<p class="plan-item">
+														<b>unlimited</b> data
+													</p>
+												</div>
+												<div>
+													<p class="plan-item">
+														<b>unlimited</b> users
+													</p>
+												</div>
+												<div>
+													<p class="plan-item no-bd">first 90 day free</p>
+												</div>
+											</div>
+											<a class="btn btn-blue" href="#">Change to this Plan</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- END PRICING TABLE 3 -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- BEGIN PAGE LEVEL SCRIPTS -->
+		<script	src="#{request.contextPath}/bootstrap/resources/js/jquery.quicksearch.js" />
+		<script src="#{request.contextPath}/bootstrap/resources/js/members.js" />
+		<!-- END PAGE LEVEL SCRIPTS -->
+
+
+	</ui:define>
+
+</ui:composition>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/templates/principal.xhtml">
+
+	<!-- BEGIN PAGE LEVEL STYLE -->
+	<link rel="stylesheet"
+		href="${ctx}/bootstrap/resources/css/dataTables.css" />
+	<!-- END PAGE LEVEL STYLE -->
+
+	<ui:define name="conteudo">
+
+		<h:form>
+
+			<div class="panel-main row">
+				<div class="col-md-12">
+					<div class="panel-default">
+
+						<div class="panel-heading bg-panel">
+							<h3 class="panel-title">
+								<strong>Multa(s) incritas em dívida ativa </strong>
+							</h3>
+						</div>
+
+
+						<div class="tabcordion" style="margin-top: 20px;">
+							<ul id="myTab" class="nav nav-tabs">
+								<li class="active"><a href="#tab1_1" data-toggle="tab">Multa(s) incritas em dívida ativa</a></li>
+							</ul>
+							<div class="tab-content" style="padding: 20px;">
+								<div class="tab-pane fade active in" id="tab1_1">
+
+										<h:dataTable styleClass="table table-striped table-hover" id="multas" var="" value="">
+											
+											<h:column>
+												<f:facet name="header">Placa do veículo</f:facet>
+												<h:outputText value="#{multaController.multa.veiculo.placa}" />
+											</h:column>
+											
+											<h:column>
+												<f:facet name="header">Data da Infração</f:facet>
+												<h:outputText value="#{multaController.multa.infracao.dataInfracao}" />
+											</h:column>
+											
+											<h:column>
+												<f:facet name="header">Valor da multa</f:facet>
+												<h:outputText value="#{multaController.multa.valor}">
+													<f:convertNumber pattern="R$ #,##0.00" />												
+												</h:outputText>
+											</h:column>
+
+											<h:column>
+												<f:facet name="header">Data de vencimento</f:facet>
+												<h:outputText value="#{multaController.multa.dataVencimento}">
+													<f:convertDateTime locale="pt_BR" dateStyle="long" timeZone="GMT-3" pattern="dd/MM/yyyy" />
+												</h:outputText>
+											</h:column>
+											
+											<h:column>
+												<f:facet name="header">Status da multa</f:facet>
+												<h:outputText value="#{multaController.multa.status}" />
+											</h:column>
+											
+											<h:column>
+												<f:facet name="header">Detalhar Multa</f:facet>
+												<h:commandLink value="Detalhar" action="#{multaController.detalharMulta}">
+													<i class="fa fa-pencil f-18" />
+													<f:setPropertyActionListener value="#{multa}" target="#{multaController.multa}" />
+												</h:commandLink>
+											</h:column>
+										</h:dataTable>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="div-botoes" style="float: left;">
+				<h:commandButton id="btnVoltar" styleClass="btn btn-success" value="Voltar" action="#{redirectorBean.dividasAtivas}" />
+			</div>
+
+		</h:form>
+
+	</ui:define>
+
+	<!-- BEGIN PAGE LEVEL SCRIPTS -->
+	<script	src="#{request.contextPath}/bootstrap/resources/js/bootstrap-switch.js" />
+	<script	src="#{request.contextPath}/bootstrap/resources/js/bootstrap-progressbar.js" />
+	<script	src="#{request.contextPath}/bootstrap/resources/js/jquery.dataTables.min.js" />
+	<script	src="#{request.contextPath}/bootstrap/resources/js/dataTables.bootstrap.js" />
+	<script	src="#{request.contextPath}/bootstrap/resources/js/dataTables.tableTools.js" />
+	<script	src="#{request.contextPath}/bootstrap/resources/js/table.editable.js" />
+	<script	src="#{request.contextPath}/bootstrap/resources/js/table_dynamic.js" />
+	<!-- END  PAGE LEVEL SCRIPTS -->
+
+</ui:composition>
+
+</html>

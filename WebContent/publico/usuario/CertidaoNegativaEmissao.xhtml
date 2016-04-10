@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/templates/principal.xhtml">
+
+	<ui:define name="conteudo">
+
+		<h:form>
+
+			<div class="panel-main row">
+				<div class="col-md-12">
+					<div class="panel-default">
+
+						<div class="panel-heading bg-panel">
+							<h3 class="panel-title">
+								<strong>Emitir Certidão Negativa de Dívida Ativa </strong>
+							</h3>
+						</div>
+
+						<strong>Preencha um ou mais campos para emissão da certidão</strong>
+
+						
+						<p:messages showDetail="true" />
+						
+						<fieldset  style="margin-top: 20px; width: 800px;">
+
+							<legend>Dados do Proprietário</legend>
+						
+						<h:panelGrid columns="1" cellpadding="5">
+
+							<h:panelGroup>
+								<h:outputLabel>	<strong>CPF</strong> </h:outputLabel> <br/>
+								<p:inputMask id="cpf" styleClass="form-control" style="width: 200px;" required="true" requiredMessage="#{msg.cpf_obrigatorio}" value="#{dividaController.pessoa.cpf}" mask="999.999.999-99" /> <br/>
+								
+								<h:outputLabel>	<strong>Nome</strong> </h:outputLabel> <br/>
+								<h:inputText id="nome" styleClass="form-control" style="width: 500px;" required="true" requiredMessage="#{msg.nome_obrigatorio}" value="#{dividaController.pessoa.nome}" /> <br/>
+								
+								<br />
+								<p:captcha label="Captcha" />
+								
+							</h:panelGroup>
+							
+						</h:panelGrid>
+       					
+       					</fieldset>
+
+						<div class="div-botoes" style="float: left;">
+							<h:commandButton id="btnEmitir" styleClass="btn btn-success" value="Emitir Certidão"
+								actionListener="#{dividaController.submit}" />
+							<h:commandButton id="btnLimpar" styleClass="btn btn-success" immediate="true" type="reset" value="Limpar" />
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+
+
+		</h:form>
+
+	</ui:define>
+
+</ui:composition>
+
+</html>

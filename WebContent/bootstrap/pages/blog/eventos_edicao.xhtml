@@ -1,0 +1,273 @@
+<ui:composition lang="pt_br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="/bootstrap/templates/principal.xhtml">
+
+	<ui:define name="conteudo">
+
+		<link rel="stylesheet"
+			href="${ctx}/bootstrap/resources/css/magnific-popup.css" />
+
+		<div class="page-title">
+			<i class="icon-custom-left"></i>
+			<h3>
+				<strong>Edit Event</strong>
+			</h3>
+			<a href="events.html"> <i class="fa fa-angle-left"></i> <span>Back
+					to Events List</span>
+			</a> <br />
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="tabcordion">
+					<ul id="myTab" class="nav nav-tabs">
+						<li class="active"><a href="#event_general" data-toggle="tab">General</a></li>
+						<li><a href="#event_reviews" data-toggle="tab">Comments <span
+								class="m-l-10 badge badge-danger">4</span></a></li>
+					</ul>
+					<div id="myTabContent" class="tab-content">
+						<div class="tab-pane fade active in" id="event_general">
+							<div class="row">
+								<div class="col-md-8 post-column-left">
+									<div class="form-group">
+										<input type="email" class="form-control f-18" id="title"
+											placeholder="Title of the event"
+											value="Moonshine Jungle Tour" />
+									</div>
+									<div class="form-group">
+										<textarea id="editor1" name="post-edit" class="cke-editor">
+                                                The Moonshine Jungle Tour is the ongoing second concert tour by American singer-songwriter Bruno
+                                                Mars in support of his second studio album, Unorthodox Jukebox.[1] The tour began on June 22, 2013
+                                                and will continue through September 6, 2014. A promotional trailer and behind-the-scenes footage of
+                                                the tour were released through Mars' official YouTube channel and website. In April 2013,
+                                                Bruno Mars announced that the tour would include Australia in February and March 2014. A promotional
+                                                trailer and behind-the-scenes footage of the tour were released through Mars' official YouTube channel
+                                                and website. From the first 42 shows and dragged more than fans, according to John Marx when
+                                                interview by Billboard. The tour was ranked 23 among the Top 25 Tours of 2013 being able to sellout 44
+                                                shows in 48, with a gross of in North America shows. In 2013, he played 84 shows giving him a total of
+                                                million engrossment. In January 2014, Bruno Mars announced a second leg in North America, with 35
+                                                concerts being scheduled in the United States and six in Canada with Pharrell joining Mars on select
+                                                dates.
+                                    </textarea>
+									</div>
+									<div class="form-group">
+										<h5>Comment</h5>
+										<textarea rows="5" class="form-control valid"
+											placeholder="Optional comment..."></textarea>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="post-column-right">
+										<div class="form-group">
+											<div>
+												<h5 class="pull-left m-t-0">
+													Pictures <span class="asterisk">*</span>
+												</h5>
+												<a href="#" class="pull-right c-gray"><i
+													class="fa fa-plus"></i> <strong>Add New</strong></a>
+												<div>
+													<a href="${ctx}/bootstrap/resources/images/mars2.jpeg"
+														class="magnific" title="Bruno Mars"> <img
+														src="${ctx}/bootstrap/resources/images/mars2.jpeg"
+														alt="mars" class="img-responsive" /></a>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<div>
+												<h5 class="pull-left m-t-0">
+													Categories <span class="asterisk">*</span>
+												</h5>
+												<a href="#" class="pull-right c-gray"><i
+													class="fa fa-plus"></i> <strong>Add New</strong></a>
+											</div>
+											<select class="form-control" title="Choose one or more">
+												<optgroup label="Music">
+													<option>Pop</option>
+													<option>Electro</option>
+													<option>Rock</option>
+													<option>Country</option>
+												</optgroup>
+												<optgroup label="Sport">
+													<option>Baseball</option>
+													<option>WWC</option>
+													<option>Basketball</option>
+												</optgroup>
+											</select>
+										</div>
+										<div class="form-group">
+											<h5>Tags</h5>
+											<select class="form-control">
+												<option>Bruno Mars</option>
+												<option>live</option>
+												<option>tour</option>
+												<option>Memphis</option>
+											</select>
+										</div>
+										<div class="form-group">
+											<h5>
+												Status <span class="asterisk">*</span>
+											</h5>
+											<div class="row">
+												<div class="col-md-4">
+													<label> <input type="radio" name="radio-choice-0" />Online
+													</label>
+												</div>
+												<div class="col-md-4">
+													<label> <input type="radio" name="radio-choice-0" />Offline
+													</label>
+												</div>
+												<div class="col-md-4">
+													<label> <input type="radio" name="radio-choice-0" />Draft
+													</label>
+												</div>
+											</div>
+										</div>
+										<h3>Optimize SEO</h3>
+										<div class="form-group">
+											<h5>
+												Meta Title <span class="asterisk">*</span>
+											</h5>
+											<input type="text" class="form-control"
+												value="Buy your shirt with Pixit" />
+										</div>
+										<div class="form-group">
+											<h5>
+												Meta Description <span class="asterisk">*</span>
+											</h5>
+											<textarea rows="4" class="form-control"
+												placeholder="Max 255 characters..."></textarea>
+										</div>
+										<div class="form-group">
+											<h5>Meta Keywords</h5>
+											<textarea rows="6" class="form-control"
+												placeholder="Max 1000 characters..."></textarea>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="event_reviews">
+							<div class="row">
+								<div class="col-md-12">
+									<table id="event-review"
+										class="table table-tools table-striped">
+										<thead>
+											<tr>
+												<th style="min-width: 70px"><strong>Review ID</strong></th>
+												<th><strong>Review Date</strong></th>
+												<th><strong>User / Client</strong></th>
+												<th style="width: 50%"><strong>Review Content</strong></th>
+												<th class="text-center"><strong>Status</strong></th>
+												<th class="text-center"><strong>Actions</strong></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>03/11/2013</td>
+												<td>John Addams</td>
+												<td>Hawaii has a lot to proud of in Bruno Mars...what a
+													talent. Old soul in a young man. Love the variety and range
+													in his music! Love hearing the old songs that inspired the
+													new songs. I got a tears in my eyes when he got choked up
+													on his encore rendition of I'll remember you, Can't wait to
+													see him on the Grammy's.</td>
+												<td class="text-center"><span
+													class="label label-success w-300">Approved</span></td>
+												<td class="text-center"><a href="#" data-rel="tooltip"
+													title="Edit this comment"
+													class="edit btn btn-sm btn-icon btn-rounded btn-default"><i
+														class="fa fa-pencil"></i></a> <a href="#" data-rel="tooltip"
+													title="Delete this comment"
+													class="delete btn btn-sm btn-icon btn-rounded btn-default"><i
+														class="fa fa-times"></i></a></td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td>02/11/2013</td>
+												<td>Fred Aster</td>
+												<td>I loved the way he performed every song including
+													the ones that he could only really do the chorus for. I
+													loved how truly moved he was throughout the performance to
+													hear the audience in his hometown singing his songs back to
+													him. He is a big star now - but mark my words - he will
+													stick around for a long time and be an UBER big star! I
+													love Bruno!</td>
+												<td class="text-center"><span
+													class="label label-danger w-300">Rejected</span></td>
+												<td class="text-center"><a href="#" data-rel="tooltip"
+													title="Edit this comment"
+													class="edit btn btn-sm btn-icon btn-rounded btn-default"><i
+														class="fa fa-pencil"></i></a> <a href="#" data-rel="tooltip"
+													title="Delete this comment"
+													class="delete btn btn-sm btn-icon btn-rounded btn-default"><i
+														class="fa fa-times"></i></a></td>
+											</tr>
+											<tr>
+												<td>3</td>
+												<td>01/11/2013</td>
+												<td>Mike Johson</td>
+												<td>Awesome amazing. A voice like butter ...he is so
+													reminiscent of a combo of Elvis And Michael Jackson A fine
+													musician and all around entertainer</td>
+												<td class="text-center"><span
+													class="label label-info w-300">Pending</span></td>
+												<td class="text-center"><a href="#" data-rel="tooltip"
+													title="Edit this comment"
+													class="edit btn btn-sm btn-icon btn-rounded btn-default"><i
+														class="fa fa-pencil"></i></a> <a href="#" data-rel="tooltip"
+													title="Delete this comment"
+													class="delete btn btn-sm btn-icon btn-rounded btn-default"><i
+														class="fa fa-times"></i></a></td>
+											</tr>
+											<tr>
+												<td>4</td>
+												<td>25/10/2013</td>
+												<td>Amanda Taping</td>
+												<td>I would highly recommend the Bruno Mars concert for
+													all age groups. One of the best if not the best concert I
+													have seen in my 62 years of rock and roll.</td>
+												<td class="text-center"><span
+													class="label label-success w-300">Approved</span></td>
+												<td class="text-center"><a href="#" data-rel="tooltip"
+													title="Edit this comment"
+													class="edit btn btn-sm btn-icon btn-rounded btn-default"><i
+														class="fa fa-pencil"></i></a> <a href="#" data-rel="tooltip"
+													title="Delete this comment"
+													class="delete btn btn-sm btn-icon btn-rounded btn-default"><i
+														class="fa fa-times"></i></a></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 m-t-20 m-b-40 align-center">
+				<a href="events.html" class="btn btn-default m-r-10 m-t-10"><i
+					class="fa fa-reply"></i> Cancel</a> <a href="events.html"
+					class="btn btn-default m-r-10 m-t-10"><i class="fa fa-edit"></i>
+					Save as Draft</a> <a href="events.html" class="btn btn-danger m-t-10"><i
+					class="fa fa-check"></i> Publish Event</a>
+			</div>
+		</div>
+
+		<!-- BEGIN PAGE LEVEL SCRIPTS -->
+		<script	src="#{request.contextPath}/bootstrap/resources/js/jquery.magnific-popup.min.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/ckeditor.js" />
+		<script src="#{request.contextPath}/bootstrap/resources/js/jquery.js" />
+		<script src="#{request.contextPath}/bootstrap/resources/js/blog.js" />
+		<!-- END  PAGE LEVEL SCRIPTS -->
+
+
+	</ui:define>
+
+</ui:composition>

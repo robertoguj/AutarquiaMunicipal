@@ -1,0 +1,448 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:cogect="http://java.sun.com/jsf/composite/componentes"
+	xmlns:composite="http://java.sun.com/jsf/composite">
+	<composite:interface>
+		<composite:attribute name="MB" required="true" />
+	</composite:interface>
+	<composite:implementation>
+		<p:dialog id="dlgVisualizarAlvarasFuncionamento"
+			header="Alvará de Funcionamento Nº"
+			widgetVar="dlgVisualizarAlvarasFuncionamentoJS" resizable="false"
+			visible="false" modal="true" dynamic="true" hideEffect="slide"
+			width="800" height="600" maximizable="false" minWidth="800"
+			minHeight="600" position="center">
+			<p:ajax event="close" update="@form"
+				listener="#{cc.attrs.MB.visualizarAlvarahandleClose}" />
+			<p:tabView orientation="top"
+				activeIndex="#{cc.attrs.MB.indiceSelecionadoTabView}" dynamic="true">
+				<p:tab title="Dados Básicos">
+					<p:panelGrid id="panelTipoEmissao" styleClass="semBorda"
+						style="width:100%">
+						<p:row>
+							<p:column>
+								<h:outputLabel
+									value="#{rotulos.alvarasFuncionamento_numeroInscricao}" />
+							</p:column>
+							<p:column>
+							</p:column>
+							<p:column>
+							</p:column>
+							<p:column>
+								<h:outputLabel
+									value="#{rotulos.alvarasFuncionamento_dataEmissao}">
+
+								</h:outputLabel>
+							</p:column>
+						</p:row>
+						<p:row>
+							<p:column>
+								<p:panel style="height:28px">
+									<h:outputLabel
+										value="#{cc.attrs.MB.alvarasFuncionamentoBeans.numeroInscricao}" />
+								</p:panel>
+							</p:column>
+							<p:column>
+							</p:column>
+							<p:column>
+							</p:column>
+							<p:column>
+								<p:panel style="height:28px">
+									<h:outputLabel
+										value="#{cc.attrs.MB.alvarasFuncionamentoBeans.dataEmissao}">
+										<f:convertDateTime pattern="dd/MM/yyyy" />
+									</h:outputLabel>
+								</p:panel>
+							</p:column>
+
+						</p:row>
+
+						<p:row>
+							<p:column>
+							</p:column>
+						</p:row>
+						<p:row>
+							<p:column>
+							</p:column>
+						</p:row>
+						<p:row>
+							<p:column>
+								<h:outputLabel
+									value="#{rotulos.alvarasFuncionamento_codigoTipoEmissao}" />
+							</p:column>
+							<p:column>
+							</p:column>
+							<p:column>
+							</p:column>
+							<p:column>
+								<h:outputLabel
+									value="#{rotulos.alvarasFuncionamento_processoDataged}" />
+							</p:column>
+						</p:row>
+						<p:row>
+							<p:column>
+								<p:panel style="height:28px">
+									<h:outputLabel
+										value="#{cc.attrs.MB.alvarasFuncionamentoBeans.getObjTiposEmissoesAlvara().tipoEmissaoAlvara()}">
+										<f:convertDateTime pattern="dd/MM/yyyy" />
+									</h:outputLabel>
+								</p:panel>
+							</p:column>
+							<p:column>
+							</p:column>
+							<p:column>
+							</p:column>
+							<p:column>
+								<p:panel style="height:28px">
+									<h:outputLabel
+										value="#{cc.attrs.MB.alvarasFuncionamentoBeans.processoDataged}" />
+								</p:panel>
+							</p:column>
+						</p:row>
+					</p:panelGrid>
+
+				</p:tab>
+				<p:tab title="Dados Imóvel">
+					<p:panelGrid styleClass="" columns="2" style="width:100%">
+						<h:outputLabel value="#{rotulos.viabilidades_iptu}"
+							styleClass="ui-column-title" />
+
+						<h:outputLabel value="Classificação Viária"
+							styleClass="ui-column-title" />
+
+						<p:panel style="height:28px">
+							<h:outputLabel
+								value="#{cc.attrs.MB.alvarasFuncionamentoBeans.iptu}" />
+						</p:panel>
+						<p:panel style="height:28px">
+							<h:outputLabel
+								value="#{cc.attrs.MB.alvarasFuncionamentoBeans.classificacaoViaria}" />
+						</p:panel>
+
+						<h:outputLabel value="Zoneamento" styleClass="ui-column-title" />
+
+						<h:outputLabel value="CEP" styleClass="ui-column-title" />
+
+						<p:panel style="height:28px">
+							<h:outputLabel
+								value="#{cc.attrs.MB.alvarasFuncionamentoBeans.zoneamento}" />
+						</p:panel>
+
+						<p:panel style="height:28px">
+							<h:outputLabel value="#{cc.attrs.MB.cep}" />
+						</p:panel>
+
+						<h:outputLabel value="Endereço" styleClass="ui-column-title" />
+						<h:outputLabel value="Nº" styleClass="ui-column-title" />
+
+						<p:panel style="height:28px">
+							<h:outputLabel value="#{cc.attrs.MB.logradouro}" />
+						</p:panel>
+						<p:panel style="height:28px">
+							<h:outputLabel value="#{cc.attrs.MB.numeroLogradouro}" />
+						</p:panel>
+
+						<h:outputLabel value="Complemento" styleClass="ui-column-title" />
+
+						<h:outputLabel value="Área Total Terreno"
+							styleClass="ui-column-title" />
+
+						<p:panel style="height:28px">
+							<h:outputLabel value="#{cc.attrs.MB.complemento}" />
+						</p:panel>
+
+						<p:panel style="height:28px">
+							<h:outputLabel
+								value="#{cc.attrs.MB.alvarasFuncionamentoBeans.areaTerreno}">
+								<f:convertNumber pattern="#,##0.00" />
+							</h:outputLabel>
+						</p:panel>
+
+						<h:outputLabel value="Área Empreendimento"
+							styleClass="ui-column-title" />
+
+						<h:outputLabel value="Área Construída"
+							styleClass="ui-column-title" />
+
+						<p:panel style="height:28px">
+							<h:outputLabel
+								value="#{cc.attrs.MB.alvarasFuncionamentoBeans.areaEstabelecimento}">
+								<f:convertNumber pattern="#,##0.00" />
+							</h:outputLabel>
+						</p:panel>
+
+						<p:panel style="height:28px">
+							<h:outputLabel
+								value="#{cc.attrs.MB.alvarasFuncionamentoBeans.areaConstruida}">
+								<f:convertNumber pattern="#,##0.00" />
+							</h:outputLabel>
+						</p:panel>
+
+
+					</p:panelGrid>
+				</p:tab>
+				<p:tab title="Empreendimento">
+					<p:panelGrid id="panelDadosEmpreendimento" columns="2"
+						style="width:100%">
+						<h:outputLabel
+							value="#{rotulos.alvarasFuncionamento_cpfRequerente}" />
+						<h:outputLabel
+							value="#{rotulos.alvarasFuncionamento_nomeRequerente}" />
+						<p:panel style="height:28px">
+							<h:outputLabel
+								value="#{cc.attrs.MB.alvarasFuncionamentoBeans.cpfRequerente}">
+							</h:outputLabel>
+						</p:panel>
+						<p:panel style="height:28px">
+							<h:outputLabel
+								value="#{cc.attrs.MB.alvarasFuncionamentoBeans.nomeRequerente}">
+							</h:outputLabel>
+						</p:panel>
+						<h:outputLabel
+							value="#{rotulos.alvarasFuncionamento_cnpjEstabelecimento}" />
+						<h:outputLabel
+							value="#{rotulos.alvarasFuncionamento_nomeFantasia}" />
+						<p:panel style="height:28px">
+							<h:outputLabel
+								value="#{cc.attrs.MB.alvarasFuncionamentoBeans.cnpjEstabelecimento}">
+							</h:outputLabel>
+						</p:panel>
+						<p:panel style="height:28px">
+							<h:outputLabel
+								value="#{cc.attrs.MB.alvarasFuncionamentoBeans.nomeFantasia}">
+							</h:outputLabel>
+						</p:panel>
+						<h:outputLabel value="Endereço" />
+						<h:outputLabel value="Nº" />
+						<p:panel style="height:28px">
+							<h:outputLabel
+								value="#{cc.attrs.MB.alvarasFuncionamentoBeans.objPessoasBeans.objEnderecosBeans.endereco}">
+							</h:outputLabel>
+						</p:panel>
+						<p:panel style="height:28px">
+							<h:outputLabel
+								value="#{cc.attrs.MB.alvarasFuncionamentoBeans.objPessoasBeans.objEnderecosBeans.numero}">
+							</h:outputLabel>
+						</p:panel>
+						<h:outputLabel value="Complemento" />
+						<h:outputLabel value="Bairro" />
+						<p:panel style="height:28px">
+							<h:outputLabel
+								value="#{cc.attrs.MB.alvarasFuncionamentoBeans.objPessoasBeans.objEnderecosBeans.complemento}">
+							</h:outputLabel>
+						</p:panel>
+						<p:panel style="height:28px">
+							<h:outputLabel
+								value="#{cc.attrs.MB.alvarasFuncionamentoBeans.objPessoasBeans.objEnderecosBeans.bairro}">
+							</h:outputLabel>
+						</p:panel>
+						<h:outputLabel value="Telefone" />
+						<h:outputLabel value="Email" />
+						<p:panel style="height:28px">
+							<h:outputLabel
+								value="#{cc.attrs.MB.alvarasFuncionamentoBeans.objPessoasBeans.objEnderecosBeans.telefone}">
+							</h:outputLabel>
+						</p:panel>
+						<p:panel style="height:28px">
+							<h:outputLabel
+								value="#{cc.attrs.MB.alvarasFuncionamentoBeans.objPessoasBeans.objEnderecosBeans.email}">
+							</h:outputLabel>
+						</p:panel>
+
+						<h:outputLabel value="Atividades" />
+						<h:outputLabel value="" />
+
+					</p:panelGrid>
+					<p:panelGrid id="panelListaAtividadesEmpreendimento"
+						styleClass="semBorda" style="width:100%">
+						<p:row>
+							<p:column>
+								<p:dataTable id="dtListaAtividadesEmpreedimento" var="atividade"
+									value="#{cc.attrs.MB.listaAtividadesAlvaraFuncionamento}"
+									rowKey="#{atividade.objCnaesBeans.subclasse}"
+									emptyMessage="#{rotulos.mensagemListaVazia}">
+
+									<p:column width="30" style="text-align:center"
+										headerText="#{rotulos.viabilidade_listaatividades_colCnae}">
+										<h:outputText value="#{atividade.objCnaesBeans.subclasse}" />
+									</p:column>
+									<p:column width="250"
+										headerText="#{rotulos.viabilidade_listaatividades_colDescricao}">
+										<h:outputText value="#{atividade.objCnaesBeans.descricao}" />
+									</p:column>
+									<p:column width="30" style="text-align:center"
+										headerText="Principal">
+										<h:outputText
+											value="#{atividade.principal eq 's' ? 'SIM' : 'NÃO' }" />
+									</p:column>
+								</p:dataTable>
+							</p:column>
+						</p:row>
+					</p:panelGrid>
+				</p:tab>
+
+				<p:tab title="Histórico">
+					<p:panelGrid id="panelListaHistoricoAlvara" styleClass="semBorda"
+						style="width:100%">
+						<p:row>
+							<p:column>
+								<p:dataTable id="dtListaHistoricoAlvara"
+									var="historicoAlvaraFuncionamento"
+									value="#{cc.attrs.MB.listaHistoricoAlvarasFuncionamento}"
+									emptyMessage="#{rotulos.mensagemListaVazia}">
+									<p:column width="30" style="text-align:center"
+										headerText="Situação">
+										<h:outputText
+											value="#{historicoAlvaraFuncionamento.objSituacoesAlvaraFuncionamentoAtualBeans.situacaoAlvaraFuncionamento}" />
+									</p:column>
+									<p:column width="30" style="text-align:center"
+										headerText="Data Processamento">
+										<h:outputText
+											value="#{historicoAlvaraFuncionamento.dataHoraCadastro}">
+											<f:convertDateTime dateStyle="long" timeZone="GMT-03:00"
+												pattern="dd/MM/yyyy HH:mm" />
+										</h:outputText>
+									</p:column>
+									<p:column width="30" style="text-align:center"
+										headerText="Pendências">
+										<h:outputText
+											value="#{historicoAlvaraFuncionamento.observacoes}" />
+									</p:column>
+								</p:dataTable>
+							</p:column>
+						</p:row>
+					</p:panelGrid>
+				</p:tab>
+				<p:tab title="Emissão do Alvará"
+					rendered="#{cc.attrs.MB.exibirAbaEmissaoAlvara()}">
+					<p:panelGrid id="panelEmissaoAlvara" styleClass="semBorda"
+						style="width:100%">
+						<p:row>
+							<p:column>
+								<h:outputText
+									value="#{rotulos.alvarasFuncionamento_observacoes}" />
+							</p:column>
+						</p:row>
+						<p:row>
+							<p:column styleClass='text-align:center;vertical-align:middle'>
+
+								<p:inputTextarea rows="5" cols="96"
+									disabled="#{cc.attrs.MB.alvaraEmitido}"
+									value="#{cc.attrs.MB.alvarasFuncionamentoBeans.observacoes}"
+									maxlength="1000" counterTemplate="{0} caracteres restantes."
+									autoResize="false" />
+								<h:outputText id="displayContador" />
+							</p:column>
+						</p:row>
+						<p:row>
+							<p:column>
+								<p:panelGrid id="panelSituacaoes" columns="2"
+									rendered="#{cc.attrs.MB.painelSituacoes}">
+									<h:outputText value="Situação do DAM:" />
+									<h:outputText value="#{cc.attrs.MB.situacaoDam}" />
+									<h:outputText value="Isenção Licenciamento Ambiental:" />
+									<h:outputText value="#{cc.attrs.MB.insencaoLicencimento}" />
+									<h:outputText value="Situacao do Alvará:" />
+									<h:outputText value="#{cc.attrs.MB.situacaoAlvara}" />
+									<h:outputText value="Situacao de Envio:" />
+									<h:outputText value="#{cc.attrs.MB.situacaoEnvio}" />
+								</p:panelGrid>
+							</p:column>
+						</p:row>
+						<p:row>
+							<p:column styleClass='text-align:center;vertical-align:middle'>
+								<p:panelGrid>
+									<p:row>
+										<p:column>
+											<p:commandButton id="btnEmitirAlvara"
+												rendered="#{not cc.attrs.MB.alvaraEmitido}"
+												value="#{rotulos.alvarasFuncionamento_btnEmitirAlvara}"
+												update="dlgMessagesCofirmacao01" styleClass="botao deferir"
+												action="#{cc.attrs.MB.confirmarEmissaoAlvara()}">
+											</p:commandButton>
+											<ui:insert name="dlgConfirmacao01">												
+												<p:confirmDialog id="dlgMessagesCofirmacao01" appendTo="@form"
+													widgetVar="dlgMsgConfimacaoJS_01" message="#{cc.attrs.MB.msgGlobal}"
+													header="#{rotulos.dlgConfirmacao_titulo}" global="false"
+													showEffect="fade" hideEffect="explode">
+
+													<p:commandButton value="#{rotulos.btnConfirmacaoSim}"
+														styleClass="ui-confirmdialog-yes" icon="ui-icon-check"
+														update="panelEmissaoAlvara"
+														oncomplete="PF('dlgMsgConfimacaoJS_01').hide()"
+														action="#{cc.attrs.MB.emitirAlvaraFuncionamento}" />
+													<p:commandButton value="#{rotulos.btnConfirmacaoNao}"
+														styleClass="ui-confirmdialog-no" icon="ui-icon-close"
+														update=""
+														action="#{cc.attrs.MB.noAction}"
+														oncomplete="PF('dlgMsgConfimacaoJS_01').hide()" />
+												</p:confirmDialog>
+											</ui:insert>
+										</p:column>
+										<p:column>
+											<p:commandButton id="btnIncluirPendencia"
+												rendered="#{not cc.attrs.MB.alvaraEmitido}"
+												value="#{rotulos.alvarasFuncionamento_btnIncluirPendencia}"
+												update="componenteDlgJustificativa_01"
+												styleClass="botao indeferir"
+												action="#{cc.attrs.MB.verificarIncluirPendenciaAlvara}">
+											</p:commandButton>
+										</p:column>
+									</p:row>
+								</p:panelGrid>
+							</p:column>
+						</p:row>
+						<p:row>
+							<p:column styleClass='text-align:center;vertical-align:middle'>
+								<p:panelGrid style="width:400" styleClass="semBorda">
+									<p:row>
+										<p:column>
+											<p:commandButton value="Download Alvará" ajax="false"
+												rendered="#{cc.attrs.MB.alvaraEmitido}"
+												styleClass="botao medium"
+												onclick="PrimeFaces.monitorDownload(start, stop);"
+												icon="ui-icon-arrowthick-1-s">
+												<p:fileDownload
+													value="#{cc.attrs.MB.downloadPdfAlvaraFuncionamento()}" />
+											</p:commandButton>
+
+
+										</p:column>
+										<p:column>
+
+											<p:commandButton value="Visualizar Alvará" ajax="false"
+												rendered="#{cc.attrs.MB.alvaraEmitido}"
+												styleClass="botao medium" process="@this"
+												actionListener="#{cc.attrs.MB.visualizarPdfAlvaraFuncionamento()}"
+												onclick="PrimeFaces.monitorDownload(start, stop);"
+												icon="ui-icon-arrowthick-1-s">
+											</p:commandButton>
+
+										</p:column>
+									</p:row>
+								</p:panelGrid>
+							</p:column>
+						</p:row>
+					</p:panelGrid>
+					<p:panel id="componenteDlgJustificativa_01" style="border: 0">
+						<cogect:dlgjustificativa
+							idDlgJustificativa="componenteDlgJustificativa01"
+							varJS="componenteDlgJustificativaJS_01"
+							actionConfirmacao="incluirPendenciaAlvara"
+							actionNegacao="noAction" MBDlgJustificativa="#{cc.attrs.MB}"
+							updateConfirmacao="" updateNegacao=""
+							campoJustificativa="#{cc.attrs.MB.justificativaPendencia}"
+							labelJustificativa="Justificativa">
+						</cogect:dlgjustificativa>
+					</p:panel>
+				</p:tab>
+			</p:tabView>
+		</p:dialog>
+
+	</composite:implementation>
+
+</ui:composition>

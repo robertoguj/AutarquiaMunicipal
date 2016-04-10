@@ -1,0 +1,380 @@
+<ui:composition lang="pt_br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="/bootstrap/templates/principal.xhtml">
+
+	<ui:define name="conteudo">
+
+		<div class="page-title">
+			<h3>
+				<strong>Manage Orders</strong>
+			</h3>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+								<table id="products-table" class="table table-tools table-hover">
+									<thead>
+										<tr>
+											<th style="min-width: 70px"><strong>ID</strong></th>
+											<th><strong>Purchase Date</strong></th>
+											<th><strong>Reference</strong></th>
+											<th><strong>Client</strong></th>
+											<th><strong>Amount</strong></th>
+											<th><strong>Items</strong></th>
+											<th><strong>Delivery date</strong></th>
+											<th><strong>Destination</strong></th>
+											<th class="text-center"><strong>Status</strong></th>
+											<th class="text-center"><strong>Actions</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>03/11/2013</td>
+											<td>SV 456 878 647</td>
+											<td>John Addams</td>
+											<td>$125.20</td>
+											<td>5</td>
+											<td>02/10/2013</td>
+											<td>New York</td>
+											<td class="text-center"><span
+												class="label label-success w-300">Shipped</span></td>
+											<td class="text-center"><a
+												href="ecommerce_order_view.html"
+												class="view btn btn-sm btn-default"><i
+													class="fa fa-search"></i> View</a></td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>02/11/2013</td>
+											<td>BG 588 735 457</td>
+											<td>Steve Jobs</td>
+											<td>$352.55</td>
+											<td>12</td>
+											<td>01/10/2013</td>
+											<td>Chicago</td>
+											<td class="text-center"><span
+												class="label label-success w-300">Payment received</span></td>
+											<td class="text-center"><a
+												href="ecommerce_order_view.html"
+												class="view btn btn-sm btn-default"><i
+													class="fa fa-search"></i> View</a></td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>04/09/2013</td>
+											<td>YT 124 856 565</td>
+											<td>Mike Jefferson</td>
+											<td>$121.00</td>
+											<td>6</td>
+											<td>28/09/2013</td>
+											<td>Los Angeles</td>
+											<td class="text-center"><span
+												class="label label-primary w-300">Waiting paiment</span></td>
+											<td class="text-center"><a
+												href="ecommerce_order_view.html"
+												class="view btn btn-sm btn-default"><i
+													class="fa fa-search"></i> View</a></td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>02/09/2013</td>
+											<td>MP 548 587 698</td>
+											<td>James Miller</td>
+											<td>$85.55</td>
+											<td>2</td>
+											<td>14/09/2013</td>
+											<td>Miami</td>
+											<td class="text-center"><span
+												class="label label-primary w-300">Waiting paiment</span></td>
+											<td class="text-center"><a
+												href="ecommerce_order_view.html"
+												class="view btn btn-sm btn-default"><i
+													class="fa fa-search"></i> View</a></td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td>01/09/2013</td>
+											<td>TG 456 878 687</td>
+											<td>Samantha Harris</td>
+											<td>$125.20</td>
+											<td>5</td>
+											<td>No date</td>
+											<td>Boston</td>
+											<td class="text-center"><span
+												class="label label-warning w-300">Fraud</span></td>
+											<td class="text-center"><a
+												href="ecommerce_order_view.html"
+												class="view btn btn-sm btn-default"><i
+													class="fa fa-search"></i> View</a></td>
+										</tr>
+										<tr>
+											<td>6</td>
+											<td>25/08/2013</td>
+											<td>JH 667 556 879</td>
+											<td>Nicole Smith</td>
+											<td>$352.55</td>
+											<td>11</td>
+											<td>02/11/2013</td>
+											<td>Chicago</td>
+											<td class="text-center"><span
+												class="label label-success w-300">Payment received</span></td>
+											<td class="text-center"><a
+												href="ecommerce_order_view.html"
+												class="view btn btn-sm btn-default"><i
+													class="fa fa-search"></i> View</a></td>
+										</tr>
+										<tr>
+											<td>7</td>
+											<td>22/08/2013</td>
+											<td>YT 124 856 554</td>
+											<td>Jordan</td>
+											<td>$658.00</td>
+											<td>15</td>
+											<td>No date</td>
+											<td>Seattle</td>
+											<td class="text-center"><span
+												class="label label-success w-300">Shipped</span></td>
+											<td class="text-center"><a
+												href="ecommerce_order_view.html"
+												class="view btn btn-sm btn-default"><i
+													class="fa fa-search"></i> View</a></td>
+										</tr>
+										<tr>
+											<td>8</td>
+											<td>22/08/2013</td>
+											<td>NB 124 698 565</td>
+											<td>Kim Addams</td>
+											<td>$365.45</td>
+											<td>7</td>
+											<td>No date</td>
+											<td>Miami</td>
+											<td class="text-center"><span
+												class="label label-primary w-300">Waiting paiment</span></td>
+											<td class="text-center"><a
+												href="ecommerce_order_view.html"
+												class="view btn btn-sm btn-default"><i
+													class="fa fa-search"></i> View</a></td>
+										</tr>
+										<tr>
+											<td>9</td>
+											<td>20/08/2013</td>
+											<td>YU 333 558 647</td>
+											<td>Bobby Brown</td>
+											<td>$127.68</td>
+											<td>2</td>
+											<td>02/03/2013</td>
+											<td>Madrid</td>
+											<td class="text-center"><span
+												class="label label-success w-300">Shipped</span></td>
+											<td class="text-center"><a
+												href="ecommerce_order_view.html"
+												class="view btn btn-sm btn-default"><i
+													class="fa fa-search"></i> View</a></td>
+										</tr>
+										<tr>
+											<td>10</td>
+											<td>17/08/2013</td>
+											<td>BP 665 755 488</td>
+											<td>Fred Smith</td>
+											<td>$368.65</td>
+											<td>12</td>
+											<td>No date</td>
+											<td>London</td>
+											<td class="text-center"><span
+												class="label label-dark w-300">Payment canceled</span></td>
+											<td class="text-center"><a
+												href="ecommerce_order_view.html"
+												class="view btn btn-sm btn-default"><i
+													class="fa fa-search"></i> View</a></td>
+										</tr>
+										<tr>
+											<td>11</td>
+											<td>04/08/2013</td>
+											<td>SD 225 544 688</td>
+											<td>Willy Demsey</td>
+											<td>$185.05</td>
+											<td>5</td>
+											<td>No date</td>
+											<td>Paris</td>
+											<td class="text-center"><span
+												class="label label-dark w-300">Payment canceled</span></td>
+											<td class="text-center"><a
+												href="ecommerce_order_view.html"
+												class="view btn btn-sm btn-default"><i
+													class="fa fa-search"></i> View</a></td>
+										</tr>
+										<tr>
+											<td>12</td>
+											<td>28/07/2013</td>
+											<td>KI 658 556 568</td>
+											<td>Dylan Mac Namara</td>
+											<td>$134.00</td>
+											<td>4</td>
+											<td>No date</td>
+											<td>Miami</td>
+											<td class="text-center"><span
+												class="label label-success w-300">Shipped</span></td>
+											<td class="text-center"><a
+												href="ecommerce_order_view.html"
+												class="view btn btn-sm btn-default"><i
+													class="fa fa-search"></i> View</a></td>
+										</tr>
+										<tr>
+											<td>13</td>
+											<td>27/07/2013</td>
+											<td>JU 665 445 758</td>
+											<td>Aretha Filips</td>
+											<td>$75.20</td>
+											<td>2</td>
+											<td>No date</td>
+											<td>New York</td>
+											<td class="text-center"><span
+												class="label label-dark w-300">Payment canceled</span></td>
+											<td class="text-center"><a
+												href="ecommerce_order_view.html"
+												class="view btn btn-sm btn-default"><i
+													class="fa fa-search"></i> View</a></td>
+										</tr>
+										<tr>
+											<td>14</td>
+											<td>27/07/2013</td>
+											<td>GF 456 855 777</td>
+											<td>Joseph Dumon</td>
+											<td>$347.98</td>
+											<td>7</td>
+											<td>02/11/2013</td>
+											<td>Boston</td>
+											<td class="text-center"><span
+												class="label label-success w-300">Payment received</span></td>
+											<td class="text-center"><a
+												href="ecommerce_order_view.html"
+												class="view btn btn-sm btn-default"><i
+													class="fa fa-search"></i> View</a></td>
+										</tr>
+										<tr>
+											<td>15</td>
+											<td>21/07/2013</td>
+											<td>KI 325 744 668</td>
+											<td>Bryan Oconnors</td>
+											<td>$32.05</td>
+											<td>1</td>
+											<td>No date</td>
+											<td>Los Angeles</td>
+											<td class="text-center"><span
+												class="label label-dark w-300">Payment canceled</span></td>
+											<td class="text-center"><a
+												href="ecommerce_order_view.html"
+												class="view btn btn-sm btn-default"><i
+													class="fa fa-search"></i> View</a></td>
+										</tr>
+										<tr>
+											<td>16</td>
+											<td>18/07/2013</td>
+											<td>AZ 554 788 244</td>
+											<td>Bob Dylan</td>
+											<td>$654.00</td>
+											<td>18</td>
+											<td>No date</td>
+											<td>Boston</td>
+											<td class="text-center"><span
+												class="label label-primary w-300">Waiting paiment</span></td>
+											<td class="text-center"><a
+												href="ecommerce_order_view.html"
+												class="view btn btn-sm btn-default"><i
+													class="fa fa-search"></i> View</a></td>
+										</tr>
+										<tr>
+											<td>17</td>
+											<td>17/07/2013</td>
+											<td>OI 214 887 657</td>
+											<td>Alfred Mills</td>
+											<td>$124.20</td>
+											<td>5</td>
+											<td>02/03/2013</td>
+											<td>San Francisco</td>
+											<td class="text-center"><span
+												class="label label-success w-300">Shipped</span></td>
+											<td class="text-center"><a
+												href="ecommerce_order_view.html"
+												class="view btn btn-sm btn-default"><i
+													class="fa fa-search"></i> View</a></td>
+										</tr>
+										<tr>
+											<td>18</td>
+											<td>14/07/2013</td>
+											<td>NB 577 523 547</td>
+											<td>Ben Saoul</td>
+											<td>$298.55</td>
+											<td>13</td>
+											<td>02/11/2013</td>
+											<td>Chicago</td>
+											<td class="text-center"><span
+												class="label label-success w-300">Payment received</span></td>
+											<td class="text-center"><a
+												href="ecommerce_order_view.html"
+												class="view btn btn-sm btn-default"><i
+													class="fa fa-search"></i> View</a></td>
+										</tr>
+										<tr>
+											<td>19</td>
+											<td>13/07/2013</td>
+											<td>UY 668 445 545</td>
+											<td>Morris Phillips</td>
+											<td>$545.00</td>
+											<td>23</td>
+											<td>No date</td>
+											<td>Los Angeles</td>
+											<td class="text-center"><span
+												class="label label-danger w-300">Payment received</span></td>
+											<td class="text-center"><a
+												href="ecommerce_order_view.html"
+												class="view btn btn-sm btn-default"><i
+													class="fa fa-search"></i> View</a></td>
+										</tr>
+										<tr>
+											<td>20</td>
+											<td>12/07/2013</td>
+											<td>GT 658 456 755</td>
+											<td>Mike Jefferson</td>
+											<td>$123.00</td>
+											<td>4</td>
+											<td>No date</td>
+											<td>Miami</td>
+											<td class="text-center"><span
+												class="label label-primary w-300">Waiting paiment</span></td>
+											<td class="text-center"><a
+												href="ecommerce_order_view.html"
+												class="view btn btn-sm btn-default"><i
+													class="fa fa-search"></i> View</a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- BEGIN PAGE LEVEL SCRIPTS -->
+		<script	src="#{request.contextPath}/bootstrap/resources/js/bootstrap-switch.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/bootstrap-progressbar.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/jquery.dataTables.min.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/dataTables.bootstrap.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/dataTables.tableTools.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/table.editable.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/ecommerce.js" />
+		<!-- END  PAGE LEVEL SCRIPTS -->
+
+
+	</ui:define>
+
+</ui:composition>

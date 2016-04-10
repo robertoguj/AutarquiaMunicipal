@@ -1,0 +1,100 @@
+<ui:composition lang="pt_br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="/bootstrap/templates/principal.xhtml">
+
+	<ui:define name="conteudo">
+
+		<link href="${ctx}/bootstrap/resources/css/fullcalendar.css" rel="stylesheet" />
+
+		<!-- BEGIN MODAL -->
+		<div class="modal fade" id="event-modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"
+							aria-hidden="true" />
+						<h4 class="modal-title">
+							<strong>Manage</strong> my events
+						</h4>
+					</div>
+					<div class="modal-body">
+						<p></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-success save-event">Create
+							event</button>
+						<button type="button" class="btn btn-danger delete-event"
+							data-dismiss="modal">Delete</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END MODAL -->
+
+		<div class="widget-fullwidth bg-gray-light row">
+			<div class="col-md-3 p-0">
+				<div class="widget bg-gray-light">
+					<div class="widget-body">
+						<div class="row">
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<h2 class="text-white semi-bold" id="calender-current-day">Events
+									Manager</h2>
+								<h3 class="text-white" id="calender-current-date">Editable
+									and dragable</h3>
+								<div id='external-events'>
+									<br /> <br />
+									<p>Drag and drop your event or click in the calendar</p>
+									<div class="external-event bg-green" data-class="bg-green"
+										style="position: relative;">
+										<i class="fa fa-move"></i>Sport
+									</div>
+									<div class="external-event bg-purple" data-class="bg-purple"
+										style="position: relative;">
+										<i class="fa fa-move"></i>Meeting
+									</div>
+									<div class="external-event bg-red" data-class="bg-red"
+										style="position: relative;">
+										<i class="fa fa-move"></i>Work
+									</div>
+									<div class="external-event bg-blue" data-class="bg-blue"
+										style="position: relative;">
+										<i class="fa fa-move"></i>Children
+									</div>
+									<p class="m-t-40">
+										<label> <input id="drop-remove" type="checkbox" />remove
+											after drop
+										</label>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-9 p-0 no-bd">
+				<div class="widget bg-white">
+					<div class="widget-body">
+						<div class="row">
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<div id="calendar"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- BEGIN PAGE LEVEL SCRIPTS -->
+		<script	src="#{request.contextPath}/bootstrap/resources/js/moment.min.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/fullcalendar.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/calendar.js" />
+		<!-- END  PAGE LEVEL SCRIPTS -->
+
+	</ui:define>
+
+</ui:composition>

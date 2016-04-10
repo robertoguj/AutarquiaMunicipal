@@ -1,0 +1,55 @@
+<ui:composition lang="pt_br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="/bootstrap/templates/principal.xhtml">
+
+	<ui:define name="conteudo">
+
+		<div class="row">
+			<div class="col-sm-8">
+				<h2>
+					We love what we do. <br /> This is features of our products
+				</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<form>
+					<label class="h6">Name / Last Name</label> <input type="text"
+						class="form-control" /> <label class="h6">E-mail</label> <input
+						type="text" class="form-control" /> <label class="h6">Message</label>
+					<textarea rows="7" class="form-control"></textarea>
+					<button type="submit" class="btn btn-success">
+						<span class="glyph-icon flaticon-email"></span>
+					</button>
+				</form>
+			</div>
+			<div class="col-sm-4 col-sm-offset-1">
+				<div class="additional">
+					<h3>Need Help?</h3>
+					<p>
+						Don’t hestiate to ask us something. Email us directly <a href="#">support@themes-lab.com</a>
+						or call us at <b>1-254-752-254</b>. You can checkout our <a
+							href="faq.html">FAQ</a> and <a href="forum.html">Forum</a> page
+						to get more information about our products.
+					</p>
+				</div>
+				<div class="additional">
+					<h3>FAQ</h3>
+					<p>As a Harvard professor, he was one of the first to explore
+						the relationship between chemical equilibrium and the reaction
+						rate of chemical processes.</p>
+				</div>
+				<div class="phone">
+					<h1 class="c-green">254 752 21 47</h1>
+					AVAILABLE AT 12PM - 18PM
+				</div>
+			</div>
+		</div>
+
+	</ui:define>
+
+</ui:composition>

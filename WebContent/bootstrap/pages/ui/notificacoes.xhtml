@@ -1,0 +1,123 @@
+<ui:composition lang="pt_br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="/bootstrap/templates/principal.xhtml">
+
+	<ui:define name="conteudo">
+
+		<link rel="stylesheet"
+			href="${ctx}/bootstrap/resources/css/jNotify.jquery.css" />
+
+		<div class="page-title">
+			<i class="icon-custom-left"></i>
+			<h3>
+				<strong>Original</strong> Notifications
+			</h3>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">
+							<strong>Notifications</strong> options
+						</h3>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-md-4">
+								<h3>
+									<strong>Status</strong> variations
+								</h3>
+								<p>You have 3 types available: info, success and error.</p>
+								<br />
+								<button type="button" data-type="info"
+									class="btn btn-info notification"
+									data-message="Você clicou com êxito no botão notificação."
+									data-horiz-pos="right" data-verti-pos="bottom">Info</button>
+								<button type="button" data-type="success"
+									class="btn btn-success notification"
+									data-message="Você clicou com êxito no botão notificação."
+									data-horiz-pos="right" data-verti-pos="bottom">Success</button>
+								<button type="button" data-type="error"
+									class="btn btn-danger notification"
+									data-message="Ops! Algo deu errado." data-horiz-pos="right"
+									data-verti-pos="bottom">Error</button>
+							</div>
+							<div class="col-md-4">
+								<h3>
+									<strong>Positions</strong> options
+								</h3>
+								<p>You can adapt the horizontal and vertical position: top,
+									bottom, left, right.</p>
+								<br />
+								<div class="notification_position">
+									<div class="bit top left notification" data-type="success"
+										data-message="Estou no canto superior esquerdo!"
+										data-horiz-pos="left" data-verti-pos="top"></div>
+									<div class="bit top right notification" data-type="info"
+										data-message="Estou no canto superior direito!"
+										data-horiz-pos="right" data-verti-pos="top"></div>
+									<div class="bit top notification" data-type="info"
+										data-message="Estou no topo centro!" data-horiz-pos="center"
+										data-verti-pos="top"></div>
+									<div class="bit medium left notification" data-type="success"
+										data-message="Estou do lado esquerdo do meio!"
+										data-horiz-pos="left" data-verti-pos="center"></div>
+									<div class="bit medium right notification" data-type="info"
+										data-message="Estou do lado direito do meio!"
+										data-horiz-pos="right" data-verti-pos="center"></div>
+									<div class="bit medium notification" data-type="info"
+										data-message="Estou no meio da página!"
+										data-horiz-pos="center" data-verti-pos="center"></div>
+									<div class="bit bottom left notification" data-type="success"
+										data-message="Estou no canto inferior esquerdo!"
+										data-horiz-pos="left" data-verti-pos="bottom"></div>
+									<div class="bit bottom right notification" data-type="info"
+										data-message="Estou no canto inferior direito!"
+										data-horiz-pos="right" data-verti-pos="bottom"></div>
+									<div class="bit bottom notification" data-type="info"
+										data-message="Estou na parte inferior central!"
+										data-horiz-pos="center" data-verti-pos="bottom"></div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="skin skin-minimal">
+									<h3>
+										<strong>Many</strong> options
+									</h3>
+									<p>You can add an overlay, change animation, width...</p>
+									<br />
+									<button type="button" class="btn btn-dark notification"
+										data-type="info"
+										data-message="Você pode escrever o que quiser em Html aqui!"
+										data-horiz-pos="right" data-verti-pos="bottom"
+										data-overlay="true">With an overlay</button>
+									<button type="button" class="btn btn-default notification"
+										data-type="info"
+										data-message="Bem vindo! Você pode adicionar imagem se você quiser."
+										data-horiz-pos="center" data-verti-pos="center"
+										data-min-width="600">I am large</button>
+									<button type="button" id="notif-callback"
+										class="btn btn-danger" data-type="info"
+										data-message="Você clicou com êxito no botão de notificação."
+										data-horiz-pos="right" data-verti-pos="bottom">With
+										callback</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- BEGIN PAGE LEVEL SCRIPTS -->
+		<script	src="#{request.contextPath}/bootstrap/resources/js/jNotify.jquery.min.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/notifications.js" />
+		<!-- END PAGE LEVEL SCRIPTS -->
+
+	</ui:define>
+
+</ui:composition>

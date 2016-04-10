@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js sidebar-large lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js sidebar-large lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js sidebar-large lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js sidebar-large"><!--<![endif]-->
+
+<head>	
+
+	<meta charset="UTF-8" />
+
+   	<title>Sistema de Controle de Dívida Ativa</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<link rel="shortcut icon" type="image/x-icon"
+		href="#{facesContext.externalContext.requestContextPath}/bootstrap/resources/images/favicon.ico" />
+    
+	<!-- BEGIN STYLE -->
+    <link href="#{facesContext.externalContext.requestContextPath}/bootstrap/resources/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="#{facesContext.externalContext.requestContextPath}/bootstrap/resources/css/plugins.css" rel="stylesheet" />
+    <link href="#{facesContext.externalContext.requestContextPath}/bootstrap/resources/css/style.min.css" rel="stylesheet" />
+    <!-- END STYLE -->
+    
+    <link href="#{facesContext.externalContext.requestContextPath}/bootstrap/resources/css/animate-custom.css" rel="stylesheet" />
+
+    <!-- BEGIN SCRIPTS -->
+    <script src="#{request.contextPath}/bootstrap/resources/js/modernizr-2.6.2-respond-1.1.0.min.js" />
+    
+</head>
+
+<body class="error-page">
+<!-- BEGIN LOCKSCREEN BOX -->
+    <div id="coming-block">
+        <div class="row">
+            <div class="col-sm-12 col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">
+                <div class="countdown-container">
+                <div align="center"><img src="#{facesContext.externalContext.requestContextPath}/bootstrap/resources/images/login-logo.png" alt="Company Logo" /></div>
+                <h1>Sistema em manutenção, normalizaremos em breve!</h1>
+                    <div class="clock row">
+                        <div class="clock-item clock-days countdown-time-value col-sm-3 col-md-3">
+                            <div class="wrap">
+                                <div class="inner">
+                                    <div id="canvas-days" class="clock-canvas"></div>
+                                    <div class="text">
+                                        <p class="val">0</p>
+                                        <p class="type-days type-time">DIAS</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clock-item clock-hours countdown-time-value col-sm-3 col-md-3">
+                            <div class="wrap">
+                                <div class="inner">
+                                    <div id="canvas-hours" class="clock-canvas"></div>
+
+                                    <div class="text">
+                                        <p class="val">0</p>
+                                        <p class="type-hours type-time">HORAS</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clock-item clock-minutes countdown-time-value col-sm-3 col-md-3">
+                            <div class="wrap">
+                                <div class="inner">
+                                    <div id="canvas-minutes" class="clock-canvas"></div>
+
+                                    <div class="text">
+                                        <p class="val">0</p>
+                                        <p class="type-minutes type-time">MINUTOS</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clock-item clock-seconds countdown-time-value col-sm-3 col-md-3">
+                            <div class="wrap">
+                                <div class="inner">
+                                    <div id="canvas-seconds" class="clock-canvas"></div>
+
+                                    <div class="text">
+                                        <p class="val">0</p>
+                                        <p class="type-seconds type-time">SEGUNDOS</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form action="#" method="get" class="coming-form" role="form">
+                    <input type="email" placeholder="Digite seu endereço de email" class="input-field m-b-0" />
+                    <a href="index.html" class="btn btn-coming">Seja Avisado</a>
+                </form>
+
+                <footer class="social m-t-60">
+                    <a href="index.html" ><span class="fa fa-facebook"></span></a>
+                    <a href="index.html" ><span class="fa fa-twitter"></span></a>
+                    <a href="index.html" ><span class="fa fa-google-plus"></span></a>
+                    <a href="index.html" ><span class="fa fa-dribbble"></span></a>
+                    <a href="index.html" ><span class="fa fa-linkedin"></span></a>
+                </footer>
+                <p class="copyright">© Copyright AMC, 2015 Tecnologia da Informação.</p>
+
+            </div>
+        </div>
+    </div>
+    <!-- END LOCKSCREEN BOX -->
+    
+    <!-- BEGIN MANDATORY SCRIPTS -->
+    <script src="#{request.contextPath}/bootstrap/resources/js/jquery-1.11.js" />
+    <script src="#{request.contextPath}/bootstrap/resources/js/jquery-migrate-1.2.1.js" />
+    <script src="#{request.contextPath}/bootstrap/resources/js/jquery-ui-1.10.4.min.js" />
+    <script src="#{request.contextPath}/bootstrap/resources/js/jquery.mobile-1.4.2.js" />
+    <script src="#{request.contextPath}/bootstrap/resources/js/bootstrap.min.js" />
+    <script src="#{request.contextPath}/bootstrap/resources/js/jquery.cookie.min.js" />
+    <!-- END MANDATORY SCRIPTS -->
+    
+    <!-- BEGIN PAGE LEVEL SCRIPTS -->
+    <script src="#{request.contextPath}/bootstrap/resources/js/backstretch.min.js" />
+    <script type="#{request.contextPath}/bootstrap/resources/js/kinetic.js" />
+    <script type="#{request.contextPath}/bootstrap/resources/js/jquery.final-countdown.js" />
+    <script src="#{request.contextPath}/bootstrap/resources/js/coming_soon.js" />
+    <!-- END PAGE LEVEL SCRIPTS -->
+
+</body>
+</html>

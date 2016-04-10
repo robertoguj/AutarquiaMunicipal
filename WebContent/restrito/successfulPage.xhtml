@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<head>
+<title>LoggedIn - Spring Security</title>
+</head>
+<body>
+	<h:form>
+		<h:messages />
+		<h:panelGrid columns="1">
+		
+
+    		Você está logado com o usuário:		
+    		<br /> 
+		
+			<h:commandLink value="Usuário"
+				rendered="#{facesContext.externalContext.isUserInRole('ROLE_USER') or facesContext.externalContext.isUserInRole('ROLE_ADMIN')}"
+				action="#{redirectorBean.userPage}" />
+			<h:commandLink value="Administrador"
+				rendered="#{facesContext.externalContext.isUserInRole('ROLE_ADMIN')}"
+				action="#{redirectorBean.adminPage}" />
+			<h:commandLink value="Início" action="#{redirectorBean.index}" />
+
+			<br />
+			<br />
+
+			<h:commandButton value="Logout" action="#{authenticator.logout}" />
+		</h:panelGrid>
+	</h:form>
+</body>
+</html>

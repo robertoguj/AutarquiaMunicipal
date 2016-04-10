@@ -1,0 +1,276 @@
+<ui:composition lang="pt_br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="/bootstrap/templates/principal.xhtml">
+
+	<ui:define name="conteudo">
+
+		<!-- BEGIN PAGE LEVEL STYLE -->
+		<link rel="stylesheet" href="${ctx}/bootstrap/resources/css/iThing.css" />
+		<link rel="stylesheet" href="${ctx}/bootstrap/resources/css/bootstrap-slider.css" />
+		<!-- END PAGE LEVEL STYLE -->
+
+		<div class="page-title">
+			<i class="icon-custom-left"></i>
+			<h3>
+				<strong>Range</strong> sliders
+			</h3>
+		</div>
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">
+							<strong>Sliders</strong>
+						</h3>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-md-6">
+								<h3>
+									<strong>Arrows</strong> always visible
+								</h3>
+								<br />
+								<p>The option arrows lets you remove scrolling arrows on
+									both sides of the slider.</p>
+								<div class="range-slider"></div>
+							</div>
+							<div class="col-md-6">
+								<h3>
+									<strong>Delay</strong> layout arrows fading
+								</h3>
+								<br />
+								<p>
+									Option
+									<code>delayOut</code>
+									lets you specify the duration labels are shown after the user
+									changed its values..
+								</p>
+								<div class="range-slider" data-slider-delay-out="500"
+									data-slider-value-label="change"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">
+							<strong>Sliders</strong>
+						</h3>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-md-6">
+								<h3>
+									<strong>Formatter</strong> decimal example
+								</h3>
+								<br />
+								<p>
+									The option
+									<code>formatter</code>
+									lets you customize displayed label text.
+								</p>
+								<div id="slider3"></div>
+							</div>
+							<div class="col-md-6">
+								<h3>
+									<strong>Range</strong> max and min values
+								</h3>
+								<br />
+								<p>
+									The option
+									<code>range</code>
+									lets you specify minimum and/or maximum range length.
+								</p>
+								<div id="slider4"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-9">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">
+							<strong>Sliders</strong> with rulers
+						</h3>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-md-6">
+								<h3>
+									<strong>Scale</strong>
+								</h3>
+								<br />
+								<p>
+									The option
+									<code>scales</code>
+									lets you add a ruler with multiple scales to the slider
+									background. Pretty cool, no?
+								</p>
+								<div id="slider5" class="range-ruler"></div>
+							</div>
+							<div class="col-md-6">
+								<h3>
+									<strong>Date</strong> ruler
+								</h3>
+								<br />
+								<p>You can customize the ruler with what you want. Here you
+									can view an example with range of dates.</p>
+								<div id="slider6" class="range-ruler"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">
+							<strong>Sliders</strong> with steps
+						</h3>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-md-12">
+								<h3>
+									<strong>Step</strong> by step
+								</h3>
+								<br />
+								<p>
+									The option
+									<code>step</code>
+									allows to customize values rounding, and graphically render
+									this rounding.
+								</p>
+								<div class="range-ruler range-slider" data-slider-step="10"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<h3>
+			<strong>Simple</strong> sliders
+		</h3>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">
+							<strong>Sliders</strong> with rulers
+						</h3>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-lg-4">
+								<h3>
+									<strong>Horizontal</strong>
+								</h3>
+								<br />
+								<p>The basic slider is horizontal and has a single handle
+									that can be moved with the mouse or by using the arrow keys.</p>
+								<div class="row">
+									<div class="col-md-8 m-b-30">
+										<div class="slide" data-slider-max="100"
+											data-slider-value="43"></div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-8 m-b-30">
+										<div class="slide" data-slider-max="100"
+											data-slider-value="86"></div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-8 m-b-30">
+										<div class="slide" data-slider-max="100"
+											data-slider-value="27"></div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-8 m-b-30">
+										<div class="slide" data-slider-max="100"
+											data-slider-value="95"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4">
+								<h3>
+									<strong>Vertical</strong>
+								</h3>
+								<br />
+								<p>
+									Change the orientation of the slider to vertical. Just set
+									<code>orientation: 'vertical'</code>
+									.
+								</p>
+								<div class="slide" data-slider-max="100" data-slider-value="43"
+									data-slider-orientation="vertical"></div>
+								<div class="slide" data-slider-max="100" data-slider-value="86"
+									data-slider-orientation="vertical"></div>
+								<div class="slide" data-slider-max="100" data-slider-value="24"
+									data-slider-orientation="vertical"></div>
+								<div class="slide" data-slider-max="100" data-slider-value="95"
+									data-slider-orientation="vertical"></div>
+							</div>
+							<div class="col-lg-4">
+								<h3>
+									<strong>Color</strong> slider
+								</h3>
+								<br />
+								<p>
+									You can change the styled color of slide adding a class like
+									<code>primary</code>
+									or
+									<code>danger</code>
+									.
+								</p>
+								<div class="row">
+									<div class="col-md-8 danger m-b-30">
+										<div class="slide" data-slider-max="100"
+											data-slider-value="70"></div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-8 primary m-b-30">
+										<div class="slide" data-slider-max="100"
+											data-slider-value="95"></div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-8 success m-b-30">
+										<div class="slide" data-slider-max="100"
+											data-slider-value="56"></div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-8 warning m-b-30">
+										<div class="slide" data-slider-max="100"
+											data-slider-value="40"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- BEGIN PAGE LEVEL SCRIPTS -->
+		<script	src="#{request.contextPath}/bootstrap/resources/js/jQAllRangeSliders-min.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/jQAllRangeSliders-withRuler-min.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/bootstrap-slider.js" />
+		<script src="#{request.contextPath}/bootstrap/resources/js/slider.js" />
+		<!-- END  PAGE LEVEL SCRIPTS -->
+
+	</ui:define>
+
+</ui:composition>

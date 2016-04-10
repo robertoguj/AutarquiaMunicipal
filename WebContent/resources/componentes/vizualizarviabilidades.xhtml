@@ -1,0 +1,335 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:composite="http://java.sun.com/jsf/composite">
+	<composite:interface>
+		<composite:attribute name="MB" required="true" />
+	</composite:interface>
+	<composite:implementation>
+		<p:dialog id="dlgVisualizarViabilidades"
+			header="Viabilidade Protocolo #{cc.attrs.MB.viabilidadesBeans.protocoloRedesim}"
+			widgetVar="dlgVisualizarViabilidadesJS" resizable="false"
+			visible="false" modal="true" dynamic="true" hideEffect="slide"
+			width="800" height="600" maximizable="false" minWidth="800"
+			minHeight="600" position="center">
+
+			<p:tabView orientation="top"
+				activeIndex="#{cc.attrs.MB.indiceSelecionadoTabView}" dynamic="true">
+				<p:tab title="Dados Básicos">
+					<p:panelGrid styleClass="" columns="1" style="width:100%">
+						<h:outputLabel value="#{rotulos.viabilidades_protocoloRedesim}"
+							styleClass="ui-column-title" />
+						<p:panel style="width:40%">
+							<h:outputLabel
+								value="#{cc.attrs.MB.viabilidadesBeans.protocoloRedesim}" />
+						</p:panel>
+						<h:outputLabel value="CPF/CNPJ" styleClass="ui-column-title" />
+						<p:panel style="width:40%;height:28px">
+							<h:outputLabel
+								value="#{cc.attrs.MB.viabilidadesBeans.getViabilidadesDadosExtrasBeans().getSolicitanteBeans().getCpf()}" />
+						</p:panel>
+						<h:outputLabel value="Nome Solicitante"
+							styleClass="ui-column-title" />
+						<p:panel style="height:28px">
+							<h:outputLabel
+								value="#{cc.attrs.MB.viabilidadesBeans.getViabilidadesDadosExtrasBeans().getSolicitanteBeans().getNome()}" />
+						</p:panel>
+						<h:outputLabel value="Evento" styleClass="ui-column-title" />
+						<p:panel style="height:28px">
+							<h:outputLabel
+								value="#{cc.attrs.MB.viabilidadesBeans.getViabilidadesDadosExtrasBeans().getEventosRedesimBeans().getDescricao()}">
+
+							</h:outputLabel>
+						</p:panel>
+						<h:outputLabel value="Natureza Jurídica"
+							styleClass="ui-column-title" />
+						<p:panel style="height:28px">
+							<h:outputLabel
+								value="#{cc.attrs.MB.viabilidadesBeans.getViabilidadesDadosExtrasBeans().getNaturezasJuridicasBeans().getDescricaoNatureza()}" />
+						</p:panel>
+						<h:outputLabel value="Enquadramento" styleClass="ui-column-title" />
+						<p:panel style="height:28px">
+							<h:outputLabel
+								value="#{cc.attrs.MB.viabilidadesBeans.getViabilidadesDadosExtrasBeans().getEnquadramento()}" />
+						</p:panel>
+					</p:panelGrid>
+
+				</p:tab>
+				<p:tab title="Dados Imóvel">
+					<p:panelGrid styleClass="" columns="2" style="width:100%">
+						<h:outputLabel value="#{rotulos.viabilidades_iptu}"
+							styleClass="ui-column-title" />
+
+						<h:outputLabel value="Classificação Viária"
+							styleClass="ui-column-title" />
+
+						<p:panel style="height:28px">
+							<h:outputLabel value="#{cc.attrs.MB.viabilidadesBeans.iptu}" />
+						</p:panel>
+						<p:panel style="height:28px">
+							<h:outputLabel
+								value="#{cc.attrs.MB.viabilidadesBeans.getObjClassificacoesViariasBeans().getDescricaoClassificacao()}" />
+						</p:panel>
+
+						<h:outputLabel value="Macrozona" styleClass="ui-column-title" />
+
+						<h:outputLabel value="Zona Especial" styleClass="ui-column-title" />
+
+						<p:panel style="height:28px">
+							<h:outputLabel
+								value="#{cc.attrs.MB.viabilidadesBeans.getMacrozonasBeans().getDescricaoMacroZona()}"
+								style="#{cc.attrs.MB.viabilidadesBeans.getMacrozonasBeans().getCodigoMacrozona() eq 0 ? 'color:white' : ''}" />
+						</p:panel>
+						<p:panel style="height:28px">
+							<h:outputLabel
+								value="#{cc.attrs.MB.viabilidadesBeans.getObjZonasEspeciaisBeans().getDescricaoZonaEspecial()}"
+								style="#{cc.attrs.MB.viabilidadesBeans.getObjZonasEspeciaisBeans().getCodigoZonaEspecial() eq 0 ? 'color:white' : ''}" />
+
+						</p:panel>
+
+
+						<h:outputLabel value="CEP" styleClass="ui-column-title" />
+
+						<h:outputLabel value="Endereço" styleClass="ui-column-title" />
+
+						<p:panel style="height:28px">
+							<h:outputLabel value="#{cc.attrs.MB.cep}" />
+						</p:panel>
+						<p:panel style="height:28px">
+							<h:outputLabel value="#{cc.attrs.MB.logradouro}" />
+						</p:panel>
+						<h:outputLabel value="Nº" styleClass="ui-column-title" />
+						<h:outputLabel value="Complemento" styleClass="ui-column-title" />
+
+						<p:panel style="height:28px">
+							<h:outputLabel value="#{cc.attrs.MB.numeroLogradouro}" />
+						</p:panel>
+						<p:panel style="height:28px">
+							<h:outputLabel value="#{cc.attrs.MB.complemento}" />
+						</p:panel>
+
+						<h:outputLabel value="Área Total Terreno"
+							styleClass="ui-column-title" />
+						<h:outputLabel value="Área Empreendimento"
+							styleClass="ui-column-title" />
+
+						<p:panel style="height:28px">
+							<h:outputLabel
+								value="#{cc.attrs.MB.viabilidadesBeans.getAreaTotalTerreno()}">
+								<f:convertNumber pattern="#,##0.00" />
+							</h:outputLabel>
+						</p:panel>
+						<p:panel style="height:28px">
+							<h:outputLabel
+								value="#{cc.attrs.MB.viabilidadesBeans.getAreaEmpreendimento()}">
+								<f:convertNumber pattern="#,##0.00" />
+							</h:outputLabel>
+						</p:panel>
+						<h:outputLabel value="Área Construída"
+							styleClass="ui-column-title" />
+
+						<h:outputLabel value="" styleClass="ui-column-title" />
+						<p:panel style="height:28px">
+							<h:outputLabel
+								value="#{cc.attrs.MB.viabilidadesBeans.getAreaConstruida()}">
+								<f:convertNumber pattern="#,##0.00" />
+							</h:outputLabel>
+						</p:panel>
+
+
+					</p:panelGrid>
+				</p:tab>
+				<p:tab title="Viabilidade Via\Zona">
+					<p:panelGrid styleClass="semBorda" style="width:100%">
+						<p:row>
+							<p:column>
+								<p:dataTable id="dtListaAtividadesAnalise" var="atividade"
+									rowExpandMode="single" editable="true"
+									value="#{cc.attrs.MB.listaAtividadesExibicao}"
+									emptyMessage="#{rotulos.mensagemListaVazia}">
+									<p:column style="width:16px">
+										<p:rowToggler />
+									</p:column>
+									<p:column width="40" style="text-align:center"
+										headerText="#{rotulos.viabilidade_listaatividades_colCnae}">
+										<h:outputText value="#{atividade.cnae}" />
+									</p:column>
+
+									<p:column width="200"
+										headerText="#{rotulos.viabilidade_listaatividades_colDescricao}">
+										<h:outputText value="#{atividade.denominacaoCnae}" />
+									</p:column>
+									<p:column width="80" style="text-align:center"
+										headerText="Risco">
+										<h:outputText value="#{atividade.riscoSanitario}" />
+									</p:column>
+									<p:column width="100" style="text-align:center"
+										headerText="#{rotulos.viabilidade_listaatividades_colsituacaoViabilidadeVia}">
+										<h:outputText value="#{atividade.tipoAdequabilidadeVia}"
+											style="#{atividade.tipoAdequabilidadeVia eq 'INADEQUADO' ? 'color:red' : ''}" />
+									</p:column>
+									<p:column width="100" style="text-align:center"
+										headerText="#{rotulos.viabilidade_listaatividades_colsituacaoViabilidadeZona}">
+										<h:outputText value="#{atividade.tipoAdequabilidadeZona}"
+											style="#{atividade.tipoAdequabilidadeZona eq 'INADEQUADO' ? 'color:red' : ''}" />
+									</p:column>
+									<p:rowExpansion>
+										<p:panelGrid columns="2" columnClasses="label,value"
+											style="width:100%">
+											<h:outputText
+												value="#{rotulos.viabilidade_listaatividades_areacalculo}"
+												styleClass="ui-column-title" />
+											<h:outputText value="#{atividade.areaCalculada}">
+												<f:convertNumber pattern="#,##0.00" />
+											</h:outputText>
+
+											<h:outputText
+												value="#{rotulos.viabilidade_listaatividades_grupo}"
+												styleClass="ui-column-title" />
+											<h:outputText value="#{atividade.grupo}" />
+											<h:outputText
+												value="#{rotulos.viabilidade_listaatividades_subgrupo}"
+												styleClass="ui-column-title" />
+											<h:outputText value="#{atividade.subgrupo}" />
+											<h:outputText
+												value="#{rotulos.viabilidade_listaatividades_sigla}"
+												styleClass="ui-column-title" />
+											<h:outputText value="#{atividade.sigla}" />
+											<h:outputText
+												value="#{rotulos.viabilidade_listaatividades_classe}"
+												styleClass="ui-column-title" />
+											<h:outputText value="#{atividade.classe}" />
+											<h:outputText
+												value="#{rotulos.viabilidade_listaatividades_observacoes}"
+												styleClass="ui-column-title" />
+											<h:outputText value="#{atividade.observacao}" />
+											<h:outputText
+												value="#{rotulos.viabilidade_listaatividades_vagas}"
+												styleClass="ui-column-title" />
+											<h:outputText value="#{atividade.vagas}" />
+											<h:outputText
+												value="#{rotulos.viabilidade_listaatividades_observacoesVagas}"
+												width="130" styleClass="ui-column-title" />
+											<h:outputText value="#{atividade.observacaoVaga}" />
+											<!-- <h:outputText
+									value="#{rotulos.viabilidade_listaatividades_normas}"
+									styleClass="ui-column-title" />
+								<p:dataList value="#{atividade.listaNomasAtividadesVias}"
+									var="normas" styleClass="listasemborda" type="ordered"
+									emptyMessage="#{rotulos.viabilidade_listaatividades_listaNomasVazia}"
+									style="width:100%">
+        												#{normas.objNormasBeans.numeroNorma} - #{normas.objNormasBeans.descricaoNorma}
+    												</p:dataList>
+								<h:outputText
+									value="#{rotulos.viabilidade_listaatividades_condicionantes}"
+									styleClass="ui-column-title" />
+								<p:dataList id="dlCondicionantesAtividades" itemType="disc"
+									value="#{atividade.listaCondicionantes}" var="condicionante"
+									styleClass="listasemborda" type="ordered"
+									emptyMessage="#{rotulos.viabilidade_listaatividades_listaCondicionantesVazia}"
+									style="width:100%">
+        												#{condicionante.tituloCondicionante} -         												
+															<h:outputText value="Mais Informações"
+										style="cursor:help;color:red"
+										title="#{condicionante.descricaoCondicionante}" />
+								</p:dataList>		 -->
+										</p:panelGrid>
+									</p:rowExpansion>
+								</p:dataTable>
+							</p:column>
+						</p:row>
+					</p:panelGrid>
+				</p:tab>
+
+				<p:tab title="Histórico">
+					<p:panelGrid id="panelListaHistorico" styleClass="semBorda"
+						style="width:100%">
+						<p:row>
+							<p:column>
+								<p:dataTable id="dtListaHistorico" var="historicoVialilidade"
+									value="#{cc.attrs.MB.listaHistoricoViabilidades}"
+									emptyMessage="#{rotulos.mensagemListaVazia}">
+									<p:column width="30" style="text-align:center"
+										headerText="Situação">
+										<h:outputText
+											value="#{historicoVialilidade.objSituacoesViabilidadeAtualBeans.situacaoViabilidade}" />
+									</p:column>
+									<p:column width="30" style="text-align:center"
+										headerText="Data Processamento">
+										<h:outputText value="#{historicoVialilidade.dataHoraCadastro}">
+											<f:convertDateTime dateStyle="long" timeZone="GMT-03:00"
+												pattern="dd/MM/yyyy HH:mm" />
+										</h:outputText>
+									</p:column>
+									<p:column width="30" style="text-align:center"
+										headerText="Pendências">
+										<h:outputText value="#{historicoVialilidade.observacoes}" />
+									</p:column>
+								</p:dataTable>
+							</p:column>
+						</p:row>
+					</p:panelGrid>
+				</p:tab>
+			<p:tab title="Parecer de Viabilidade" rendered="#{cc.attrs.MB.exibirAbaParecer()}">
+					<p:panelGrid styleClass="" columns="2" style="width:100%">
+						<h:outputLabel value="Data do Parecer"
+							styleClass="ui-column-title" />
+							<h:outputLabel value="Resultado"
+							styleClass="ui-column-title" />
+						<p:panel>
+							<h:outputLabel
+								value="#{cc.attrs.MB.viabilidadesBeans.dataHoraCadastro}" >
+								<f:convertDateTime dateStyle="long" timeZone="GMT-03:00"
+												pattern="dd/MM/yyyy HH:mm" />
+								</h:outputLabel>
+						</p:panel>
+						<p:panel>
+						<h:outputLabel
+								value="#{cc.attrs.MB.viabilidadesBeans.getObjSituacoesViabilidadeBeans().getSituacaoViabilidade()}" />
+						</p:panel>
+					</p:panelGrid>
+					<p:panelGrid styleClass="" columns="1" style="width:100%">
+						<h:outputLabel value="Parecer"
+							styleClass="ui-column-title" />
+						<p:panel style="width:100%">
+							<h:outputLabel
+								value="#{cc.attrs.MB.parecerViabilidade}" />
+						</p:panel>
+					</p:panelGrid>
+				 <p:panelGrid style="width:400" styleClass="semBorda">
+
+							<p:row>
+								<p:column>
+									<p:commandButton value="Download Viabilidade" ajax="false" 
+										styleClass="botao medium"
+										onclick="PrimeFaces.monitorDownload(start, stop);"
+										icon="ui-icon-arrowthick-1-s">
+										<p:fileDownload value="#{cc.attrs.MB.viabilidadePdf}" />
+									</p:commandButton>
+									
+					
+								</p:column>
+								<p:column>
+									
+									<p:commandButton value="Visualizar Viabilidade" ajax="false" 
+										styleClass="botao medium"
+										process="@this"
+										actionListener="#{cc.attrs.MB.visualizarPdf}"
+										onclick="PrimeFaces.monitorDownload(start, stop);"
+										icon="ui-icon-arrowthick-1-s">
+
+									</p:commandButton>
+					
+								</p:column>
+							</p:row>
+						</p:panelGrid>
+				</p:tab>
+			</p:tabView>
+		</p:dialog>
+
+	</composite:implementation>
+
+</ui:composition>

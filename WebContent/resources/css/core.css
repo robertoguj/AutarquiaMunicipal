@@ -1,0 +1,684 @@
+/*
+Theme Name: alvarafacil
+Description:
+Version:
+License:
+License URI:
+Tags: 
+Text Domain: alvarafacil
+*/
+/*************************************
+			   Zerando
+*************************************/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+fieldset,a,a img,input,select {
+	border: none;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #1CA095;
+}
+
+a,li,h1,h2,h3,h4,h5,h6,small,span,input,textarea {
+	transition: all 400ms;
+}
+
+span {
+	transition: all 0ms;
+}
+
+a,input {
+	outline: none;
+}
+
+p,a,li,label {
+	font-size: 12px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+	font-weight: normal;
+}
+
+p,a,li,input,textarea,select,label,h1,h2,h3,h4,h5,h6,h1 a,h2 a,h3 a,h4 a,h5 a,h6 a,small,span,legend
+	{
+	font-family: "trebuchet ms", arial, tahoma, verdana;
+	font-weight: 400;
+}
+
+strong {
+	font-family: helvetica, arial, tahoma, verdana;
+	font-weight: 600;
+}
+
+/*************************************
+	Gerais
+*************************************/
+.clear {
+	clear: both;
+}
+
+.clear.line {
+	border-bottom: 4px solid #EEE;
+	margin: 0 28px 0 20px;
+	border-radius: 4px;
+	height: 4px;
+}
+
+.radius {
+	border-radius: 6px;
+	moz-border-radius: 6px;
+	webkit-border-radius: 6px;
+}
+
+.bgpmf {
+	background-color: #1CA095;
+}
+
+.bgbody {
+	background-color: #f1f1f1;
+}
+
+/*************************************
+	Global
+*************************************/
+body {
+	background: #f1f1f1;
+}
+
+.-wrapper {
+	margin: 0 auto;
+	padding: 0px 0px 0px 0px;
+	border: 0px solid #FFF;
+	width: 960px;
+	padding-bottom: 0px;
+	background: #FFF;
+	position: relative;
+}
+
+/*************************************
+	Header
+*************************************/
+.header {
+	height: 64px;
+	padding: 8px;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.header h1 {
+	display: block;
+	width: 334px;
+	height: 64px;
+	background: url('#{request.contextPath}/resources/gfx/alvarafacil-logo.png');
+	text-indent: -9000px;
+	overflow: hidden;
+}
+
+.header h2 {
+	display: block;
+	width: 212px;
+	height: 64px;
+	background: url('#{request.contextPath}/resources/gfx/logo-horizontal-fortaleza.png');
+	text-indent: -9000px;
+	overflow: hidden;
+	position: absolute;
+	top: 8px;
+	right: 20px;
+}
+
+/*************************************
+	Content
+*************************************/
+
+.content {
+	
+}
+
+.container-wrapper {
+	width: 960px;
+	margin: 0 auto;
+}
+
+/*************************************
+	Form Login
+*************************************/
+.form-login {
+	width: 380px;
+	height: 380px;
+	margin: 96px auto;
+	background-color: #F2F2F2;
+	box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+	position: relative;
+	padding: 40px 28px;
+}
+
+#formLoginPrincipal h1 {
+	display: block;
+	width: 125px;
+	height: 105px;
+	background:
+		url("#{request.contextPath}/resources/gfx/logo-pmf-form-login.png")
+		scroll 0 0 no-repeat transparent;
+	position: absolute;
+	top: -80px;
+	left: 50%;
+	margin-left: -62px;
+	overflow: hidden;
+	text-indent: -9000px;
+}
+
+.form-login legend {
+	color: #1CA095;
+	display: block;
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+	margin: 0 auto 30px;
+}
+
+.form-login .text {
+	margin-bottom: 16px;
+}
+
+.form-login .text label {
+	display: block;
+	font-size: 20px;
+	margin-bottom: 12px;
+	color: #333;
+}
+
+.form-login .text input {
+	width: 90%;
+	border: 1px solid #A2A2A2;
+	border-radius: 6px;
+	padding: 20px 5%;
+	height: 20px;
+	padding: 20px 5%;
+	font-size: 24px;
+	background:
+		url("#{request.contextPath}/resources/gfx/input-text-bg.png") scroll 0
+		0 repeat-x;
+}
+
+.botao, .ui-toolbar-group-right button {
+	display: block !important;
+	width: 100% !important;
+	height: 60px !important;
+	border-radius: 6px !important;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.5) !important;
+	color: #FFF !important;
+	font-size: 17px !important;
+	/* text-shadow: 2px 2px 2px rgba(0,0,0,0.5) !important; */
+	cursor: pointer !important;
+	/*margin: 14px 8px 14px 14px !important;*/
+	background: #1CA095 !important;
+	float: left;
+}
+
+.ui-toolbar-group-right button {
+	height: 34px !important;
+}
+
+.botao.small {
+	height: 32px !important;
+	font-size: 18px !important;
+}
+
+.botao.medium {
+	height: 48px !important;
+	font-size: 20px !important;
+}
+
+.botao.large {
+	height: 60px !important;
+	font-size: 24px !important;
+}
+
+.content .ui-dialog .ui-dialog-buttonpane {	text-align: center; }
+
+.botao.default {
+	width: 120px !important;
+	height: 32px !important;
+	font-size: 17px !important;
+}
+
+.botao:hover {
+	background-color: #137169 !important;
+}
+
+.rotulo {
+	
+}
+
+.rotulo.small {
+	font-size: 8px !important;
+}
+
+.rotulo.medium {
+	font-size: 14px !important;
+}
+
+.rotulo.large {
+	font-size: 20px !important;
+}
+
+.form-login .checkbox input {
+	margin: 4px;
+}
+
+.form-login .checkbox label {
+	font-size: 14px;
+	color: #666;
+}
+
+.form-login a.lembrar {
+	font-size: 14px;
+	color: #666;
+	position: absolute;
+	bottom: 24px;
+	right: 28px;
+}
+
+/*************************************
+	footer
+*************************************/
+.footer {
+	height: 55px;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.footer span.orgao {
+	display: block;
+	text-align: center;
+	line-height: 55px;
+	color: #FFF;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.footer .version {
+			margin: 16px;
+		}
+		
+			.footer .version span {
+				display: block;
+				text-align: center;
+				font-size: 14px;
+				color: #1CA095;
+				margin: 2px;
+				text-shadow: 1px 1px 0 #FFF;
+			}
+/*************************************
+	Componentes
+*************************************/
+.quebraLinha {
+	word-wrap: break-word;
+}
+
+.ui-toolbar-group-right {
+	width: 196px;
+}
+
+.ui-state-highlight,.ui-widget-content .ui-state-highlight,.ui-widget-header .ui-state-highlight { border-width: 2px; }
+.semBorda tr,.semBorda td { border: none !important; }
+.ui-column-title { font-weight: bold !important; }
+.caixaAlta { text-transform: uppercase; }
+
+.ui-tree-node-label {
+	font-size: 0.7em !important;
+}
+
+.ui-tree-node-content {
+	border: 0px solid transparent !important;
+	padding: 0px !important;
+	vertical-align: middle !important;
+}
+
+.processando {
+	width: 250px !important;
+}
+
+.integrando {
+	font-size: 14px;
+	font-stretch: expanded;
+	font-family:Verdana;
+}
+
+.ui-tree {
+	border: 0 !important;
+}
+
+.ui-toolbar-group-left {
+	width: 720px;
+	padding: 16px 0 16px 4px;
+}
+
+	.ui-toolbar-group-left button,
+	.ui-toolbar-group-left div.ui-button {
+		margin-left: 12px;
+	}
+
+.ui-toolbar-group-right .ui-menubutton .ui-button {
+	margin: 16px;
+}
+
+.div.ui-button, .ui-splitbutton {
+width: 120px !important;
+}
+
+#formLoginPrincipal button.ui-button.botao {
+	margin: 0 !important;
+}
+
+.ui-menu .ui-icon {
+	position: inherit !important;
+}
+
+.ui-clock {
+	padding: 0px 0px !important;;
+	font-size: 12px !important;
+	background: none !important;
+	border: none !important;
+	color: #222222 !important;;
+}
+
+.ui-menu .ui-menu-parent .ui-icon-triangle-1-e,.ui-menu .ui-menu-parent .ui-icon-triangle-1-s,.ui-menubar .ui-menu-child .ui-icon-triangle-1-s,.ui-menubar .ui-menu-child .ui-icon-triangle-1-s {
+	
+}
+
+.fotoContato {
+	cursor: pointer;
+	height: 100%;
+	width: 200px;
+}
+
+.dashBoardViabilidades {
+	height: 36px;
+	width: 100%;
+	float: left;
+	background:
+		url("#{request.contextPath}/resources/gfx/backListaUsers.png") scroll
+		0 0 repeat-x transparent !important;
+}
+
+.contatosListarContatos {
+	height: 50px;
+	width: 100%;
+	float: left;
+	background:
+		url("#{request.contextPath}/resources/gfx/backListaUsers.png") scroll
+		0 0 repeat-x transparent !important;
+}
+
+.fotoListarContatos {
+	width: 50px;
+	float: left;
+}
+
+.nomeContatoListarContatos {
+	width: 100%;
+	text-align: left;
+	font-size: 18px !important;
+	margin-left: 10px;
+	margin-top: 0px;
+	font-weight: normal;
+	line-height: 48px;
+	cursor: pointer;
+}
+
+#formInfoUsuario {
+	position: absolute;
+	z-index: 9999;
+	right: 13px;
+	top: 83px;
+}
+/* .ui-accordion .ui-accordion-content {
+	padding: 1em 6.4em !important;
+} */
+/* .ui-datascroller .ui-datascroller-content,.ui-panelgrid .ui-panelgrid-cell
+	{
+	padding: 10px !important;
+} */
+.ui-picklist .ui-picklist-list {
+	width: 446px !important;
+}
+
+#contatosDialog.ui-dialog {
+	z-index: 99999 !important;
+}
+
+.ui-wizard-nav-next {
+	/* display: block !important; */
+	width: 120px !important;
+	height: 32px !important;
+	border-radius: 6px !important;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.5) !important;
+	color: #FFF !important;
+	font-size: 17px !important;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5) !important;
+	cursor: pointer !important;
+	margin: 16px 20px 16px 16px !important;
+	background: #1CA095 !important;
+	float: left;
+}
+
+.ui-wizard-nav-back {
+	/* display: block !important; */
+	width: 120px !important;
+	height: 32px !important;
+	border-radius: 6px !important;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.5) !important;
+	color: #FFF !important;
+	font-size: 17px !important;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5) !important;
+	cursor: pointer !important;
+	margin: 16px 20px 16px 16px !important;
+	background: #1CA095 !important;
+	float: left;
+}
+
+.ui-wizard-step-title {
+	width: 175px !important;
+	border-radius: 4px !important;
+	height: 32px !important;
+	line-height: 20px;
+	text-align: center;
+	color: #FFF !important;
+	font-size: 16px !important;
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5) !important;
+	margin: 16px 0px 2px 6px !important;
+	background: #1CA095 !important;
+	float: left;
+	border: none;
+}
+
+	.ui-wizard-step-title.ui-state-highlight {
+		border: none;
+		background: #136C66 !important;
+	}
+
+.linha-tabela {
+	padding: 5px 1px !important;
+}
+
+.botao.pesquisar {
+	width: 160px !important;
+	height: 48px !important;
+	font-size: 17px !important;
+}
+
+.botao.localizar {
+	width: 150px !important;
+	height: 33px !important;
+	font-size: 16px !important;
+}
+
+.ui-datalist-content.listasemborda{  
+    border: 0px !important;   
+}
+
+.botao.deferir {
+	width: 280px !important;
+	height: 50px !important;
+	font-size: 20px !important;
+	background: #2291FF !important;
+}
+
+.botao.indeferir {
+	width: 280px !important;
+	height: 50px !important;
+	font-size: 20px !important;
+	background: #D94539 !important;
+} 
+
+.dashboard {
+	display: block !important;
+	width: 130px !important;
+/* 	height: 33px !important;
+	color: #FFF !important; */
+	font-size: 14px !important;
+	cursor: pointer !important;
+	margin: 4px 4px 4px 4px !important;
+/* 	background: #1CA095 !important; */
+	float: left;
+/* 	border-radius: 3px !important;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.5) !important; */
+}
+
+.dashboard2 {
+	display: block !important;
+	width: 160px !important;
+	height: 35px !important;
+	color: #FFF !important;
+	font-size: 17px !important;
+	cursor: pointer !important;
+	margin: 4px 4px 4px 4px !important;
+	background: #1CA095 !important;
+	float: left;
+	border-radius: 6px !important;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.5) !important;
+}
+
+.pesquisarViabilidade {
+	display: block !important;
+	width: 85px !important;
+	height: 23px !important;
+	color: #FFF !important;
+	font-size: 13px !important;
+	font: bold;
+	cursor: pointer !important;
+	margin: 0px 0px 0px 0px !important;
+	background: #1CA095 !important;
+	float: left;
+}
+
+.ui-panelgrid-header .ui-widget-header {
+	padding: 8px;
+	color: #FFF;
+	text-shadow: 1px 1px 0px rgba(0,0,0,0.4);
+	line-height: 32px;
+	text-indent: 10px;
+}
+
+.ui-menu .ui-menuitem-link {
+	font-size: 15px;
+}
+
+.ui-fieldset .ui-fieldset-legend {
+	padding: 0.4em !important;
+	background: none !important;
+	border: none !important;
+	color: #888;
+}
+
+.ui-button-icon-left { left: auto !important; right: .5em; }
+.ui-button-text-icon-left .ui-button-text { padding: .3em 2.1em .3em 1em !important; }
+.content .ui-icon.ui-icon-alert.ui-confirm-dialog-severity { background: url("#{request.contextPath}/resources/gfx/cancel-16.png") scroll 0 0 no-repeat transparent; }
+.content .ui-confirm-dialog-severity { margin-right: 12px; }
+
+.content form table.ui-panelgrid { /* border: 1px solid #aaaaaa;*/ padding: 16px 0; }
+.content form table.ui-panelgrid tr td, .content form table.ui-panelgrid tr  { border: none !important; }
+
+
+#formRelogar .ui-panelgrid {
+		text-align: center;
+	}
+	#formRelogar .ui-panelgrid .ui-panelgrid-cell {
+		border-color: #FFF !important;
+	}
+	
+		#formRelogar .ui-dialog-titlebar span {
+			color: #FFF;
+			display: block;
+			width: 100%;
+			text-align: center;
+			margin: 0.2em 0 0.3em;
+			text-shadow: 1px 1px 0 rgba(0,0,0,0.5);
+		}
+		
+		#formRelogar button.ui-button {
+			background: none;
+			border: none;
+			color: #FFF;
+			width: 100%;
+			font-size: 18px;
+			outline: hidden;
+			margin: 0 auto;
+			height: 48px !important;
+			border-radius: 0;
+		}
+		
+		#formRelogar table.ui-panelgrid.ui-widget tfoot tr {
+			border-top: 12px solid #FFF;
+		}
+
+
+.ui-autocomplete-panel {
+  width: 730px !important;
+}
+
+.ui-state-active .ui-icon {
+background-image: url("#{request.contextPath}/javax.faces.resource/images/ui-icons_454545_256x240.png.jsf?ln=primefaces-pmf")!important;
+}
+
+ul.ui-menu-child
+ {
+     width: 300px !important;
+ }
+ 
+ .ui-picklist .ui-picklist-list{
+	height:150px !important;
+	width: 150px !important;
+}
+
+.ui-dialog .ui-dialog-title{
+	color: white;
+}
+
+.j_idt19 img{
+	width: 250px;
+}
+
+button {
+	margin-top: 20px;
+}
+	
+}

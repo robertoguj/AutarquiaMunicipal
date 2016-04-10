@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/templates/principal.xhtml">
+
+	<ui:define name="conteudo">
+
+		<h:form>
+
+			<div class="panel-main row">
+				<div class="col-md-12">
+					<div class="panel-default">
+
+						<div class="panel-heading bg-panel">
+							<h3 class="panel-title">
+								<strong>Relatório de Dívidas Ativas </strong>
+							</h3>
+						</div>
+
+						<strong>Preencha um ou mais campos para emitir o relatório</strong>
+
+						<p:growl id="msgs" showDetail="true" />
+
+						<h:panelGrid columns="2" cellpadding="5" columnClasses="td200, td200">
+
+							<h:panelGroup>
+								<h:outputLabel>	<strong>Data da Notificação</strong> </h:outputLabel>
+								<p:calendar id="dataNotificacao" style="width: 80px;" value="#{calendarioView.data}" pattern="dd/MM/yyyy" mask="true" />
+								
+								<h:outputLabel>	<strong>CPF</strong> </h:outputLabel>
+								<p:inputMask id="cpf" styleClass="form-control"	value="#{proprietario.cpf}" mask="999.999.999-99" />
+							</h:panelGroup>
+							
+							<h:panelGroup>
+								<h:outputLabel>	<strong>Nº da Notificação</strong> </h:outputLabel>
+								<h:inputText id="nome" styleClass="form-control" value="#{notificacao.numero}" />
+								
+								<h:outputLabel>	<strong>Data de Inscrição</strong> </h:outputLabel>
+								<p:calendar id="dataInscricao" style="width: 80px;" value="#{calendarioView.data}" pattern="dd/MM/yyyy" mask="true" />
+							</h:panelGroup>
+							
+						</h:panelGrid>
+						
+						<fieldset  style="margin-top: 20px; width: 800px;">
+
+							<legend>Status da Dívida</legend>
+						
+							<h:selectManyCheckbox id="status" value="" >
+								<f:selectItem id="item1" itemLabel="Não Pagas" itemValue="NAO_PAGAS" />
+								<f:selectItem id="item2" itemLabel="Em Recurso" itemValue="EM_RECURSO" />
+    							<f:selectItem id="item3" itemLabel="Liquidadas" itemValue="LIQUIDADAS" />
+       							<f:selectItem id="item4" itemLabel="Prescritas" itemValue="PRESCRITAS" />
+       							<f:selectItem id="item5" itemLabel="Execultadas" itemValue="EXECULTADAS" />
+       						</h:selectManyCheckbox>
+       					
+       					</fieldset>
+
+						<div class="div-botoes" style="float: left;">
+							<h:commandButton id="btnEmitir" styleClass="btn btn-success" value="Emitir Relatório" />
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+
+
+		</h:form>
+
+	</ui:define>
+
+</ui:composition>
+
+</html>

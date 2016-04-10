@@ -1,0 +1,93 @@
+<ui:composition lang="pt_br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="/bootstrap/templates/principal.xhtml">
+
+	<ui:define name="conteudo">
+
+		<div class="panels_draggable">
+			<div class="page-title">
+				<i class="icon-custom-left"></i>
+				<h3>
+					<strong>Draggable</strong> Panels
+				</h3>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="sortable ui-sortable">
+						<div class="panel no-bd bd-3 panel-stat">
+							<div class="panel-body bg-red">
+								<div class="icon">
+									<i class="fa fa-bullhorn"></i>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<div class="stat-num">250</div>
+										<h3>Beautiful stat panel</h3>
+										<p>You can customize color &amp; border</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sortable ui-sortable">
+						<div class="panel no-bd bd-3 panel-stat">
+							<div class="panel-body bg-blue">
+								<div class="icon">
+									<i class="fa fa-cloud"></i>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<div class="stat-num">250</div>
+										<h3>Beautiful stat panel</h3>
+										<p>You can customize color &amp; border</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="sortable ui-sortable">
+						<div class="panel no-bd bd-0 panel-stat">
+							<div class="panel-body bg-purple">
+								<div class="icon">
+									<i class="fa fa-bar-chart-o"></i>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<div class="stat-num">28</div>
+										<h3>Custom color</h3>
+										<p>We put no border here</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sortable ui-sortable">
+						<div class="panel no-bd bd-9 panel-stat">
+							<div class="panel-body bg-dark">
+								<div class="icon">
+									<i class="fa fa-camera"></i>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<div class="stat-num">250</div>
+										<h3>Beautiful stat panel</h3>
+										<p>Large border radius</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</ui:define>
+
+</ui:composition>

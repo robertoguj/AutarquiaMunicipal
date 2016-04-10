@@ -1,0 +1,448 @@
+<ui:composition lang="pt_br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="/bootstrap/templates/principal.xhtml">
+
+	<ui:define name="conteudo">
+
+		<div class="page-title">
+			<i class="icon-custom-left"></i>
+			<h2>
+				Members <small>list of users registered</small>
+			</h2>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-md-4">
+								<input type="text" id="member-finder" class="form-control"
+									placeholder="Search a member..." />
+							</div>
+							<div class="col-md-8 align-right m-t-10">
+								<span class="c-gray m-r-20">Filter by <a href="#"
+									class="m-l-10 m-r-5">Date</a> <span class="c-gray-light">/</span>
+									<a href="#" class="m-l-5 m-r-5">Name</a> <span
+									class="c-gray-light">/</span> <a href="#" class="c-blue m-l-5">City</a>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-md-4 member-entry">
+								<div class="row member">
+									<div class="col-xs-3">
+										<img src="${ctx}/bootstrap/resources/images/avatar1_big.png"
+											alt="avatar 1" class="pull-left img-responsive" />
+									</div>
+									<div class="col-xs-9">
+										<h3 class="m-t-0 member-name">
+											<strong>John Snow</strong>
+										</h3>
+										<div class="pull-left">
+											<p>
+												<i class="fa fa-envelope-o c-gray-light p-r-10"></i>
+												cameso@it.com
+											</p>
+											<p>
+												<i class="fa fa-facebook c-gray-light p-r-10"></i>
+												facebook.com/jsnow
+											</p>
+										</div>
+										<div class="pull-right align-right">
+											<p>
+												<i class="fa fa-calendar c-gray-light p-r-10"></i> 6 may
+												2014
+											</p>
+											<p>
+												<i class="fa fa-map-marker c-gray-light p-r-10"></i> New
+												York
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 member-entry">
+								<div class="row member">
+									<div class="col-xs-3">
+										<img src="${ctx}/bootstrap/resources/images/avatar2_big.png"
+											alt="avatar 2" class="pull-left img-responsive" />
+									</div>
+									<div class="col-xs-9">
+										<h3 class="m-t-0 member-name">
+											<strong>Bobby Brown</strong>
+										</h3>
+										<div class="pull-left">
+											<p>
+												<i class="fa fa-envelope-o c-gray-light p-r-10"></i>
+												brown@gmail.com
+											</p>
+											<p>
+												<i class="fa fa-facebook c-gray-light p-r-10"></i>
+												facebook.com/bbrown
+											</p>
+										</div>
+										<div class="pull-right align-right">
+											<p>
+												<i class="fa fa-calendar c-gray-light p-r-10"></i> 2 may
+												2014
+											</p>
+											<p>
+												<i class="fa fa-map-marker c-gray-light p-r-10"></i> Chicago
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 member-entry">
+								<div class="row member">
+									<div class="col-xs-3">
+										<img src="${ctx}/bootstrap/resources/images/avatar10_big.png"
+											alt="avatar 3" class="pull-left img-responsive" />
+									</div>
+									<div class="col-xs-9">
+										<h3 class="m-t-0 member-name">
+											<strong>Melissa Johnson</strong>
+										</h3>
+										<div class="pull-left">
+											<p>
+												<i class="fa fa-envelope-o c-gray-light p-r-10"></i>
+												m-johnson@yahoo.com
+											</p>
+											<p>
+												<i class="fa fa-facebook c-gray-light p-r-10"></i>
+												facebook.com/mjohnson
+											</p>
+										</div>
+										<div class="pull-right align-right">
+											<p>
+												<i class="fa fa-calendar c-gray-light p-r-10"></i> 28 april
+												2014
+											</p>
+											<p>
+												<i class="fa fa-map-marker c-gray-light p-r-10"></i> Miami
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 member-entry">
+								<div class="row member">
+									<div class="col-xs-3">
+										<img src="${ctx}/bootstrap/resources/images/avatar6_big.png"
+											alt="avatar 5" class="pull-left img-responsive" />
+									</div>
+									<div class="col-xs-9">
+										<h3 class="m-t-0 member-name">
+											<strong>Meggan Miller</strong>
+										</h3>
+										<div class="pull-left">
+											<p>
+												<i class="fa fa-envelope-o c-gray-light p-r-10"></i>
+												m-miller@outlook.com
+											</p>
+											<p>
+												<i class="fa fa-facebook c-gray-light p-r-10"></i>
+												facebook.com/mmiller
+											</p>
+										</div>
+										<div class="pull-right align-right">
+											<p>
+												<i class="fa fa-calendar c-gray-light p-r-10"></i> 26 april
+												2014
+											</p>
+											<p>
+												<i class="fa fa-map-marker c-gray-light p-r-10"></i> Paris
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 member-entry">
+								<div class="row member">
+									<div class="col-xs-3">
+										<img src="${ctx}/bootstrap/resources/images/avatar8_big.png"
+											alt="avatar 4" class="pull-left img-responsive" />
+									</div>
+									<div class="col-xs-9">
+										<h3 class="m-t-0 member-name">
+											<strong>Scott Thomson</strong>
+										</h3>
+										<div class="pull-left">
+											<p>
+												<i class="fa fa-envelope-o c-gray-light p-r-10"></i>
+												s-thomson@gmail.com
+											</p>
+											<p>
+												<i class="fa fa-facebook c-gray-light p-r-10"></i>
+												facebook.com/sthomson
+											</p>
+										</div>
+										<div class="pull-right align-right">
+											<p>
+												<i class="fa fa-calendar c-gray-light p-r-10"></i> 24 april
+												2014
+											</p>
+											<p>
+												<i class="fa fa-map-marker c-gray-light p-r-10"></i> Boston
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 member-entry">
+								<div class="row member">
+									<div class="col-xs-3">
+										<img src="${ctx}/bootstrap/resources/images/avatar6_big.png"
+											alt="avatar 6" class="pull-left img-responsive" />
+									</div>
+									<div class="col-xs-9">
+										<h3 class="m-t-0 member-name">
+											<strong>Samantha Harris</strong>
+										</h3>
+										<div class="pull-left">
+											<p>
+												<i class="fa fa-envelope-o c-gray-light p-r-10"></i>
+												s-harris@yahoo.com
+											</p>
+											<p>
+												<i class="fa fa-facebook c-gray-light p-r-10"></i>
+												facebook.com/sharris
+											</p>
+										</div>
+										<div class="pull-right align-right">
+											<p>
+												<i class="fa fa-calendar c-gray-light p-r-10"></i> 23 april
+												2014
+											</p>
+											<p>
+												<i class="fa fa-map-marker c-gray-light p-r-10"></i> Los
+												Angeles
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 member-entry">
+								<div class="row member">
+									<div class="col-xs-3">
+										<img src="${ctx}/bootstrap/resources/images/avatar7_big.png"
+											alt="avatar 7" class="pull-left img-responsive" />
+									</div>
+									<div class="col-xs-9">
+										<h3 class="m-t-0 member-name">
+											<strong>Alfred Benson</strong>
+										</h3>
+										<div class="pull-left">
+											<p>
+												<i class="fa fa-envelope-o c-gray-light p-r-10"></i>
+												a-benson@it.com
+											</p>
+											<p>
+												<i class="fa fa-facebook c-gray-light p-r-10"></i>
+												facebook.com/abenson
+											</p>
+										</div>
+										<div class="pull-right align-right">
+											<p>
+												<i class="fa fa-calendar c-gray-light p-r-10"></i> 22 april
+												2014
+											</p>
+											<p>
+												<i class="fa fa-map-marker c-gray-light p-r-10"></i> New
+												York
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 member-entry">
+								<div class="row member">
+									<div class="col-xs-3">
+										<img src="${ctx}/bootstrap/resources/images/avatar8_big.png"
+											alt="avatar 8" class="pull-left img-responsive" />
+									</div>
+									<div class="col-xs-9">
+										<h3 class="m-t-0 member-name">
+											<strong>Kim Addams</strong>
+										</h3>
+										<div class="pull-left">
+											<p>
+												<i class="fa fa-envelope-o c-gray-light p-r-10"></i>
+												k-addams@hotmail.com
+											</p>
+											<p>
+												<i class="fa fa-facebook c-gray-light p-r-10"></i>
+												facebook.com/kaddams
+											</p>
+										</div>
+										<div class="pull-right align-right">
+											<p>
+												<i class="fa fa-calendar c-gray-light p-r-10"></i> 20 april
+												2014
+											</p>
+											<p>
+												<i class="fa fa-map-marker c-gray-light p-r-10"></i> Madrid
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 member-entry">
+								<div class="row member">
+									<div class="col-xs-3">
+										<img src="${ctx}/bootstrap/resources/images/avatar9_big.png"
+											alt="avatar 9" class="pull-left img-responsive" />
+									</div>
+									<div class="col-xs-9">
+										<h3 class="m-t-0 member-name">
+											<strong>Melissa Johnson</strong>
+										</h3>
+										<div class="pull-left">
+											<p>
+												<i class="fa fa-envelope-o c-gray-light p-r-10"></i>
+												m-johnson@yahoo.com
+											</p>
+											<p>
+												<i class="fa fa-facebook c-gray-light p-r-10"></i>
+												facebook.com/mjohnson
+											</p>
+										</div>
+										<div class="pull-right align-right">
+											<p>
+												<i class="fa fa-calendar c-gray-light p-r-10"></i> 28 april
+												2014
+											</p>
+											<p>
+												<i class="fa fa-map-marker c-gray-light p-r-10"></i> Miami
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 member-entry">
+								<div class="row member">
+									<div class="col-xs-3">
+										<img src="${ctx}/bootstrap/resources/images/avatar10_big.png"
+											alt="avatar 10" class="pull-left img-responsive" />
+									</div>
+									<div class="col-xs-9">
+										<h3 class="m-t-0 member-name">
+											<strong>Harold Maxwell</strong>
+										</h3>
+										<div class="pull-left">
+											<p>
+												<i class="fa fa-envelope-o c-gray-light p-r-10"></i>
+												h-maxwell@yahoo.com
+											</p>
+											<p>
+												<i class="fa fa-facebook c-gray-light p-r-10"></i>
+												facebook.com/hmaxwell
+											</p>
+										</div>
+										<div class="pull-right align-right">
+											<p>
+												<i class="fa fa-calendar c-gray-light p-r-10"></i> 22 april
+												2014
+											</p>
+											<p>
+												<i class="fa fa-map-marker c-gray-light p-r-10"></i> Chicago
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 member-entry">
+								<div class="row member">
+									<div class="col-xs-3">
+										<img src="${ctx}/bootstrap/resources/images/avatar11_big.png"
+											alt="avatar 11" class="pull-left img-responsive" />
+									</div>
+									<div class="col-xs-9">
+										<h3 class="m-t-0 member-name">
+											<strong>Morris Phillip</strong>
+										</h3>
+										<div class="pull-left">
+											<p>
+												<i class="fa fa-envelope-o c-gray-light p-r-10"></i>
+												m-phillip@gmail.com
+											</p>
+											<p>
+												<i class="fa fa-facebook c-gray-light p-r-10"></i>
+												facebook.com/mphillip
+											</p>
+										</div>
+										<div class="pull-right align-right">
+											<p>
+												<i class="fa fa-calendar c-gray-light p-r-10"></i> 20 april
+												2014
+											</p>
+											<p>
+												<i class="fa fa-map-marker c-gray-light p-r-10"></i> Harlem
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 member-entry">
+								<div class="row member">
+									<div class="col-xs-3">
+										<img src="${ctx}/bootstrap/resources/images/avatar12_big.png"
+											alt="avatar 12" class="pull-left img-responsive" />
+									</div>
+									<div class="col-xs-9">
+										<h3 class="m-t-0 member-name">
+											<strong>Eddy Malon</strong>
+										</h3>
+										<div class="pull-left">
+											<p>
+												<i class="fa fa-envelope-o c-gray-light p-r-10"></i>
+												e-malon@yahoo.com
+											</p>
+											<p>
+												<i class="fa fa-facebook c-gray-light p-r-10"></i>
+												facebook.com/emalon
+											</p>
+										</div>
+										<div class="pull-right align-right">
+											<p>
+												<i class="fa fa-calendar c-gray-light p-r-10"></i> 15 april
+												2014
+											</p>
+											<p>
+												<i class="fa fa-map-marker c-gray-light p-r-10"></i> Sydney
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="m-t-30 align-center">
+							<ul class="pagination">
+								<li><span><i class="fa fa-angle-left c-gray-light"></i></span></li>
+								<li class="active"><span>1</span></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><span>...</span></li>
+								<li><a href="#">9</a></li>
+								<li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- BEGIN PAGE LEVEL SCRIPTS -->
+		<script	src="#{request.contextPath}/bootstrap/resources/js/jquery.quicksearch.js" />
+		<script src="#{request.contextPath}/bootstrap/resources/js/members.js" />
+		<!-- END  PAGE LEVEL SCRIPTS -->
+
+	</ui:define>
+
+</ui:composition>

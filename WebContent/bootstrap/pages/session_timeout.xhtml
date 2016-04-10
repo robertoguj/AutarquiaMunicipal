@@ -1,0 +1,46 @@
+<ui:composition lang="pt_br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="/bootstrap/templates/principal.xhtml">
+
+<ui:define name="conteudo">
+
+	<div class="page-title">
+		<i class="icon-custom-left"></i>
+		<h3>
+			Session Timeout <small> lockscreen after a moment</small>
+		</h3>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-12">
+							<p class=" alert alert-info">
+								After 5 seconds of inactivity (don't move the mouse), you will
+								see a expiring warning dialog. The user can choose to stay
+								connected or log out. If there is no action during 30 seconds,
+								the user is automatically logged out and redirected to the
+								lockscreen panel.<br/>
+								<br/> You can easily modify the duration before the dialog is shown in the session_timeout.js file. 
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- BEGIN PAGE LEVEL SCRIPTS -->
+    <script src="#{request.contextPath}/bootstrap/resources/js/jquery.idletimer.js" />
+    <script src="#{request.contextPath}/bootstrap/resources/js/jquery.idletimeout.js" />
+    <script src="#{request.contextPath}/bootstrap/resources/js/session_timeout.js" />
+    <!-- END  PAGE LEVEL SCRIPTS -->
+    
+    </ui:define>
+    
+</ui:composition>

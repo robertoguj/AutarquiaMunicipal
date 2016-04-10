@@ -1,0 +1,120 @@
+<ui:composition lang="pt_br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="/bootstrap/templates/principal.xhtml">
+
+	<ui:define name="conteudo">
+
+		<link rel="stylesheet" href="${ctx}/bootstrap/resources/css/summernote.css" />
+
+		<div class="page-title">
+			<i class="icon-custom-left"></i>
+			<h3>
+				<strong>New</strong> Message
+			</h3>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="border-bottom">
+									<div class="pull-left">
+										<a href="#" class=" btn btn-default"><i
+											class="fa fa-arrow-left fa-fw"></i> back</a>
+									</div>
+									<div class="pull-left p-l-20">
+										<a href="#" class=" btn btn-success"><i
+											class="fa fa-floppy-o fa-fw"></i> Save Draft</a>
+									</div>
+									<div class="clearfix m-b-20"></div>
+								</div>
+								<form class="form-horizontal p-t-20" role="form">
+									<div class="form-group">
+										<label for="to" class="col-sm-2 control-label">To:</label>
+										<div class="col-sm-10">
+											<div class="input-group">
+												<input type="text" class="form-control" id="to" /> <span
+													class="input-group-addon bg-white cursor-pointer"
+													data-toggle="collapse" data-target="#cc"> CC/BCC <span
+													class="caret"></span>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div id="cc" class="collapse">
+										<div class="form-group">
+											<label for="Cc" class="col-sm-2 control-label">Cc:</label>
+											<div class="col-sm-10">
+												<input type="text" class="form-control" id="Cc" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="Bcc" class="col-sm-2 control-label">Bcc:</label>
+											<div class="col-sm-10">
+												<input type="text" class="form-control" id="Bcc" />
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="Bcc" class="col-sm-2 control-label">From:</label>
+										<div class="col-sm-6">
+											<div class="btn-group">
+												<button type="button"
+													class="btn btn-default dropdown-toggle width-230"
+													data-toggle="dropdown">
+													<i class="fa fa-ellipsis-horizontal"></i><span
+														class="float-left"><strong>contact@Pixit.com</strong></span>
+													<span class="float-right"><i
+														class="fa fa-angle-down"></i></span>
+												</button>
+												<ul class="dropdown-menu">
+													<li><a href="#">contact@Pixit.com</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="Bcc" class="col-sm-2 control-label">Signature:</label>
+										<div class="col-sm-6">
+											<div class="btn-group">
+												<button type="button"
+													class="btn btn-default dropdown-toggle width-230"
+													data-toggle="dropdown">
+													<i class="fa fa-ellipsis-horizontal"></i><span
+														class="float-left"><strong>Signature</strong></span> <span
+														class="float-right"><i class="fa fa-angle-down"></i></span>
+												</button>
+												<ul class="dropdown-menu">
+													<li><a href="#">Signature</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="clearfix"></div>
+								</form>
+								<div class="summernote"></div>
+								<div class="text-center footer-message">
+									<a href="#" class="btn btn-default"><i
+										class="fa fa-times-circle"></i> Cancel</a> <a href="#"
+										class="btn btn-primary"><i class="fa fa-share fa-fw"></i>
+										Send email</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- BEGIN PAGE LEVEL SCRIPTS -->
+		<script	src="#{request.contextPath}/bootstrap/resources/js/summernote.min.js" />
+		<!-- END PAGE LEVEL SCRIPTS -->
+
+	</ui:define>
+
+</ui:composition>

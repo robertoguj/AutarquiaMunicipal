@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	template="/templates/principal.xhtml">
+
+	<ui:define name="conteudo">
+
+		<h:form>
+
+			<h:panelGrid id="cadastroUsuario" rendered="false">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel panel-default">
+
+							<div class="panel-heading bg-panel">
+								<h3 class="panel-title">
+									<strong>Validação de Cadastro</strong>
+								</h3>
+							</div>
+
+							<h:panelGroup layout="block" rendered="#{activation.valid}">
+								<p>Sua conta foi ativada com sucesso!</p>
+								<p>
+									Você será encaminhado em 5 segundos para
+									<h:link outcome="login">página de login</h:link>
+								</p>
+							</h:panelGroup>
+
+							<h:panelGroup layout="block" rendered="#{!activation.valid}">
+								<p>A ativação falhou! Por favor entre em seu e-mail
+									novamente e tente mais uma vez.</p>
+							</h:panelGroup>
+
+						</div>
+					</div>
+				</div>
+
+		</h:form>
+
+	</ui:define>
+
+</ui:composition>

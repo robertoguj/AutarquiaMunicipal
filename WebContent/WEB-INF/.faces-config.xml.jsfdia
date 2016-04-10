@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:" SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::0" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="index::#index.jsf" NAME="output"
+    PATH="/index.jsf" TARGET="rules:#index.jsf" TITLE="index" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::1" SHAPE="32,129,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::1" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="successfulPage::#pages#successfulPage.jsf"
+    NAME="output" PATH="/pages/successfulPage.jsf"
+    TARGET="rules:#pages#successfulPage.jsf" TITLE="successfulPage" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::2" SHAPE="32,241,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::2" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="userPage::#pages#usuario#userPage.jsf"
+    NAME="output" PATH="/pages/usuario/userPage.jsf"
+    TARGET="rules:#pages#usuario#userPage.jsf" TITLE="userPage" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::3" SHAPE="32,353,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::3" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="adminPage::#pages#administrador#adminPage.jsf" NAME="output"
+    PATH="/pages/administrador/adminPage.jsf"
+    TARGET="rules:#pages#administrador#adminPage.jsf" TITLE="adminPage" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#pages#usuario#userPage.jsf"
+  PATH="/pages/usuario/userPage.jsf" SHAPE="240,257,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#pages#administrador#adminPage.jsf"
+  PATH="/pages/administrador/adminPage.jsf" SHAPE="240,369,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#index.jsf" PATH="/index.jsf"
+  SHAPE="240,33,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#pages#successfulPage.jsf"
+  PATH="/pages/successfulPage.jsf" SHAPE="240,145,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>

@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+[<!ENTITY nbsp "&#xA0;">]>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<f:view contentType="text/html" />
+
+<h:head>
+
+	<c:set var="ctx" value="#{facesContext.externalContext.requestContextPath}" />
+
+	<title>Sistema de Controle de Dívida Ativa</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<link rel="shortcut icon" type="image/x-icon" href="${ctx}/bootstrap/resources/images/favicon.ico" />
+		
+	<!--[if lt IE 7]>      <html class="no-js sidebar-large lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+	<!--[if IE 7]>         <html class="no-js sidebar-large lt-ie9 lt-ie8"> <![endif]-->
+	<!--[if IE 8]>         <html class="no-js sidebar-large lt-ie9"> <![endif]-->
+	<!--[if gt IE 8]><!--> <html class="no-js sidebar-large"></html><!--<![endif]-->
+
+	<!-- BEGIN STYLE -->
+    <link href="${ctx}/bootstrap/resources/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="${ctx}/bootstrap/resources/css/plugins.css" rel="stylesheet" />
+    <link href="${ctx}/bootstrap/resources/style.css" rel="stylesheet" />
+    <!-- END STYLE -->
+    
+    <link href="${ctx}/bootstrap/resources/icones/icons.css" rel="stylesheet" />
+	<link href="${ctx}/bootstrap/resources/icones/icons.min.css" rel="stylesheet" />
+
+    <!-- BEGIN SCRIPTS -->
+    <script src="#{request.contextPath}/bootstrap/resources/js/modernizr-2.6.2-respond-1.1.0.min.js" />
+
+	<!-- BEGIN MANDATORY SCRIPTS -->
+    <script src="#{request.contextPath}/bootstrap/resources/js/jquery-1.11.js" />
+    <script src="#{request.contextPath}/bootstrap/resources/js/jquery-migrate-1.2.1.js" />
+    <script src="#{request.contextPath}/bootstrap/resources/js/jquery-ui-1.10.4.min.js" />
+    <script src="#{request.contextPath}/bootstrap/resources/js/jquery.mobile-1.4.2.js" />
+    <script src="#{request.contextPath}/bootstrap/resources/js/bootstrap.min.js" />
+    <script src="#{request.contextPath}/bootstrap/resources/js/bootstrap-hover-dropdown.min.js" />
+    <script src="#{request.contextPath}/bootstrap/resources/js/bootstrap-select.js" />
+    <script src="#{request.contextPath}/bootstrap/resources/js/jquery.mCustomScrollbar.concat.min.js" />
+    <script src="#{request.contextPath}/bootstrap/resources/js/jquery.mmenu.min.all.js" />
+    <script src="#{request.contextPath}/bootstrap/resources/js/nprogress.js" />
+    <script src="#{request.contextPath}/bootstrap/resources/js/sparkline.min.js" />
+    <script src="#{request.contextPath}/bootstrap/resources/js/breakpoints.js" />
+    <script src="#{request.contextPath}/bootstrap/resources/js/jquery-numerator.js" />
+    <script src="#{request.contextPath}/bootstrap/resources/js/jquery.cookie.min.js" />
+    <!-- END MANDATORY SCRIPTS -->
+
+
+</h:head>
+
+<h:body>
+
+    <!-- BEGIN TOP MENU -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+        	<ui:insert name="cabecalho">
+            	<ui:include src="/bootstrap/templates/cabecalho.xhtml" />
+            </ui:insert>
+        </div>
+    </div>
+    <!-- END TOP MENU -->
+
+
+    <!-- BEGIN WRAPPER -->
+    <div id="wrapper">
+
+        <!-- BEGIN MAIN SIDEBAR -->
+        <div id="sidebar">
+        	<ui:insert name="menu">
+            	<ui:include src="/bootstrap/templates/menu.xhtml" />
+            </ui:insert>
+         </div>
+        <!-- END MAIN SIDEBAR -->
+
+
+        <!-- BEGIN MAIN CONTEUDO -->
+        <div id="main-content">
+			<ui:insert name="conteudo">
+            	<!-- [Template content will be inserted here] -->
+            </ui:insert>
+
+        </div>
+        <!-- END MAIN CONTEUDO -->
+
+    </div>
+    <!-- END WRAPPER -->
+
+	<!-- 
+		<ui:insert name="menu_lateral">
+      		<ui:include src="/bootstrap/templates/menulateral.xhtml" />
+    	</ui:insert>
+ 	-->
+	
+	<script src="#{request.contextPath}/bootstrap/resources/js/application.js" />
+	
+</h:body>
+</html>

@@ -1,0 +1,247 @@
+<ui:composition lang="pt_br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="/bootstrap/templates/principal.xhtml">
+
+	<ui:define name="conteudo">
+
+		<link href="${ctx}/bootstrap/resources/css/dropzone.css"
+			rel="stylesheet" />
+
+		<div class="page-title">
+			<i class="icon-custom-left"></i>
+			<h3>
+				<strong>New Post</strong>
+			</h3>
+			<a href="posts.html"> <i class="fa fa-angle-left"></i> <span>Back
+					to Posts</span>
+			</a> <br />
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="tabcordion">
+					<ul id="myTab" class="nav nav-tabs">
+						<li class="active"><a href="#post_general" data-toggle="tab">General</a></li>
+						<li><a href="#post_reviews" data-toggle="tab">Comments <span
+								class="m-l-10 badge badge-primary">5</span></a></li>
+					</ul>
+					<div id="myTabContent" class="tab-content">
+						<div class="tab-pane fade active in" id="post_general">
+							<div class="row">
+								<div class="col-md-8 post-column-left">
+									<div class="form-group">
+										<input type="email" class="form-control f-18" id="title"
+											placeholder="Title of your article..." />
+									</div>
+									<div class="form-group">
+										<textarea id="editor1" name="post-edit" class="cke-editor">
+                                            </textarea>
+									</div>
+									<div class="form-group">
+										<h5>Comment</h5>
+										<textarea rows="5" class="form-control valid"
+											placeholder="Optional comment..."></textarea>
+									</div>
+									<div class="form-group">
+										<h5>Featured Images (various will create a slides show
+											automatically)</h5>
+										<form action="#" class="dropzone">
+											<div class="fallback">
+												<input name="file" type="file" />
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="post-column-right">
+										<div class="form-group">
+											<div>
+												<h5 class="pull-left m-t-0">
+													Categories <span class="asterisk">*</span>
+												</h5>
+												<a href="#" class="pull-right c-gray"><i
+													class="fa fa-plus"></i> <strong>Add New</strong></a>
+											</div>
+											<select class="form-control" title="Choose one or more">
+												<optgroup label="Language">
+													<option>HTML</option>
+													<option>CSS</option>
+													<option>Javascript</option>
+												</optgroup>
+												<optgroup label="Type">
+													<option>Tutorial</option>
+													<option>Update</option>
+													<option>News</option>
+												</optgroup>
+											</select>
+										</div>
+										<div class="form-group">
+											<h5>Tags</h5>
+											<select class="form-control">
+												<option>HTML</option>
+												<option>CSS</option>
+												<option>PHP</option>
+												<option>Javascript</option>
+											</select>
+										</div>
+										<div class="form-group">
+											<h5>
+												Status <span class="asterisk">*</span>
+											</h5>
+											<div class="row">
+												<div class="col-md-4">
+													<label> <input type="radio" name="radio-choice-0" />Online
+													</label>
+												</div>
+												<div class="col-md-4">
+													<label> <input type="radio" name="radio-choice-0" />Offline
+													</label>
+												</div>
+												<div class="col-md-4">
+													<label> <input type="radio" name="radio-choice-0" />Draft
+													</label>
+												</div>
+											</div>
+										</div>
+										<h3>Optimize SEO</h3>
+										<div class="form-group">
+											<h5>
+												Meta Title <span class="asterisk">*</span>
+											</h5>
+											<input type="text" class="form-control"
+												value="Product 1 : buy your shirt with Pixit" />
+										</div>
+										<div class="form-group">
+											<h5>
+												Meta Description <span class="asterisk">*</span>
+											</h5>
+											<textarea rows="4" class="form-control"
+												placeholder="Max 255 characters..."></textarea>
+										</div>
+										<div class="form-group">
+											<h5>Meta Keywords</h5>
+											<textarea rows="6" class="form-control"
+												placeholder="Max 1000 characters..."></textarea>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="post_reviews">
+							<div class="row">
+								<div class="col-md-12">
+									<table id="post-review" class="table table-tools table-hover">
+										<thead>
+											<tr>
+												<th style="min-width: 70px"><strong>Review ID</strong></th>
+												<th><strong>Review Date</strong></th>
+												<th><strong>User / Client</strong></th>
+												<th><strong>Review Content</strong></th>
+												<th class="text-center"><strong>Status</strong></th>
+												<th class="text-center"><strong>Actions</strong></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>03/11/2013</td>
+												<td>John Addams</td>
+												<td>Good article. I like it a lot. Thanks!</td>
+												<td class="text-center"><span
+													class="label label-success w-300">Approved</span></td>
+												<td class="text-center"><a
+													href="ecommerce_product_view.html"
+													class="edit btn btn-sm btn-default"><i
+														class="fa fa-pencil"></i> Edit</a> <a href="#"
+													class="delete btn btn-sm btn-default"><i
+														class="fa fa-times-circle"></i> Remove</a></td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td>02/11/2013</td>
+												<td>Fred Aster</td>
+												<td>I sell my car. Do you want to buy it?</td>
+												<td class="text-center"><span
+													class="label label-danger w-300">Rejected</span></td>
+												<td class="text-center"><a
+													href="ecommerce_product_view.html"
+													class="edit btn btn-sm btn-default"><i
+														class="fa fa-pencil"></i> Edit</a> <a href="#"
+													class="delete btn btn-sm btn-default"><i
+														class="fa fa-times-circle"></i> Remove</a></td>
+											</tr>
+											<tr>
+												<td>3</td>
+												<td>01/11/2013</td>
+												<td>Mike Johson</td>
+												<td>Very interesting. Thanks for sharing!</td>
+												<td class="text-center"><span
+													class="label label-info w-300">Pending</span></td>
+												<td class="text-center"><a
+													href="ecommerce_product_view.html"
+													class="edit btn btn-sm btn-default"><i
+														class="fa fa-pencil"></i> Edit</a> <a href="#"
+													class="delete btn btn-sm btn-default"><i
+														class="fa fa-times-circle"></i> Remove</a></td>
+											</tr>
+											<tr>
+												<td>4</td>
+												<td>25/10/2013</td>
+												<td>Amanda Taping</td>
+												<td>Love it.</td>
+												<td class="text-center"><span
+													class="label label-success w-300">Approved</span></td>
+												<td class="text-center"><a
+													href="ecommerce_product_view.html"
+													class="edit btn btn-sm btn-default"><i
+														class="fa fa-pencil"></i> Edit</a> <a href="#"
+													class="delete btn btn-sm btn-default"><i
+														class="fa fa-times-circle"></i> Remove</a></td>
+											</tr>
+											<tr>
+												<td>5</td>
+												<td>20/10/2013</td>
+												<td>John Johnson</td>
+												<td>I don't understand anything</td>
+												<td class="text-center"><span
+													class="label label-success w-300">Approved</span></td>
+												<td class="text-center"><a
+													href="ecommerce_product_view.html"
+													class="edit btn btn-sm btn-default"><i
+														class="fa fa-pencil"></i> Edit</a> <a href="#"
+													class="delete btn btn-sm btn-default"><i
+														class="fa fa-times-circle"></i> Remove</a></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 m-t-20 m-b-40 align-center">
+				<a href="posts.html" class="btn btn-default m-r-10 m-t-10"><i
+					class="fa fa-reply"></i> Cancel</a> <a href="posts.html"
+					class="btn btn-default m-r-10 m-t-10"><i class="fa fa-edit"></i>
+					Save as Draft</a> <a href="posts.html" class="btn btn-success m-t-10"><i
+					class="fa fa-check"></i> Save &amp; Publish</a>
+			</div>
+		</div>
+
+		<!-- BEGIN PAGE LEVEL SCRIPTS -->
+		<script	src="#{request.contextPath}/bootstrap/resources/js/ckeditor.js" />
+		<script src="#{request.contextPath}/bootstrap/resources/js/jquery.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/dropzone.min.js" />
+		<script src="#{request.contextPath}/bootstrap/resources/js/blog.js" />
+		<!-- END  PAGE LEVEL SCRIPTS -->
+
+
+	</ui:define>
+
+</ui:composition>

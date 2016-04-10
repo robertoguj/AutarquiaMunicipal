@@ -1,0 +1,63 @@
+<ui:composition lang="pt_br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="/bootstrap/templates/principal.xhtml">
+
+	<ui:define name="conteudo">
+
+		<link rel="stylesheet" href="${ctx}/bootstrap/resources/css/jquery.Jcrop.min.css" />
+
+		<div class="image-croping">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<h3>
+								<strong>Preview Pane</strong> Crop Image
+							</h3>
+							<img src="${ctx}/bootstrap/resources/images/image_crop1.jpg"
+								id="image_crop1" alt="[Jcrop Example]" />
+							<div id="preview-pane">
+								<div class="preview-container">
+									<img src="${ctx}/bootstrap/resources/images/image_crop1.jpg"
+										class="jcrop-preview" alt="Preview" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<h3>
+								<strong>Preview Pane</strong> Crop Image
+							</h3>
+							<img src="${ctx}/bootstrap/resources/images/image_crop2.jpg"
+								id="image_crop2" alt="[Jcrop Example]" />
+							<div id="style-button">
+								<div class="btn-group" id="buttonbar">
+									<button id="radio1" data-setclass="jcrop-light" type="button"
+										class="btn btn-default">Light</button>
+									<button id="radio2" data-setclass="jcrop-dark" type="button"
+										class="btn btn-dark">Dark</button>
+									<button id="radio3" data-setclass="jcrop-normal" type="button"
+										class="btn btn-warning active">Normal</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- BEGIN PAGE LEVEL SCRIPTS -->
+		<script	src="#{request.contextPath}/bootstrap/resources/js/jquery.Jcrop.min.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/image_croping.js" />
+		<!-- END  PAGE LEVEL SCRIPTS -->
+
+	</ui:define>
+
+</ui:composition>

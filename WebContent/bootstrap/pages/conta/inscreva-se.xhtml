@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+[<!ENTITY nbsp "&#xA0;">]>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<f:view contentType="text/html" />
+
+<h:head>
+
+	<c:set var="ctx" value="#{facesContext.externalContext.requestContextPath}" />
+
+	<title>Sistema de Controle de Dívida Ativa</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<link rel="shortcut icon" type="image/x-icon" href="${ctx}/bootstrap/resources/images/favicon.ico" />
+
+	<!--[if lt IE 7]>      <html class="no-js sidebar-large lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+	<!--[if IE 7]>         <html class="no-js sidebar-large lt-ie9 lt-ie8"> <![endif]-->
+	<!--[if IE 8]>         <html class="no-js sidebar-large lt-ie9"> <![endif]-->
+	<!--[if gt IE 8]><!--> <html class="no-js sidebar-large"></html>
+	<!--<![endif]-->
+    
+	<!-- BEGIN STYLE -->
+    <link href="${ctx}/bootstrap/resources/css/icons.min.css" rel="stylesheet" />
+    <link href="${ctx}/bootstrap/resources/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="${ctx}/bootstrap/resources/css/plugins.css" rel="stylesheet" />
+    <link href="${ctx}/bootstrap/resources/css/lada.min.css" rel="stylesheet" />
+    <link href="${ctx}/bootstrap/resources/css/animate-custom.css" rel="stylesheet" />
+    <link href="${ctx}/bootstrap/resources/style.css" rel="stylesheet" />
+    <!-- END STYLE -->
+
+    <!-- BEGIN SCRIPTS -->
+    <script src="#{request.contextPath}/bootstrap/resources/js/modernizr-2.6.2-respond-1.1.0.min.js" />
+    
+</h:head>
+
+<h:body class="login fade-in" data-page="signup">
+    
+    <!-- START SIGNUP BOX -->
+    <div class="container" id="login-block">
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4">
+                <div class="login-box clearfix animated flipInY">
+
+                    <div class="login-logo">
+                    	<img src="${ctx}/bootstrap/resources/images/login-logo.png" />
+                    </div>
+                    <hr/>
+                    <div class="login-form">
+                        <!-- Start Error box -->
+                        <div class="alert alert-danger hide">
+                            <button type="button" class="close" data-dismiss="alert" />
+                            <h4>Erro!</h4>
+                            Usuário ou senha inválidos.
+                        </div>
+                        <!-- End Error box -->
+                        
+                        <h:form action="#" method="post">
+                            
+                            <h:inputText type="text" placeholder="Name" class="input-field" onfocus="if(this.value  == 'Usuário') { this.value = '' }" onblur="if(this.value == '') { this.value = 'Usuário' }" />
+                            
+                            <h:inputText type="email" placeholder="E-mail" class="input-field" onfocus="if(this.value  == 'Email') { this.value = '' }" onblur="if(this.value == '') { this.value = 'Email' }" />
+                            
+                            <h:inputText type="password" placeholder="Password" class="input-field" onfocus="if(this.value  == 'Senha') { this.value = '' }" onblur="if(this.value == '') { this.value = 'Senha' }" />
+                            
+                            <h:inputText type="password" placeholder="Confirm Password" class="input-field" onfocus="if(this.value  == 'Confirmar Senha') { this.value = '' }" onblur="if(this.value == '') { this.value = 'Confirmar Senha' }" />
+                        
+                        	<div class="div-login" style="margin: auto; text-align: center">
+								<h:commandButton style="display:inline;" value="Inscreva-se" styleClass="btn btn-default" />
+							</div>
+                        
+                        </h:form>
+                        
+                        <div class="login-links">
+                            <a href="${ctx}/bootstrap/pages/conta/recuperar_senha.jsf" >Esqueceu sua senha?</a>
+                            <br/>
+                            <a href="${ctx}/bootstrap/pages/login.jsf" >Já possui uma conta? <strong>Logar</strong></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END LOCKSCREEN BOX -->
+    
+    <!-- BEGIN MANDATORY SCRIPTS -->
+    <script src="#{request.contextPath}/bootstrap/resources/js/jquery-1.11.js" />
+    <script src="#{request.contextPath}/bootstrap/resources/js/jquery-migrate-1.2.1.js" />
+    <script src="#{request.contextPath}/bootstrap/resources/js/jquery-ui-1.10.4.min.js" />
+    <script src="#{request.contextPath}/bootstrap/resources/js/jquery.mobile-1.4.2.js" />
+    <script src="#{request.contextPath}/bootstrap/resources/js/bootstrap.min.js" />
+    <script src="#{request.contextPath}/bootstrap/resources/js/jquery.cookie.min.js" />
+    <!-- END MANDATORY SCRIPTS -->
+    
+    <!-- BEGIN PAGE LEVEL SCRIPTS -->
+    <script src="#{request.contextPath}/bootstrap/resources/js/backstretch.min.js" />
+    <script src="#{request.contextPath}/bootstrap/resources/js/lada.min.js" />
+    <script src="#{request.contextPath}/bootstrap/resources/js/account.js" />
+	<!-- END PAGE LEVEL SCRIPTS -->
+    
+</h:body>
+</html>

@@ -1,0 +1,276 @@
+<ui:composition lang="pt_br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui">
+
+	<div id="main-menu">
+	
+		<ul class="sidebar-nav">
+			<li class="current">
+				<a href="${ctx}/bootstrap/pages/index.jsf"><i class="fa fa-dashboard"></i><span class="sidebar-text">Principal</span></a>
+			</li>
+			<li><a href="#"><i class="glyph-icon flaticon-shopping80"></i><span	class="sidebar-text">Ecommerce</span><span class="fa arrow"></span></a>
+				<ul class="submenu collapse">
+					<li>
+						<a href="${ctx}/bootstrap/pages/ecommerce/dashboard.jsf"><span class="sidebar-text">Paineis</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/ecommerce/produtos.jsf"><span class="sidebar-text">Produtos</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/ecommerce/consulta_produtos.jsf"><span class="sidebar-text">Consulta Produtos</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/ecommerce/encomendas.jsf"><span class="sidebar-text">Encomendas</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/ecommerce/consulta_encomendas.jsf"><span class="sidebar-text">Consulta Encomendas</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/ecommerce/consulta_fatura.jsf"><span class="sidebar-text">Consulta Fatura</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/ecommerce/tabela_precos.jsf"><span class="sidebar-text">Tabela de Preços</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/ecommerce/carrinho_compras.jsf"><span class="sidebar-text">Carrinho de Compras</span></a>
+					</li>
+				</ul>
+			</li>
+			
+			<li>
+				<a href="#"><i class="fa fa-edit"></i><span	class="sidebar-text">Blog</span><span class="fa arrow"></span></a>
+				<ul class="submenu collapse">
+					<li>
+						<a href="${ctx}/bootstrap/pages/blog/dashboard.jsf">Paineis</a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/blog/artigos.jsf"><span class="sidebar-text">Artigos</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/blog/artigos_edicao.jsf"><span class="sidebar-text">Editar Artigos</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/blog/eventos.jsf"><span class="sidebar-text">Eventos</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/blog/eventos_edicao.jsf"><span class="sidebar-text">Editar Eventos</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/blog/blog_lista.jsf"><span class="sidebar-text">Blog Lista</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/blog/blog_unico.jsf"><span class="sidebar-text">Blog Único</span></a>
+					</li>
+				</ul>
+			</li>
+			
+			<li>
+				<a href="#"><i class="glyph-icon flaticon-star105"></i><span class="sidebar-text">Extra</span><span class="fa arrow"></span></a>
+				<ul class="submenu collapse">
+					<li>
+						<a href="${ctx}/bootstrap/pages/extra/anotacoes.jsf"><span class="sidebar-text">Anotações</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/extra/calendario.jsf"><span class="sidebar-text">Calendário</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/extra/graficos.jsf"><span class="sidebar-text">Gráficos</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/extra/widgets.jsf"><span class="sidebar-text">Widgets</span></a>
+					</li>
+				</ul>
+			</li>
+			
+			<li><a href="#"><i class="glyph-icon flaticon-email"></i><span
+					class="sidebar-text">Email</span><span class="fa arrow"></span></a>
+				<ul class="submenu collapse">
+					<li>
+						<a href="${ctx}/bootstrap/pages/email/mailbox.jsf"><span class="sidebar-text">Caixa de Entrada</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/email/mensagens.jsf"><span class="sidebar-text">Nova Mensagem</span></a>
+					</li>
+				</ul>
+			</li>
+			
+			<li><a href="#"><i class="glyph-icon flaticon-forms"></i><span
+					class="sidebar-text">Formulários</span><span class="fa arrow"></span></a>
+				<ul class="submenu collapse">
+					<li>
+						<a href="${ctx}/bootstrap/pages/formularios/form_elementos.jsf"><span class="sidebar-text">Formulário Elementos</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/formularios/form_validacao.jsf"><span class="sidebar-text">Formulário Validações</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/formularios/form_assistente.jsf"><span class="sidebar-text">Formulário Wizards</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/formularios/sliders.jsf"><span class="sidebar-text">Sliders</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/formularios/editores.jsf"><span class="sidebar-text">Editores</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/formularios/file_upload.jsf"><span class="sidebar-text">File Upload</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/formularios/form_contato.jsf"><span class="sidebar-text">Contato</span></a>
+					</li>
+				</ul>
+			</li>
+			
+			<li><a href="#"><i class="glyph-icon flaticon-ui-elements2"></i><span
+					class="sidebar-text">UI Elementos</span><span class="fa arrow"></span></a>
+				<ul class="submenu collapse">
+					<li>
+						<a href="${ctx}/bootstrap/pages/ui/componentes.jsf"><span class="sidebar-text">Componentes</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/ui/animacoes.jsf"><span class="sidebar-text">Animações CSS3</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/ui/botoes.jsf"><span class="sidebar-text">Botões</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/ui/icones.jsf"><span class="sidebar-text">Icones</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/ui/tipografia.jsf"><span class="sidebar-text">Tipografia</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/ui/modais.jsf"><span class="sidebar-text">Modals</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/ui/notificacoes.jsf"><span class="sidebar-text">Notificações</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/ui/tabs_accordion.jsf"><span class="sidebar-text">Tabelas &amp; Accordion</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/ui/tabela_lista.jsf"><span class="sidebar-text">Listas Classificáveis</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/ui/arvore.jsf"><span class="sidebar-text">Árvore</span></a>
+					</li>
+				</ul>
+			</li>
+			
+			<li><a href="#"><i class="glyph-icon flaticon-pages"></i><span
+					class="sidebar-text">Páginas</span><span class="fa arrow"></span></a>
+				<ul class="submenu collapse">
+					<li>
+						<a href="${ctx}/bootstrap/pages/erro/404.jsf"><span class="sidebar-text">404 Error Page</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/erro/500.jsf"><span class="sidebar-text">500 Error Page</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/bloqueio.jsf"><span	class="sidebar-text">Bloqueio de Tela</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/login.jsf"><span class="sidebar-text">Login</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/erro/manutencao.jsf"><span class="sidebar-text">Manutenção</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/session_timeout.jsf"><span class="sidebar-text">Session Timeout</span></a>
+					</li>
+				</ul>
+			</li>
+			
+			<li><a href="#"><i class="glyph-icon flaticon-pages"></i><span
+					class="sidebar-text">Fórum</span><span class="fa arrow"></span></a>
+				<ul class="submenu collapse">
+					<li>
+						<a href="${ctx}/bootstrap/pages/forum/questoes.jsf"><span class="sidebar-text">Questões</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/forum/membros.jsf"><span class="sidebar-text">Membros</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/forum/comentarios.jsf"><span class="sidebar-text">Comentários</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/forum/perguntas.jsf"><span class="sidebar-text">FAQ</span></a>
+					</li>
+				</ul>
+			</li>
+			
+			<li><a href="#"><i class="glyph-icon flaticon-panels"></i><span
+					class="sidebar-text">Paineis</span><span class="fa arrow"></span></a>
+				<ul class="submenu collapse">
+					<li>
+						<a href="${ctx}/bootstrap/pages/paineis/intro.jsf"><span class="sidebar-text">Paineis Intro</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/paineis/personalizados.jsf"><span class="sidebar-text">Paineis Personalizados</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/paineis/arrastaveis.jsf"><span class="sidebar-text">Painéis Arrastáveis</span></a>
+					</li>
+				</ul>
+			</li>
+			
+			<li><a href="#"><i class="fa fa-table"></i><span
+					class="sidebar-text">Tabelas</span><span class="fa arrow"></span></a>
+				<ul class="submenu collapse">
+					<li>
+						<a href="${ctx}/bootstrap/pages/tabelas/tables.jsf"><span class="sidebar-text">Estilo de Tabelas</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/tabelas/tabela_editavel.jsf"><span class="sidebar-text">Tabelas Editáveis</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/tabelas/tabela_dinamica.jsf"><span class="sidebar-text">Tabelas Dinâmicas</span></a>
+					</li>
+				</ul>
+			</li>
+			
+			<li><a href="#"><i class="glyph-icon flaticon-account"></i><span
+					class="sidebar-text">Conta</span><span class="fa arrow"></span></a>
+				<ul class="submenu collapse">
+					<li>
+						<a href="${ctx}/bootstrap/pages/conta/profile_usuario.jsf"><span class="sidebar-text">Profile do Usuário</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/conta/profile_edicao.jsf"><span class="sidebar-text">Editar Profile</span></a>
+					</li>
+					
+					<li>
+						<a href="${ctx}/bootstrap/pages/conta/inscreva-se.jsf"><span class="sidebar-text">Increva-se</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/conta/recuperar_senha.jsf"><span class="sidebar-text">Recuperar Senha</span></a>
+					</li>
+				</ul>
+			</li>
+			
+			<li><a href="#"><i class="glyph-icon flaticon-gallery"></i><span
+					class="sidebar-text">Imagens</span><span class="fa arrow"></span></a>
+				<ul class="submenu collapse">
+					<li>
+						<a href="${ctx}/bootstrap/pages/imagens/galeria.jsf"><span class="sidebar-text">Galeria</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/imagens/midias.jsf"><span class="sidebar-text">Mídias</span></a>
+					</li>
+					<li>
+						<a href="${ctx}/bootstrap/pages/imagens/view.jsf"><span class="sidebar-text">Imagem View</span></a>
+					</li>
+				</ul>
+			</li>
+			<li class="m-b-245">
+                <a href="${ctx}/bootstrap/pages/bloqueio.jsf"><i class="glyph-icon flaticon-account"></i><span class="sidebar-text">Bloquear Usuário</span></a>
+            </li>
+
+		</ul>
+
+	</div>
+
+</ui:composition>

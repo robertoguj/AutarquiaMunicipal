@@ -1,0 +1,536 @@
+<ui:composition lang="pt_br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="/bootstrap/templates/principal.xhtml">
+
+
+	<ui:define name="conteudo">
+
+		<link
+			href="${ctx}/bootstrap/resources/css/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
+
+		<div class="page-title">
+			<h3>
+				<strong>Blog</strong> Dashboard
+			</h3>
+		</div>
+		<div class="row m-t-20">
+			<div class="col-md-6">
+				<div class="panel blog-stat">
+					<div class="panel-heading bg-dark">
+						<h3 class="panel-title">Global Stats</h3>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-xs-6">
+								<h5>
+									<strong>CONTENT</strong>
+								</h5>
+								<div>
+									<p>
+										<a href="posts.html">127 Posts</a>
+									</p>
+									<p>
+										<a href="posts.html">12 Categories</a>
+									</p>
+									<p>
+										<a href="posts.html">3 Pages</a>
+									</p>
+									<p>
+										<a href="posts.html">240 Tags</a>
+									</p>
+								</div>
+
+							</div>
+							<div class="col-xs-6">
+								<h5>
+									<strong>DISCUSSION</strong>
+								</h5>
+								<p>
+									<a href="posts.html">524 Comments</a>
+								</p>
+								<p>
+									<a href="posts.html">512 Approved</a>
+								</p>
+								<p>
+									<a href="posts.html">12 Pending</a>
+								</p>
+								<p>
+									<a href="posts.html"><span class="c-red">0 Spam</span></a>
+								</p>
+							</div>
+
+							<div class="col-md-12">
+								<h5 class="m-t-30 m-b-0">
+									<strong>VISITS</strong>
+								</h5>
+								<div id="chart_visits" style="height: 262px"></div>
+							</div>
+						</div>
+					</div>
+					<div class="panel-footer">
+						<div class="row">
+							<div class="col-md-3">Space Used</div>
+							<div class="col-md-9">
+								<div class="progress">
+									<div class="progress-bar progress-bar-primary"
+										data-aria-valuetransitiongoal="75">
+										75% <span class="c-gray-light">(570 Mo)</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="panel panel-stat bg-white">
+					<div class="panel-heading text-center p-10 p-b-0">
+						<div class="pos-abs t-10 l-15 f-20">
+							<i class="glyph-icon flaticon-visitors"></i>
+						</div>
+						<h2 class="panel-title">Visits</h2>
+						<div class="pos-abs t-5 r-5 f-18 cursor-pointer">
+							<div class="glyph-icon flaticon-plus16 f-32"></div>
+						</div>
+					</div>
+					<div class="panel-body p-0 p-b-0">
+						<div id="world-map" style="height: 300px;"></div>
+						<div class="table-responsive">
+							<table class="table table-striped">
+								<tr>
+									<th>Country</th>
+									<th>Visitors</th>
+									<th>Online</th>
+									<th>Page Views</th>
+								</tr>
+								<tr>
+									<td><a href="#">USA</a></td>
+									<td>
+										<div id="sparkline-1"></div>
+									</td>
+									<td>209</td>
+									<td>239</td>
+								</tr>
+								<tr>
+									<td><a href="#">India</a></td>
+									<td>
+										<div id="sparkline-2"></div>
+									</td>
+									<td>131</td>
+									<td>958</td>
+								</tr>
+								<tr>
+									<td><a href="#">Britain</a></td>
+									<td>
+										<div id="sparkline-3"></div>
+									</td>
+									<td>19</td>
+									<td>417</td>
+								</tr>
+								<tr>
+									<td><a href="#">Brazil</a></td>
+									<td>
+										<div id="sparkline-4"></div>
+									</td>
+									<td>109</td>
+									<td>476</td>
+								</tr>
+								<tr>
+									<td><a href="#">China</a></td>
+									<td>
+										<div id="sparkline-5"></div>
+									</td>
+									<td>192</td>
+									<td>437</td>
+								</tr>
+								<tr>
+									<td><a href="#">Australia</a></td>
+									<td>
+										<div id="sparkline-6"></div>
+									</td>
+									<td>1709</td>
+									<td>947</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row m-t-20">
+			<div class="col-md-12">
+				<div class="tabcordion">
+					<ul class="nav nav-tabs nav-dark">
+						<li class="active"><a href="#products" data-toggle="tab">Last
+								Posts</a></li>
+						<li><a href="#orders" data-toggle="tab">Last Events</a></li>
+						<li><a href="#reviews" data-toggle="tab">Pending Comments
+								<span class="m-l-10 badge badge-primary">5</span>
+						</a></li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-pane fade active in" id="products">
+							<div class="row p-20">
+								<div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+									<table class="table table-striped">
+										<thead>
+											<tr>
+												<th>Title</th>
+												<th>Author</th>
+												<th>Categories</th>
+												<th>Tags</th>
+												<th>Creation</th>
+												<th>Comments</th>
+												<th class="text-center">Status</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><a class="w-600" href="post_edit.html">Geolocation
+														API</a></td>
+												<td><a href="profil_edit.html">Fred Aster</a></td>
+												<td>Javascript</td>
+												<td><span class="label label-default"><i
+														class="fa fa-tag f-10 p-r-5 c-gray-light"></i> map</span> <span
+													class="label label-default"><i
+														class="fa fa-tag f-10 p-r-5 c-gray-light"></i> jquery</span></td>
+												<td>06/10/2014</td>
+												<td>5</td>
+												<td class="text-center"><span
+													class="label label-success w-300">Online</span></td>
+											</tr>
+											<tr>
+												<td><a class="w-600" href="post_edit.html">Authentification</a>
+												</td>
+												<td><a href="profil_edit.html">Miles Bines</a></td>
+												<td>PHP</td>
+												<td><span class="label label-default"><i
+														class="fa fa-tag f-10 p-r-5 c-gray-light"></i> session</span> <span
+													class="label label-default"><i
+														class="fa fa-tag f-10 p-r-5 c-gray-light"></i> cookie</span></td>
+												<td>06/08/2014</td>
+												<td>2</td>
+												<td class="text-center"><span
+													class="label label-success w-300">Online</span></td>
+											</tr>
+											<tr>
+												<td><a class="w-600" href="post_edit.html">Upload
+														Files</a></td>
+												<td><a href="profil_edit.html">Bobby Brown</a></td>
+												<td>PHP</td>
+												<td><span class="label label-default"><i
+														class="fa fa-tag f-10 p-r-5 c-gray-light"></i> upload</span> <span
+													class="label label-default"><i
+														class="fa fa-tag f-10 p-r-5 c-gray-light"></i> php</span></td>
+												<td>06/07/2014</td>
+												<td>5</td>
+												<td class="text-center"><span
+													class="label label-danger w-300">Deleted</span></td>
+											</tr>
+											<tr>
+												<td><a class="w-600" href="post_edit.html">Loop
+														functions</a></td>
+												<td><a href="profil_edit.html">Martin Vones</a></td>
+												<td>Jquery</td>
+												<td><span class="label label-default"><i
+														class="fa fa-tag f-10 p-r-5 c-gray-light"></i> jquery</span> <span
+													class="label label-default"><i
+														class="fa fa-tag f-10 p-r-5 c-gray-light"></i> function</span></td>
+												<td>03/05/2014</td>
+												<td>6</td>
+												<td class="text-center"><span
+													class="label label-success w-300">Online</span></td>
+											</tr>
+											<tr>
+												<td><a class="w-600" href="post_edit.html">Sending
+														Email</a></td>
+												<td><a href="profil_edit.html">John Milo</a></td>
+												<td>HTML</td>
+												<td><span class="label label-default"><i
+														class="fa fa-tag f-10 p-r-5 c-gray-light"></i> html</span> <span
+													class="label label-default"><i
+														class="fa fa-tag f-10 p-r-5 c-gray-light"></i> email</span></td>
+												<td>06/03/2014</td>
+												<td>4</td>
+												<td class="text-center"><span
+													class="label label-success w-300">Online</span></td>
+											</tr>
+											<tr>
+												<td><a class="w-600" href="post_edit.html">User
+														Profil</a></td>
+												<td><a href="profil_edit.html">Alex Wilson</a></td>
+												<td>HTML</td>
+												<td><span class="label label-default"><i
+														class="fa fa-tag f-10 p-r-5 c-gray-light"></i> profil</span> <span
+													class="label label-default"><i
+														class="fa fa-tag f-10 p-r-5 c-gray-light"></i> css</span></td>
+												<td>03/02/2014</td>
+												<td>6</td>
+												<td class="text-center"><span
+													class="label label-dark w-300">Draft</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="orders">
+							<div class="row p-20">
+								<div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+									<table class="table table-striped">
+										<thead>
+											<tr>
+												<th style="width: 200px;">Illustration</th>
+												<th>Name</th>
+												<th>Location</th>
+												<th>Categories</th>
+												<th style="width: 15%">Tags</th>
+												<th class="text-center">Start Date</th>
+												<th class="text-center">End Date</th>
+												<th class="text-center">Status</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><a
+													href="${ctx}/bootstrap/resources/images/mars.jpg"
+													class="magnific" title="Bruno Mars"> <img
+														src="${ctx}/bootstrap/resources/images/mars.jpg"
+														alt="mars" class="img-responsive" /></a></td>
+												<td><a href="event_edit.html" class="c-red">Bruno
+														Mars</a></td>
+												<td>Memphis</td>
+												<td>Music</td>
+												<td><span class="label label-default"><i
+														class="fa fa-tag f-10 p-r-5 c-gray-light"></i> live</span> <span
+													class="label label-default"><i
+														class="fa fa-tag f-10 p-r-5 c-gray-light"></i> Bruno Mars</span>
+													<span class="label label-default"><i
+														class="fa fa-tag f-10 p-r-5 c-gray-light"></i> Memphis</span></td>
+												<td class="text-center">
+													<div class="event-date">
+														<div class="event-month">
+															<span class="dots" /> <span title="June">Jun </span> <span
+																class="dots" />
+														</div>
+														<div class="event-day">24</div>
+														<div class="event-day-txt">Sun</div>
+													</div>
+												</td>
+												<td class="text-center">
+													<div class="event-date">
+														<div class="event-month">
+															<span class="dots" /> <span title="June">Jun </span> <span
+																class="dots" />
+														</div>
+														<div class="event-day">28</div>
+														<div class="event-day-txt">THU</div>
+													</div>
+												</td>
+												<td class="text-center"><span
+													class="label label-success w-300">Coming</span></td>
+											</tr>
+											<tr>
+												<td><a
+													href="${ctx}/bootstrap/resources/images/paul.jpg"
+													class="magnific" title="Paul McCartney"> <img
+														src="${ctx}/bootstrap/resources/images/paul.jpg"
+														alt="paul" class="img-responsive" /></a></td>
+												<td><a href="event_edit.html" class="c-red">Paul
+														McCartney</a></td>
+												<td>New York</td>
+												<td>Music</td>
+												<td><span class="label label-default"><i
+														class="fa fa-tag f-10 p-r-5 c-gray-light"></i> concert</span> <span
+													class="label label-default"><i
+														class="fa fa-tag f-10 p-r-5 c-gray-light"></i> Paul
+														McCartney</span> <span class="label label-default"><i
+														class="fa fa-tag f-10 p-r-5 c-gray-light"></i> NY</span></td>
+												<td class="text-center">
+													<div class="event-date">
+														<div class="event-month">
+															<span class="dots" /> <span title="June">May </span> <span
+																class="dots" />
+														</div>
+														<div class="event-day">17</div>
+														<div class="event-day-txt">Mon</div>
+													</div>
+												</td>
+												<td class="text-center">
+													<div class="event-date">
+														<div class="event-month">
+															<span class="dots" /> <span title="June">May </span> <span
+																class="dots" />
+														</div>
+														<div class="event-day">18</div>
+														<div class="event-day-txt">Tue</div>
+													</div>
+												</td>
+												<td class="text-center"><span
+													class="label label-success w-300">Coming</span></td>
+											</tr>
+											<tr>
+												<td><a
+													href="${ctx}/bootstrap/resources/images/buble.jpg"
+													class="magnific" title="Michael Bublé"> <img
+														src="${ctx}/bootstrap/resources/images/buble.jpg"
+														alt="buble" class="img-responsive" /></a></td>
+												<td><a href="event_edit.html" class="c-red">Michael
+														Bublé</a></td>
+												<td>Miami</td>
+												<td>Music</td>
+												<td><span class="label label-default"><i
+														class="fa fa-tag f-10 p-r-5 c-gray-light"></i> Michael
+														Bublé</span> <span class="label label-default"><i
+														class="fa fa-tag f-10 p-r-5 c-gray-light"></i> Miami</span></td>
+												<td class="text-center">
+													<div class="event-date">
+														<div class="event-month">
+															<span class="dots" /> <span title="June">May </span> <span
+																class="dots" />
+														</div>
+														<div class="event-day">16</div>
+														<div class="event-day-txt">Thu</div>
+													</div>
+												</td>
+												<td class="text-center">
+													<div class="event-date">
+														<div class="event-month">
+															<span class="dots" /> <span title="June">May </span> <span
+																class="dots" />
+														</div>
+														<div class="event-day">21</div>
+														<div class="event-day-txt">Sat</div>
+													</div>
+												</td>
+												<td class="text-center"><span
+													class="label label-success w-300">Coming</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="reviews">
+							<div class="row p-20">
+								<div class="col-md-12">
+									<table id="event-review"
+										class="table table-tools table-striped">
+										<thead>
+											<tr>
+												<th style="min-width: 70px"><strong>Review ID</strong></th>
+												<th><strong>Review Date</strong></th>
+												<th><strong>User / Client</strong></th>
+												<th style="width: 50%"><strong>Review Content</strong></th>
+												<th class="text-center"><strong>Status</strong></th>
+												<th class="text-center"><strong>Actions</strong></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>03/11/2013</td>
+												<td>John Addams</td>
+												<td>Hawaii has a lot to proud of in Bruno Mars...what a
+													talent. Old soul in a young man. Love the variety and range
+													in his music! Love hearing the old songs that inspired the
+													new songs. I got a tears in my eyes when he got choked up
+													on his encore rendition of I'll remember you, Can't wait to
+													see him on the Grammy's.</td>
+												<td class="text-center"><span
+													class="label label-info w-300">Pending</span></td>
+												<td class="text-center"><a href="#" data-rel="tooltip"
+													title="Edit this comment"
+													class="edit btn btn-sm btn-icon btn-rounded btn-default"><i
+														class="fa fa-pencil"></i></a> <a href="#" data-rel="tooltip"
+													title="Delete this comment"
+													class="delete btn btn-sm btn-icon btn-rounded btn-default"><i
+														class="fa fa-times"></i></a></td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td>02/11/2013</td>
+												<td>Fred Aster</td>
+												<td>I loved the way he performed every song including
+													the ones that he could only really do the chorus for. I
+													loved how truly moved he was throughout the performance to
+													hear the audience in his hometown singing his songs back to
+													him. He is a big star now - but mark my words - he will
+													stick around for a long time and be an UBER big star! I
+													love Bruno!</td>
+												<td class="text-center"><span
+													class="label label-info w-300">Pending</span></td>
+												<td class="text-center"><a href="#" data-rel="tooltip"
+													title="Edit this comment"
+													class="edit btn btn-sm btn-icon btn-rounded btn-default"><i
+														class="fa fa-pencil"></i></a> <a href="#" data-rel="tooltip"
+													title="Delete this comment"
+													class="delete btn btn-sm btn-icon btn-rounded btn-default"><i
+														class="fa fa-times"></i></a></td>
+											</tr>
+											<tr>
+												<td>3</td>
+												<td>01/11/2013</td>
+												<td>Mike Johson</td>
+												<td>Awesome amazing. A voice like butter ...he is so
+													reminiscent of a combo of Elvis And Michael Jackson A fine
+													musician and all around entertainer</td>
+												<td class="text-center"><span
+													class="label label-info w-300">Pending</span></td>
+												<td class="text-center"><a href="#" data-rel="tooltip"
+													title="Edit this comment"
+													class="edit btn btn-sm btn-icon btn-rounded btn-default"><i
+														class="fa fa-pencil"></i></a> <a href="#" data-rel="tooltip"
+													title="Delete this comment"
+													class="delete btn btn-sm btn-icon btn-rounded btn-default"><i
+														class="fa fa-times"></i></a></td>
+											</tr>
+											<tr>
+												<td>4</td>
+												<td>25/10/2013</td>
+												<td>Amanda Taping</td>
+												<td>I would highly recommend the Bruno Mars concert for
+													all age groups. One of the best if not the best concert I
+													have seen in my 62 years of rock and roll.</td>
+												<td class="text-center"><span
+													class="label label-info w-300">Pending</span></td>
+												<td class="text-center"><a href="#" data-rel="tooltip"
+													title="Edit this comment"
+													class="edit btn btn-sm btn-icon btn-rounded btn-default"><i
+														class="fa fa-pencil"></i></a> <a href="#" data-rel="tooltip"
+													title="Delete this comment"
+													class="delete btn btn-sm btn-icon btn-rounded btn-default"><i
+														class="fa fa-times"></i></a></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- BEGIN PAGE LEVEL SCRIPTS -->
+		<script	src="#{request.contextPath}/bootstrap/resources/js/metrojs.min.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/jquery.flot.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/jquery.flot.animator.min.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/jquery.flot.resize.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/jquery.flot.time.min.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/jquery.ui.touch-punch.min.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/jquery-jvectormap-1.2.2.min.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/jquery-jvectormap-world-mill-en.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/bootstrap-progressbar.js" />
+		<script src="#{request.contextPath}/bootstrap/resources/js/blog.js" />
+		<!-- END  PAGE LEVEL SCRIPTS -->
+
+
+	</ui:define>
+
+</ui:composition>

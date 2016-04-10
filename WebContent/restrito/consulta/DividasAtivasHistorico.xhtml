@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+	<ui:composition template="/templates/principal.xhtml">
+
+		<!-- BEGIN PAGE LEVEL STYLE -->
+		<link rel="stylesheet" href="${ctx}/bootstrap/resources/css/dataTables.css" />
+		<!-- END PAGE LEVEL STYLE -->
+
+		<ui:define name="conteudo">
+
+			<h:form>
+
+				<div class="panel-main row">
+					<div class="col-md-12">
+						<div class="panel-default">
+
+							<div class="panel-heading bg-panel">
+								<h3 class="panel-title"> <strong>Consultar Histórico de Dívidas </strong> </h3>
+							</div>
+							
+							<strong>Preencha um dos campos para efetuar a pesquisa</strong>
+
+							<p:growl id="msgs" showDetail="true" />
+
+							<fieldset  style="margin-top: 20px; width: 800px;">
+
+								<legend>Dados do Proprietário</legend>
+								<h:panelGrid columns="1" cellpadding="5" columnClasses="td300">
+
+									<h:panelGroup>
+										<h:outputLabel>	<strong>CPF</strong> </h:outputLabel>
+										<p:inputMask id="cpf" styleClass="form-control" value="#{proprietario.cpf}" mask="999.999.999-99" />
+										
+									</h:panelGroup>
+
+								</h:panelGrid>
+
+							</fieldset>
+							
+							
+							<div class="div-botoes" style="float: left;">
+								<h:commandButton id="btnConsultar" styleClass="btn btn-success" value="Consultar" reRender="listaHistoricoDividas" />
+								<h:commandButton id="btnLimpar" styleClass="btn btn-success" immediate="true" type="reset" value="Limpar" />
+							</div>
+							
+							
+							
+							
+								<h:dataTable var="" id="listaHistoricoDividas"
+										styleClass="table table-striped table-hover table-dynamic"
+										value="">
+
+										<h:column>
+											<f:facet name="header">Valor da Dívida</f:facet>
+											<h:outputText value="#{divida.valor}" />
+										</h:column>
+
+										<h:column>
+											<f:facet name="header">Data de Inclusão</f:facet>
+											<h:outputText value="#{divida.dataIncricao}" />
+										</h:column>
+										
+										<h:column>
+											<f:facet name="header">Status</f:facet>
+											<h:outputText value="#{divida.status}" />
+										</h:column>
+
+										<h:column>
+											<f:facet name="header">Detalhar Dívida</f:facet>
+											<h:commandLink title="Detalhar Dívida" value="Detalhar" rendered="false" />
+										</h:column>
+
+										<h:column>
+											<f:facet name="header">
+												<input type="checkbox" id="selecctall" />
+											</f:facet>
+											<h:selectBooleanCheckbox class="checkbox1" value="#{user.checkBoxeSelecao}" rendered="false" />
+										</h:column>
+
+									</h:dataTable>
+							
+
+						</div>
+					</div>
+				</div>
+
+			<script>
+				$(document).ready(function() {
+					$('#selecctall').click(function(event) { //on click 
+						if (this.checked) { // check select status
+							$('.checkbox1').each(function() { //loop through each checkbox
+								this.checked = true; //select all checkboxes with class "checkbox1"               
+							});
+						} else {
+							$('.checkbox1').each(function() { //loop through each checkbox
+								this.checked = false; //deselect all checkboxes with class "checkbox1"                       
+							});
+						}
+					});
+
+				});
+			</script>
+
+
+		</h:form>
+
+		<!-- BEGIN PAGE LEVEL SCRIPTS -->
+		<script	src="#{request.contextPath}/bootstrap/resources/js/bootstrap-switch.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/bootstrap-progressbar.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/jquery.dataTables.min.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/dataTables.bootstrap.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/dataTables.tableTools.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/table.editable.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/table_dynamic.js" />
+		<!-- END  PAGE LEVEL SCRIPTS -->
+
+		</ui:define>
+
+	</ui:composition>
+
+</html>

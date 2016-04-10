@@ -1,0 +1,492 @@
+<ui:composition lang="pt_br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="/bootstrap/templates/principal.xhtml">
+
+	<ui:define name="conteudo">
+
+		<div class="panel-content">
+			<div class="row media-manager">
+				<ul class="media-header">
+					<li><a href="#" class="c-dark filter active" data-filter="all">
+							<strong>All</strong>
+					</a></li>
+					<li><a href="#" class="filter" data-filter=".cat-image"><i
+							class="glyphicon glyphicon-camera"></i> Images</a></li>
+					<li><a href="#" class="filter" data-filter=".cat-film"><i
+							class="glyphicon glyphicon-film"></i> Videos</a></li>
+					<li><a href="#" class="filter" data-filter=".cat-music"><i
+							class="glyphicon glyphicon-music"></i> Audios</a></li>
+					<li><a href="#" class="filter" data-filter=".cat-doc"><i
+							class="glyphicon glyphicon-folder-open"></i> Documents</a></li>
+					<li class="pull-right"><a href="#" data-toggle="modal"
+						data-target="#add-file"><i
+							class="fa fa-cloud-download c-white"></i> Upload Files</a></li>
+				</ul>
+				<div class="margin-bottom-30"></div>
+				<div class="col-sm-9">
+					<div class="gallery row">
+						<div class="mix cat-image col-xs-6 col-sm-4 col-md-3">
+							<div class="btn-group media-group">
+								<button type="button" class="btn btn-default dropdown-toggle"
+									data-toggle="dropdown">
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu media-menu" role="menu">
+									<li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+									<li><a href="#"><i class="fa fa-download"></i>
+											Download</a></li>
+									<li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+								</ul>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<div class="thmb">
+										<div class="thmb-prev">
+											<img src="${ctx}/bootstrap/resources/images/animal1.jpg"
+												class="img-responsive" alt="" />
+										</div>
+										<h5 class="media-title">
+											<a href="">Animal1.jpg</a>
+										</h5>
+										<small class="text-muted pull-left">547 Ko</small> <small
+											class="text-muted pull-right">Apr 11, 2014</small>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mix cat-doc col-xs-6 col-sm-4 col-md-3">
+							<div class="btn-group media-group">
+								<button type="button" class="btn btn-default dropdown-toggle"
+									data-toggle="dropdown">
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu media-menu" role="menu">
+									<li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+									<li><a href="#"><i class="fa fa-download"></i>
+											Download</a></li>
+									<li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+								</ul>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<div class="thmb">
+										<div class="thmb-prev">
+											<img src="${ctx}/bootstrap/resources/images/nature1-1.jpg"
+												class="img-responsive" alt="" />
+										</div>
+										<h5 class="media-title">
+											<a href="">Nature1.doc</a>
+										</h5>
+										<small class="text-muted pull-left">328 Ko</small> <small
+											class="text-muted pull-right">Fev 18, 2014</small>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mix cat-film col-xs-6 col-sm-4 col-md-3">
+							<div class="btn-group media-group">
+								<button type="button" class="btn btn-default dropdown-toggle"
+									data-toggle="dropdown">
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu media-menu" role="menu">
+									<li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+									<li><a href="#"><i class="fa fa-download"></i>
+											Download</a></li>
+									<li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+								</ul>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<div class="thmb">
+										<div class="thmb-prev">
+											<img src="${ctx}/bootstrap/resources/images/transport1.jpg"
+												class="img-responsive" alt="" />
+										</div>
+										<h5 class="media-title">
+											<a href="">Transport1.mp4</a>
+										</h5>
+										<small class="text-muted pull-left">256 Ko</small> <small
+											class="text-muted pull-right">Fev 16, 2014</small>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mix cat-image col-xs-6 col-sm-4 col-md-3">
+							<div class="btn-group media-group">
+								<button type="button" class="btn btn-default dropdown-toggle"
+									data-toggle="dropdown">
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu media-menu" role="menu">
+									<li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+									<li><a href="#"><i class="fa fa-download"></i>
+											Download</a></li>
+									<li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+								</ul>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<div class="thmb">
+										<div class="thmb-prev">
+											<img src="${ctx}/bootstrap/resources/images/animal2.jpg"
+												class="img-responsive" alt="" />
+										</div>
+										<h5 class="media-title">
+											<a href="">Animal2.jpg</a>
+										</h5>
+										<small class="text-muted pull-left">467 Ko</small> <small
+											class="text-muted pull-right">Apr 4, 2014</small>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mix cat-doc col-xs-6 col-sm-4 col-md-3">
+							<div class="btn-group media-group">
+								<button type="button" class="btn btn-default dropdown-toggle"
+									data-toggle="dropdown">
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu media-menu" role="menu">
+									<li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+									<li><a href="#"><i class="fa fa-download"></i>
+											Download</a></li>
+									<li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+								</ul>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<div class="thmb">
+										<div class="thmb-prev">
+											<img src="${ctx}/bootstrap/resources/images/nature2-1.jpg"
+												class="img-responsive" alt="" />
+										</div>
+										<h5 class="media-title">
+											<a href="">Nature2.doc</a>
+										</h5>
+										<small class="text-muted pull-left">397 Ko</small> <small
+											class="text-muted pull-right">Fev 24, 2014</small>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mix cat-music col-xs-6 col-sm-4 col-md-3">
+							<div class="btn-group media-group">
+								<button type="button" class="btn btn-default dropdown-toggle"
+									data-toggle="dropdown">
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu media-menu" role="menu">
+									<li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+									<li><a href="#"><i class="fa fa-download"></i>
+											Download</a></li>
+									<li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+								</ul>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<div class="thmb">
+										<div class="thmb-prev">
+											<img src="${ctx}/bootstrap/resources/images/transport2.jpg"
+												class="img-responsive" alt="" />
+										</div>
+										<h5 class="media-title">
+											<a href="">Transport2.mp3</a>
+										</h5>
+										<small class="text-muted pull-left">654 Ko</small> <small
+											class="text-muted pull-right">Fev 24, 2014</small>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mix cat-doc col-xs-6 col-sm-4 col-md-3">
+							<div class="btn-group media-group">
+								<button type="button" class="btn btn-default dropdown-toggle"
+									data-toggle="dropdown">
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu media-menu" role="menu">
+									<li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+									<li><a href="#"><i class="fa fa-download"></i>
+											Download</a></li>
+									<li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+								</ul>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<div class="thmb">
+										<div class="thmb-prev">
+											<img src="${ctx}/bootstrap/resources/images/animal3.jpg"
+												class="img-responsive" alt="" />
+										</div>
+										<h5 class="media-title">
+											<a href="">Animal.doc</a>
+										</h5>
+										<small class="text-muted pull-left">654 Ko</small> <small
+											class="text-muted pull-right">Fev 24, 2014</small>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mix cat-music col-xs-6 col-sm-4 col-md-3">
+							<div class="btn-group media-group">
+								<button type="button" class="btn btn-default dropdown-toggle"
+									data-toggle="dropdown">
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu media-menu" role="menu">
+									<li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+									<li><a href="#"><i class="fa fa-download"></i>
+											Download</a></li>
+									<li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+								</ul>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<div class="thmb">
+										<div class="thmb-prev">
+											<img src="${ctx}/bootstrap/resources/images/nature3-1.jpg"
+												class="img-responsive" alt="" />
+										</div>
+										<h5 class="media-title">
+											<a href="">Nature3.mp3</a>
+										</h5>
+										<small class="text-muted pull-left">654 Ko</small> <small
+											class="text-muted pull-right">Fev 24, 2014</small>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mix cat-image col-xs-6 col-sm-4 col-md-3">
+							<div class="btn-group media-group">
+								<button type="button" class="btn btn-default dropdown-toggle"
+									data-toggle="dropdown">
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu media-menu" role="menu">
+									<li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+									<li><a href="#"><i class="fa fa-download"></i>
+											Download</a></li>
+									<li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+								</ul>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<div class="thmb">
+										<div class="thmb-prev">
+											<img src="${ctx}/bootstrap/resources/images/transport3.jpg"
+												class="img-responsive" alt="" />
+										</div>
+										<h5 class="media-title">
+											<a href="">Transport3.jpg</a>
+										</h5>
+										<small class="text-muted pull-left">654 Ko</small> <small
+											class="text-muted pull-right">Fev 24, 2014</small>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mix cat-film col-xs-6 col-sm-4 col-md-3">
+							<div class="btn-group media-group">
+								<button type="button" class="btn btn-default dropdown-toggle"
+									data-toggle="dropdown">
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu media-menu" role="menu">
+									<li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+									<li><a href="#"><i class="fa fa-download"></i>
+											Download</a></li>
+									<li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+								</ul>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<div class="thmb">
+										<div class="thmb-prev">
+											<img src="${ctx}/bootstrap/resources/images/animal4.jpg"
+												class="img-responsive" alt="" />
+										</div>
+										<h5 class="media-title">
+											<a href="">Animal4.mp4</a>
+										</h5>
+										<small class="text-muted pull-left">654 Ko</small> <small
+											class="text-muted pull-right">Fev 24, 2014</small>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mix cat-doc col-xs-6 col-sm-4 col-md-3">
+							<div class="btn-group media-group">
+								<button type="button" class="btn btn-default dropdown-toggle"
+									data-toggle="dropdown">
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu media-menu" role="menu">
+									<li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+									<li><a href="#"><i class="fa fa-download"></i>
+											Download</a></li>
+									<li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+								</ul>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<div class="thmb">
+										<div class="thmb-prev">
+											<img src="${ctx}/bootstrap/resources/images/nature6.jpg"
+												class="img-responsive" alt="" />
+										</div>
+										<h5 class="media-title">
+											<a href="">Nature6.doc</a>
+										</h5>
+										<small class="text-muted pull-left">654 Ko</small> <small
+											class="text-muted pull-right">Fev 24, 2014</small>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mix cat-image col-xs-6 col-sm-4 col-md-3">
+							<div class="btn-group media-group">
+								<button type="button" class="btn btn-default dropdown-toggle"
+									data-toggle="dropdown">
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu media-menu" role="menu">
+									<li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+									<li><a href="#"><i class="fa fa-download"></i>
+											Download</a></li>
+									<li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+								</ul>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<div class="thmb">
+										<div class="thmb-prev">
+											<img src="${ctx}/bootstrap/resources/images/nature4-1.jpg"
+												class="img-responsive" alt="" />
+										</div>
+										<h5 class="media-title">
+											<a href="">Nature4.jpg</a>
+										</h5>
+										<small class="text-muted pull-left">654 Ko</small> <small
+											class="text-muted pull-right">Fev 24, 2014</small>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3 media-menu">
+					<div class="m-b-10">
+						<strong>FOLDERS</strong> <a href="#"
+							class="pull-right c-gray w-600">+ ADD NEW</a>
+					</div>
+					<div class="panel-group" id="accordion">
+						<div class="panel panel-default" data-toggle="collapse"
+							data-parent="#accordion">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<span class="glyphicon glyphicon-camera"> </span>Pictures
+								</h4>
+							</div>
+							<div id="collapseOne" class="panel-collapse collapse in">
+								<div class="panel-body">
+									<table class="table">
+										<tr>
+											<td><a
+												href="javascript:if(confirm(%27http://www.jquery2dotnet.com/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.jquery2dotnet.com/%27">Holydays</a></td>
+										</tr>
+										<tr>
+											<td><a
+												href="javascript:if(confirm(%27http://www.jquery2dotnet.com/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.jquery2dotnet.com/%27">Party</a></td>
+										</tr>
+										<tr>
+											<td><a
+												href="javascript:if(confirm(%27http://www.jquery2dotnet.com/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.jquery2dotnet.com/%27">Works</a>
+												<span class="label label-success">8</span></td>
+										</tr>
+										<tr>
+											<td><a
+												href="javascript:if(confirm(%27http://www.jquery2dotnet.com/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.jquery2dotnet.com/%27">Children</a></td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default" data-toggle="collapse"
+							data-parent="#accordion">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<span class="glyphicon glyphicon-film"> </span>Videos
+								</h4>
+							</div>
+							<div id="collapseTwo" class="panel-collapse collapse">
+								<div class="panel-body">
+									<table class="table">
+										<tr>
+											<td><a
+												href="javascript:if(confirm(%27http://www.jquery2dotnet.com/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.jquery2dotnet.com/%27">Clips</a>
+												<span class="label label-success">20</span></td>
+										</tr>
+										<tr>
+											<td><a
+												href="javascript:if(confirm(%27http://www.jquery2dotnet.com/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.jquery2dotnet.com/%27">Works</a></td>
+										</tr>
+										<tr>
+											<td><a
+												href="javascript:if(confirm(%27http://www.jquery2dotnet.com/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.jquery2dotnet.com/%27">Holydays</a></td>
+										</tr>
+										<tr>
+											<td><a
+												href="javascript:if(confirm(%27http://www.jquery2dotnet.com/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.jquery2dotnet.com/%27">Others</a></td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default" data-toggle="collapse"
+							data-parent="#accordion">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<span class="glyphicon glyphicon-folder-open"> </span>Documents
+								</h4>
+							</div>
+							<div id="collapseThree" class="panel-collapse collapse">
+								<div class="panel-body">
+									<table class="table">
+										<tr>
+											<td><a
+												href="javascript:if(confirm(%27http://www.jquery2dotnet.com/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.jquery2dotnet.com/%27">Projects</a></td>
+										</tr>
+										<tr>
+											<td><a
+												href="javascript:if(confirm(%27http://www.jquery2dotnet.com/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.jquery2dotnet.com/%27">Invoices</a>
+												<span class="label label-info">5</span></td>
+										</tr>
+										<tr>
+											<td><a
+												href="javascript:if(confirm(%27http://www.jquery2dotnet.com/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.jquery2dotnet.com/%27">Legal</a></td>
+										</tr>
+										<tr>
+											<td><a
+												href="javascript:if(confirm(%27http://www.jquery2dotnet.com/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.jquery2dotnet.com/%27">CV</a></td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- BEGIN PAGE LEVEL SCRIPTS -->
+		<script	src="#{request.contextPath}/bootstrap/resources/js/jquery.mixitup.js" />
+		<!-- END  PAGE LEVEL SCRIPTS -->
+
+	</ui:define>
+
+</ui:composition>

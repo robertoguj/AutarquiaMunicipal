@@ -1,0 +1,54 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:composite="http://java.sun.com/jsf/composite">
+	
+	<composite:interface>
+    	<composite:attribute name="MB" required="true" />
+    	<composite:attribute name="actionNovo" required="false" default="#{cc.attrs.MB.novo}" method-signature="void action()"/>
+    	<composite:attribute name="actionIncluir" required="false" default="#{cc.attrs.MB.incluir}" method-signature="void action()"/>
+    	<composite:attribute name="actionAtualizar" required="false" default="#{cc.attrs.MB.atualizar}" method-signature="void action()"/>
+    	<composite:attribute name="actionExcluir" required="false" default="#{cc.attrs.MB.excluir}" method-signature="void action()"/>
+    	<composite:attribute name="actionLocalizar" required="false" default="#{cc.attrs.MB.localizar}" method-signature="void action()"/>
+    	
+    	<composite:attribute name="updateNovo" required="true"/>
+    	<composite:attribute name="updateIncluir" required="true"/>
+    	<composite:attribute name="updateAtualizar" required="true"/>
+    	<composite:attribute name="updateExcluir" required="true"/>
+    	<composite:attribute name="updateLocalizar" required="true"/>
+    </composite:interface>
+
+	<composite:implementation>    
+		<p:commandButton id="btnNovo" value="#{rotulos.btnNovo}" styleClass="botao default"
+			process="@this" update="#{cc.attrs.updateNovo} btnIncluir"
+			action="#{cc.attrs.actionNovo}" oncomplete="" />
+		<p:commandButton id="btnIncluir" value="#{rotulos.btnIncluir}" styleClass="botao default" disabled="#{cc.attrs.MB.pesquisando}"
+			update="#{cc.attrs.updateIncluir}" 
+			action="#{cc.attrs.actionIncluir}" oncomplete="" />
+		<p:commandButton id="btnAtualizar" value="#{rotulos.btnAtualizar}"  styleClass="botao default"
+			update="#{cc.attrs.updateAtualizar}" 
+			action="#{cc.attrs.actionAtualizar}" oncomplete="" />
+		<p:commandButton id="btnExcluir" value="#{rotulos.btnExcluir}"  styleClass="botao default"
+			process="@this" update="#{cc.attrs.updateExcluir}" style="width:120px" 
+			oncomplete="PF('dlgConfirmaExclusaoJS').show()" />			
+		<p:selectBooleanButton id="btnLocalizar" value="#{cc.attrs.MB.pesquisando}" styleClass="botao default" onLabel="Fechar"  
+			offLabel="Localizar" onIcon="ui-icon-close">
+			<p:ajax update="#{cc.attrs.updateLocalizar}  btnIncluir" listener="#{cc.attrs.actionLocalizar}" />
+		</p:selectBooleanButton>	
+		<p:confirmDialog id="dlgConfirmaExclusao"
+			message="#{rotulos.mensagemConfirmacaoExclusao}" header=""
+			severity="alert" widgetVar="dlgConfirmaExclusaoJS">
+			<p:commandButton id="btnConfirmacaoSim" process="@this"
+				value="#{rotulos.btnConfirmacaoSim}" update="#{cc.attrs.updateExcluir}"
+				oncomplete="PF('dlgConfirmaExclusaoJS').hide()"
+				action="#{cc.attrs.actionExcluir}" />
+			<p:commandButton id="btnConfirmacaoNao"
+				value="#{rotulos.btnConfirmacaoNao}"
+				onclick="PF('dlgConfirmaExclusaoJS').hide()" type="button" />
+		</p:confirmDialog>
+	</composite:implementation>		
+	
+</ui:composition>

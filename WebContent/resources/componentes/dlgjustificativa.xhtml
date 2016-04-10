@@ -1,0 +1,71 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:composite="http://java.sun.com/jsf/composite">
+	<composite:interface>
+		<composite:attribute name="MBDlgJustificativa" required="true" />
+		<composite:attribute name="idDlgJustificativa" required="true" />
+		<composite:attribute name="labelJustificativa"  required="false"  />
+		<composite:attribute name="campoJustificativa" required="true" />
+		<composite:attribute name="varJS" required="true" />
+		<composite:attribute name="actionConfirmacao" required="true" />
+		<composite:attribute name="updateConfirmacao" required="false" />
+		<composite:attribute name="actionNegacao" required="true" />
+		<composite:attribute name="updateNegacao" required="false" />
+	</composite:interface>
+	<composite:implementation>
+
+		<p:dialog id="#{cc.attrs.idDlgJustificativa}" appendTo="@parent:@form"
+			widgetVar="#{cc.attrs.varJS}" modal="true" draggable="false" 
+			header="#{rotulos.dlgConfirmacao_titulo}" showEffect="fade"	hideEffect="explode">
+
+			<p:panelGrid style="width:100%" styleClass="semBorda">
+				<p:row>
+					<p:column colspan="10">
+						<h:outputText id="labelJustificativa" value="#{cc.attrs.labelJustificativa}" />
+					</p:column>
+				</p:row>
+
+				<p:row>
+					<p:column colspan="10">
+						<p:inputTextarea rows="5" cols="96"
+							value="#{cc.attrs.campoJustificativa}" maxlength="1000"
+							counterTemplate="{0} caracteres restantes." autoResize="false" />
+						<h:outputText id="displayContador" />
+					</p:column>
+				</p:row>
+				<p:row>
+					<p:column styleClass='text-align:center;vertical-align:middle'>
+					</p:column>
+					<p:column styleClass='text-align:center;vertical-align:middle'>
+					</p:column>
+					<p:column styleClass='text-align:center;vertical-align:middle'>
+					</p:column>
+					<p:column styleClass='text-align:center;vertical-align:middle'>
+					</p:column>
+					<p:column styleClass='text-align:center;vertical-align:middle'>
+					</p:column>
+					<p:column styleClass='text-align:center;vertical-align:middle'>
+						<p:commandButton value="#{rotulos.btnConfirma}"
+							update="#{cc.attrs.updateConfirmacao}"
+							action="#{cc.attrs.MBDlgJustificativa[cc.attrs.actionConfirmacao]}" />
+					</p:column>
+					<p:column styleClass='text-align:center;vertical-align:middle'>
+						<p:commandButton value="#{rotulos.btnCancela}"
+							update="#{cc.attrs.updateNegacao}"
+							action="#{cc.attrs.MBDlgJustificativa[cc.attrs.actionNegacao]}"
+							oncomplete="PF('#{cc.attrs.varJS}').hide()" />
+
+					</p:column>					
+					<p:column styleClass='text-align:center;vertical-align:middle'>
+					</p:column>
+					<p:column styleClass='text-align:center;vertical-align:middle'>
+					</p:column>
+				</p:row>
+			</p:panelGrid>
+		</p:dialog>
+	</composite:implementation>
+</ui:composition>

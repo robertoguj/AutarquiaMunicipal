@@ -1,0 +1,90 @@
+<ui:composition lang="pt_br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="/bootstrap/templates/principal.xhtml">
+
+	<ui:define name="conteudo">
+
+		<div class="page-title">
+			<i class="icon-custom-left"></i>
+			<h3>
+				<strong>Tree</strong> view
+			</h3>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">
+							<strong>Tree </strong>View
+						</h3>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-md-4">
+								<h3>
+									<strong>Color</strong> options
+								</h3>
+								<p>You can customize the color of each tree or let dark.</p>
+								<br />
+								<div id="tree1"></div>
+							</div>
+							<div class="col-md-4">
+								<h3>
+									<strong>Checkbox</strong> tree
+								</h3>
+								<p>You can add checkbox, making multiple selection much
+									easier.</p>
+								<br />
+								<div id="tree2">
+									<ul>
+										<li id="phtml_1"><a href="#">My videos</a>
+											<ul>
+												<li id="phtml_2"><a href="#">Video 1</a></li>
+												<li id="phtml_3"><a href="#">Video 2</a></li>
+												<li id="phtml_4"><a href="#">Video 3</a></li>
+											</ul></li>
+										<li id="phtml_5"><a href="#">My pictures</a>
+											<ul>
+												<li id="phtml_6"><a href="#">Picture 1</a></li>
+												<li id="phtml_7"><a href="#">Picture 2</a></li>
+												<li id="phtml_8"><a href="#">Picture 3</a></li>
+											</ul></li>
+										<li id="phtml_9"><a href="#">My files</a></li>
+										<li id="phtml_10"><a href="#">My documents</a></li>
+										<li id="phtml_11"><a href="#">Secret files</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<h3>
+									<strong>Drag &amp; Drop</strong> tree
+								</h3>
+								<p>It's possible to drag and drop tree nodes and rearrange
+									the tree.</p>
+								<br />
+								<div id="tree3">
+									<ul>
+										<li>Root node 1</li>
+										<li>Root node 2</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- BEGIN PAGE LEVEL SCRIPTS -->
+		<script src="#{request.contextPath}/bootstrap/resources/js/jstree.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/jstree.types.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/jstree.dnd.js" />
+		<script	src="#{request.contextPath}/bootstrap/resources/js/tree_view.js" />
+
+	</ui:define>
+
+</ui:composition>
