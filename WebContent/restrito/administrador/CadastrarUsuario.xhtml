@@ -125,10 +125,9 @@
 								</h:outputLabel>
 								<h:selectOneMenu id="cbxPerfil" required="false"
 									requiredMessage="#{msg.perfil_obrigatorio}"
-									value="#{usuarioController.user.roles}" converter="genericConverter">
-									<f:selectItem itemLabel="Selecione" itemValue="#{null}" />
-									<f:selectItems itemLabel="teste"
-										value="#{usuarioController.listaPerfilSelect}" />
+									value="#{usuarioController.user.roles}">
+									<f:selectItem itemLabel="-- Selecione --" itemValue="#{null}" />
+									<f:selectItems value="#{usuarioController.listaSelecionarPerfil}" />
 									<f:ajax render="cbxPerfil" event="valueChange"/>
 								</h:selectOneMenu>
 

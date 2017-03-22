@@ -197,7 +197,7 @@
 	<!-- INTERNACIONALIZAÇÃO -->
 	<application>
 		<resource-bundle>
-			<base-name>amc.scda.idioma.mensagens</base-name>
+			<base-name>mensagens</base-name>
 			<var>msg</var>
 		</resource-bundle>
 		

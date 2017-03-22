@@ -1,43 +1,191 @@
- INFO [main] (Log4jTeste.java:11) ­ INFO MSG
- WARN [main] (Log4jTeste.java:12) ­ WARN MSG
-ERROR [main] (Log4jTeste.java:13) ­ ERROR MSG
-FATAL [main] (Log4jTeste.java:14) ­ FATAL MSG
- INFO [main] (Version.java:37) ­ HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
- INFO [main] (Version.java:41) ­ HHH000412: Hibernate Core {4.1.8.Final}
- INFO [main] (Environment.java:239) ­ HHH000206: hibernate.properties not found
- INFO [main] (Environment.java:342) ­ HHH000021: Bytecode provider name : javassist
- INFO [main] (Configuration.java:1933) ­ HHH000043: Configuring from resource: hibernate.cfg.xml
- INFO [main] (Configuration.java:1952) ­ HHH000040: Configuration resource: hibernate.cfg.xml
- INFO [main] (Version.java:37) ­ HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
- INFO [main] (Version.java:41) ­ HHH000412: Hibernate Core {4.1.8.Final}
- INFO [main] (Environment.java:239) ­ HHH000206: hibernate.properties not found
- INFO [main] (Environment.java:342) ­ HHH000021: Bytecode provider name : javassist
- INFO [main] (Configuration.java:1933) ­ HHH000043: Configuring from resource: hibernate.cfg.xml
- INFO [main] (Configuration.java:1952) ­ HHH000040: Configuration resource: hibernate.cfg.xml
- WARN [main] (DTDEntityResolver.java:74) ­ HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
- INFO [main] (Configuration.java:2074) ­ HHH000041: Configured SessionFactory: null
- INFO [main] (DriverManagerConnectionProviderImpl.java:96) ­ HHH000402: Using Hibernate built-in connection pool (not for production use!)
- INFO [main] (DriverManagerConnectionProviderImpl.java:130) ­ HHH000115: Hibernate connection pool size: 20
- INFO [main] (DriverManagerConnectionProviderImpl.java:133) ­ HHH000006: Autocommit mode: false
- INFO [main] (DriverManagerConnectionProviderImpl.java:147) ­ HHH000401: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/scda]
- INFO [main] (DriverManagerConnectionProviderImpl.java:152) ­ HHH000046: Connection properties: {user=postgres, password=****}
- INFO [main] (Dialect.java:123) ­ HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
- INFO [main] (LobCreatorBuilder.java:120) ­ HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
- INFO [main] (TransactionFactoryInitiator.java:68) ­ HHH000399: Using default transaction strategy (direct JDBC transactions)
- INFO [main] (ASTQueryTranslatorFactory.java:48) ­ HHH000397: Using ASTQueryTranslatorFactory
- INFO [main] (SchemaUpdate.java:182) ­ HHH000228: Running hbm2ddl schema update
- INFO [main] (SchemaUpdate.java:193) ­ HHH000102: Fetching database metadata
- INFO [main] (SchemaUpdate.java:205) ­ HHH000396: Updating schema
- INFO [main] (TableMetadata.java:65) ­ HHH000261: Table found: public.roles
- INFO [main] (TableMetadata.java:66) ­ HHH000037: Columns: [role_description, role_id, description, perfil]
- INFO [main] (TableMetadata.java:68) ­ HHH000108: Foreign keys: []
- INFO [main] (TableMetadata.java:69) ­ HHH000126: Indexes: [roles_role_description_key, roles_pkey]
- INFO [main] (TableMetadata.java:65) ­ HHH000261: Table found: public.user_roles
- INFO [main] (TableMetadata.java:66) ­ HHH000037: Columns: [role_id, user_id]
- INFO [main] (TableMetadata.java:68) ­ HHH000108: Foreign keys: [fk734299492a427adb, fk734299498517b6fb]
- INFO [main] (TableMetadata.java:69) ­ HHH000126: Indexes: []
- INFO [main] (TableMetadata.java:65) ­ HHH000261: Table found: public.users
- INFO [main] (TableMetadata.java:66) ­ HHH000037: Columns: [status, nm_usuario, email, telefone, user_password, cpf, user_id, user_username]
- INFO [main] (TableMetadata.java:68) ­ HHH000108: Foreign keys: []
- INFO [main] (TableMetadata.java:69) ­ HHH000126: Indexes: [users_pkey, users_user_username_key]
- INFO [main] (SchemaUpdate.java:240) ­ HHH000232: Schema update complete
+ INFO [main] (Version.java:37) ¡© HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+ INFO [main] (Version.java:41) ¡© HHH000412: Hibernate Core {4.1.8.Final}
+ INFO [main] (Environment.java:239) ¡© HHH000206: hibernate.properties not found
+ INFO [main] (Environment.java:342) ¡© HHH000021: Bytecode provider name : javassist
+ INFO [main] (Configuration.java:1933) ¡© HHH000043: Configuring from resource: hibernate.cfg.xml
+ INFO [main] (Configuration.java:1952) ¡© HHH000040: Configuration resource: hibernate.cfg.xml
+ WARN [main] (DTDEntityResolver.java:74) ¡© HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+ INFO [main] (Version.java:37) ¡© HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+ INFO [main] (Version.java:41) ¡© HHH000412: Hibernate Core {4.1.8.Final}
+ INFO [main] (Environment.java:239) ¡© HHH000206: hibernate.properties not found
+ INFO [main] (Environment.java:342) ¡© HHH000021: Bytecode provider name : javassist
+ INFO [main] (Configuration.java:1933) ¡© HHH000043: Configuring from resource: hibernate.cfg.xml
+ INFO [main] (Configuration.java:1952) ¡© HHH000040: Configuration resource: hibernate.cfg.xml
+ WARN [main] (DTDEntityResolver.java:74) ¡© HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+ INFO [main] (Configuration.java:2074) ¡© HHH000041: Configured SessionFactory: null
+ INFO [main] (Version.java:37) ¡© HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+ INFO [main] (Version.java:41) ¡© HHH000412: Hibernate Core {4.1.8.Final}
+ INFO [main] (Environment.java:239) ¡© HHH000206: hibernate.properties not found
+ INFO [main] (Environment.java:342) ¡© HHH000021: Bytecode provider name : javassist
+ INFO [main] (Configuration.java:1933) ¡© HHH000043: Configuring from resource: hibernate.cfg.xml
+ INFO [main] (Configuration.java:1952) ¡© HHH000040: Configuration resource: hibernate.cfg.xml
+ WARN [main] (DTDEntityResolver.java:74) ¡© HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+ INFO [main] (Configuration.java:2074) ¡© HHH000041: Configured SessionFactory: null
+ INFO [main] (Version.java:37) ¡© HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+ INFO [main] (Version.java:41) ¡© HHH000412: Hibernate Core {4.1.8.Final}
+ INFO [main] (Environment.java:239) ¡© HHH000206: hibernate.properties not found
+ INFO [main] (Environment.java:342) ¡© HHH000021: Bytecode provider name : javassist
+ INFO [main] (Configuration.java:1933) ¡© HHH000043: Configuring from resource: hibernate.cfg.xml
+ INFO [main] (Configuration.java:1952) ¡© HHH000040: Configuration resource: hibernate.cfg.xml
+ WARN [main] (DTDEntityResolver.java:74) ¡© HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+ INFO [main] (Configuration.java:2074) ¡© HHH000041: Configured SessionFactory: null
+ INFO [main] (DriverManagerConnectionProviderImpl.java:96) ¡© HHH000402: Using Hibernate built-in connection pool (not for production use!)
+ INFO [main] (DriverManagerConnectionProviderImpl.java:130) ¡© HHH000115: Hibernate connection pool size: 20
+ INFO [main] (DriverManagerConnectionProviderImpl.java:133) ¡© HHH000006: Autocommit mode: false
+ INFO [main] (DriverManagerConnectionProviderImpl.java:147) ¡© HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/sdam]
+ INFO [main] (DriverManagerConnectionProviderImpl.java:152) ¡© HHH000046: Connection properties: {user=admin, password=****}
+ WARN [main] (JdbcServicesImpl.java:169) ¡© HHH000342: Could not obtain connection to query metadata : Access denied for user ''@'localhost' to database 'sdam'
+ INFO [main] (Dialect.java:123) ¡© HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+ INFO [main] (LobCreatorBuilder.java:85) ¡© HHH000422: Disabling contextual LOB creation as connection was null
+ INFO [main] (TransactionFactoryInitiator.java:68) ¡© HHH000399: Using default transaction strategy (direct JDBC transactions)
+ INFO [main] (ASTQueryTranslatorFactory.java:48) ¡© HHH000397: Using ASTQueryTranslatorFactory
+ INFO [main] (SchemaUpdate.java:182) ¡© HHH000228: Running hbm2ddl schema update
+ INFO [main] (SchemaUpdate.java:193) ¡© HHH000102: Fetching database metadata
+ERROR [main] (SchemaUpdate.java:201) ¡© HHH000319: Could not get database metadata
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Access denied for user ''@'localhost' to database 'sdam'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1052)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3609)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3541)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:943)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:4113)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1308)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2336)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2369)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2153)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:792)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:381)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:208)
+	at org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:193)
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:194)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:178)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:503)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1750)
+	at scda.util.HibernateUtil.buildSessionFactory(HibernateUtil.java:18)
+	at scda.util.HibernateUtil.<clinit>(HibernateUtil.java:10)
+	at scda.util.TestaHibernate.main(TestaHibernate.java:9)
+ERROR [main] (SchemaUpdate.java:245) ¡© HHH000299: Could not complete schema update
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Access denied for user ''@'localhost' to database 'sdam'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1052)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3609)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3541)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:943)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:4113)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1308)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2336)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2369)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2153)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:792)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:381)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:208)
+	at org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:193)
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:194)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:178)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:503)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1750)
+	at scda.util.HibernateUtil.buildSessionFactory(HibernateUtil.java:18)
+	at scda.util.HibernateUtil.<clinit>(HibernateUtil.java:10)
+	at scda.util.TestaHibernate.main(TestaHibernate.java:9)
+ INFO [main] (Version.java:37) Â­ HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+ INFO [main] (Version.java:41) Â­ HHH000412: Hibernate Core {4.1.8.Final}
+ INFO [main] (Environment.java:239) Â­ HHH000206: hibernate.properties not found
+ INFO [main] (Environment.java:342) Â­ HHH000021: Bytecode provider name : javassist
+ INFO [main] (Configuration.java:1933) Â­ HHH000043: Configuring from resource: hibernate.cfg.xml
+ INFO [main] (Configuration.java:1952) Â­ HHH000040: Configuration resource: hibernate.cfg.xml
+ WARN [main] (DTDEntityResolver.java:74) Â­ HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+ INFO [main] (Configuration.java:2074) Â­ HHH000041: Configured SessionFactory: null
+ INFO [main] (DriverManagerConnectionProviderImpl.java:96) Â­ HHH000402: Using Hibernate built-in connection pool (not for production use!)
+ INFO [main] (DriverManagerConnectionProviderImpl.java:130) Â­ HHH000115: Hibernate connection pool size: 20
+ INFO [main] (DriverManagerConnectionProviderImpl.java:133) Â­ HHH000006: Autocommit mode: false
+ INFO [main] (DriverManagerConnectionProviderImpl.java:147) Â­ HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/sdam]
+ INFO [main] (DriverManagerConnectionProviderImpl.java:152) Â­ HHH000046: Connection properties: {user=root, password=****}
+ INFO [main] (Dialect.java:123) Â­ HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+ INFO [main] (TransactionFactoryInitiator.java:68) Â­ HHH000399: Using default transaction strategy (direct JDBC transactions)
+ INFO [main] (ASTQueryTranslatorFactory.java:48) Â­ HHH000397: Using ASTQueryTranslatorFactory
+ INFO [main] (SchemaUpdate.java:182) Â­ HHH000228: Running hbm2ddl schema update
+ INFO [main] (SchemaUpdate.java:193) Â­ HHH000102: Fetching database metadata
+ INFO [main] (SchemaUpdate.java:205) Â­ HHH000396: Updating schema
+ INFO [main] (DatabaseMetadata.java:120) Â­ HHH000262: Table not found: perfil
+ INFO [main] (DatabaseMetadata.java:120) Â­ HHH000262: Table not found: usuario
+ INFO [main] (DatabaseMetadata.java:120) Â­ HHH000262: Table not found: usuario_perfil
+ INFO [main] (DatabaseMetadata.java:120) Â­ HHH000262: Table not found: perfil
+ INFO [main] (DatabaseMetadata.java:120) Â­ HHH000262: Table not found: usuario
+ INFO [main] (DatabaseMetadata.java:120) Â­ HHH000262: Table not found: usuario_perfil
+ INFO [main] (SchemaUpdate.java:240) Â­ HHH000232: Schema update complete
+ INFO [main] (Version.java:37) Â­ HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+ INFO [main] (Version.java:41) Â­ HHH000412: Hibernate Core {4.1.8.Final}
+ INFO [main] (Environment.java:239) Â­ HHH000206: hibernate.properties not found
+ INFO [main] (Environment.java:342) Â­ HHH000021: Bytecode provider name : javassist
+ INFO [main] (Configuration.java:1933) Â­ HHH000043: Configuring from resource: hibernate.cfg.xml
+ INFO [main] (Configuration.java:1952) Â­ HHH000040: Configuration resource: hibernate.cfg.xml
+ WARN [main] (DTDEntityResolver.java:74) Â­ HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+ INFO [main] (Configuration.java:2074) Â­ HHH000041: Configured SessionFactory: null
+ INFO [main] (DriverManagerConnectionProviderImpl.java:96) Â­ HHH000402: Using Hibernate built-in connection pool (not for production use!)
+ INFO [main] (DriverManagerConnectionProviderImpl.java:130) Â­ HHH000115: Hibernate connection pool size: 20
+ INFO [main] (DriverManagerConnectionProviderImpl.java:133) Â­ HHH000006: Autocommit mode: false
+ INFO [main] (DriverManagerConnectionProviderImpl.java:147) Â­ HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/sdam]
+ INFO [main] (DriverManagerConnectionProviderImpl.java:152) Â­ HHH000046: Connection properties: {user=root, password=****}
+ INFO [main] (Dialect.java:123) Â­ HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+ INFO [main] (TransactionFactoryInitiator.java:68) Â­ HHH000399: Using default transaction strategy (direct JDBC transactions)
+ INFO [main] (ASTQueryTranslatorFactory.java:48) Â­ HHH000397: Using ASTQueryTranslatorFactory
+ INFO [main] (SchemaUpdate.java:182) Â­ HHH000228: Running hbm2ddl schema update
+ INFO [main] (SchemaUpdate.java:193) Â­ HHH000102: Fetching database metadata
+ INFO [main] (SchemaUpdate.java:205) Â­ HHH000396: Updating schema
+ INFO [main] (DatabaseMetadata.java:120) Â­ HHH000262: Table not found: divida
+ INFO [main] (DatabaseMetadata.java:120) Â­ HHH000262: Table not found: dividas_multas
+ INFO [main] (DatabaseMetadata.java:120) Â­ HHH000262: Table not found: multa
+ INFO [main] (DatabaseMetadata.java:120) Â­ HHH000262: Table not found: notificacao
+ INFO [main] (TableMetadata.java:65) Â­ HHH000261: Table found: sdam.perfil
+ INFO [main] (TableMetadata.java:66) Â­ HHH000037: Columns: [perfil_id, description]
+ INFO [main] (TableMetadata.java:68) Â­ HHH000108: Foreign keys: []
+ INFO [main] (TableMetadata.java:69) Â­ HHH000126: Indexes: [description, primary]
+ INFO [main] (DatabaseMetadata.java:120) Â­ HHH000262: Table not found: pessoa
+ INFO [main] (DatabaseMetadata.java:120) Â­ HHH000262: Table not found: postagem
+ INFO [main] (DatabaseMetadata.java:120) Â­ HHH000262: Table not found: recurso
+ INFO [main] (TableMetadata.java:65) Â­ HHH000261: Table found: sdam.usuario
+ INFO [main] (TableMetadata.java:66) Â­ HHH000037: Columns: [password, telefone, usuario_id, cpf, nome, status_conta, email, username]
+ INFO [main] (TableMetadata.java:68) Â­ HHH000108: Foreign keys: []
+ INFO [main] (TableMetadata.java:69) Â­ HHH000126: Indexes: [primary, username]
+ INFO [main] (TableMetadata.java:65) Â­ HHH000261: Table found: sdam.usuario_perfil
+ INFO [main] (TableMetadata.java:66) Â­ HHH000037: Columns: [usuario_id, perfil_id]
+ INFO [main] (TableMetadata.java:68) Â­ HHH000108: Foreign keys: [fk57cd23fdc27a8e40, fk57cd23fdccec7bb4]
+ INFO [main] (TableMetadata.java:69) Â­ HHH000126: Indexes: [fk57cd23fdc27a8e40, fk57cd23fdccec7bb4]
+ INFO [main] (DatabaseMetadata.java:120) Â­ HHH000262: Table not found: veiculo
+ INFO [main] (DatabaseMetadata.java:120) Â­ HHH000262: Table not found: divida
+ INFO [main] (DatabaseMetadata.java:120) Â­ HHH000262: Table not found: dividas_multas
+ INFO [main] (DatabaseMetadata.java:120) Â­ HHH000262: Table not found: multa
+ INFO [main] (DatabaseMetadata.java:120) Â­ HHH000262: Table not found: notificacao
+ INFO [main] (DatabaseMetadata.java:120) Â­ HHH000262: Table not found: pessoa
+ INFO [main] (DatabaseMetadata.java:120) Â­ HHH000262: Table not found: postagem
+ INFO [main] (DatabaseMetadata.java:120) Â­ HHH000262: Table not found: recurso
+ INFO [main] (DatabaseMetadata.java:120) Â­ HHH000262: Table not found: veiculo
+ INFO [main] (SchemaUpdate.java:240) Â­ HHH000232: Schema update complete

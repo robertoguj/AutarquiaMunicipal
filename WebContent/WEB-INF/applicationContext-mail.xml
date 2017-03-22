@@ -18,7 +18,7 @@
 		</property>
 	</bean>
 
-	<bean id="registrationService" class="amc.scda.service.SimpleRegistrationService">
+	<bean id="registrationService" class="scda.util.FacesUtil">
 		<property name="mailSender" ref="mailSenderConf" />
 		<property name="velocityEngine" ref="velocityEngineConf" />
 	</bean>

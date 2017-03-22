@@ -38,13 +38,11 @@
 
 							<h:commandButton id="btnExcluir" styleClass="btn btn-success" value="Excluir"
 								action="#{usuarioController.excluirSelecao}"
-								rendered="#{usuarioController.acesso}"
 								onclick="return confirm('Confirmar exclusao?');" />
 
 							<h:commandButton id="btnConsultar" value="Consultar"
 								action="#{usuarioController.consultar}"
 								styleClass="btn btn-success"
-								rendered="#{usuarioController.acesso}"
 								reRender="listaDeUsuarios" />
 						</div>
 
@@ -62,7 +60,7 @@
 												<input type="checkbox" id="selecctall" />
 											</f:facet>
 											<h:selectBooleanCheckbox class="checkbox1"
-												value="#{user.checkboxSelecao}" />
+												value="#{user.usuarioSelecionado}" />
 										</h:column>
 
 										<h:column>
@@ -83,11 +81,6 @@
 										<h:column>
 											<f:facet name="header">Telefone</f:facet>
 											<h:outputText value="#{user.telefone}" />
-										</h:column>
-										
-										<h:column>
-											<f:facet name="header">Status</f:facet>
-											<h:outputText value="#{user.status}" />
 										</h:column>
 
 										<h:column>
