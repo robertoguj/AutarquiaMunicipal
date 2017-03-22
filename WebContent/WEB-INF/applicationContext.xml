@@ -22,10 +22,10 @@
                     http://www.springframework.org/schema/util/spring-util-3.0.xsd">
 
 	<context:annotation-config />
-	<context:component-scan base-package="scda" />
+	<context:component-scan base-package="divida.ativa" />
 
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
-		<property name="driverClassName" value="org.postgresql.Driver" />
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url" value="jdbc:mysql://localhost:3306/damdb" />
 		<property name="username" value="root" />
 		<property name="password" value="" />

@@ -1,7 +1,7 @@
 eclipse.preferences.version=1
-encoding//src/scda/model/enumeration/StatusDivida.java=UTF-8
-encoding//src/scda/model/enumeration/StatusMulta.java=UTF-8
-encoding//src/scda/model/enumeration/TiposAmbientesAplicacao.java=UTF-8
-encoding//src/scda/security/Authenticator.java=UTF-8
-encoding//src/scda/service/DividaService.java=UTF-8
-encoding//src/scda/util/TestaHibernate.java=UTF-8
+encoding//src/divida/ativa/model/enu/StatusDivida.java=UTF-8
+encoding//src/divida/ativa/model/enu/StatusMulta.java=UTF-8
+encoding//src/divida/ativa/model/enu/TiposAmbientesAplicacao.java=UTF-8
+encoding//src/divida/ativa/security/Authenticator.java=UTF-8
+encoding//src/divida/ativa/service/DividaService.java=UTF-8
+encoding//src/divida/ativa/util/TestaHibernate.java=UTF-8

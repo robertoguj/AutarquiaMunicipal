@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf13585721779620" configfile="/scda/WebContent/WEB-INF/faces-config.xml">
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf13585721779620" configfile="/DAMWEB/WebContent/WEB-INF/faces-config.xml">
   <nodes xsi:type="pageflow:PFPage" name="*" x="122" y="3250" id="pf14379984739750" outlinks="pf143799956817446 pf143799956817447 pf143799956817448 pf143799956817449 pf143799956817450 pf143799956817451 pf143799956817452 pf143799956817453" path="*"/>
   <nodes xsi:type="pageflow:PFPage" name="restrito/index.jsf" x="122" y="178" id="pf143799847397524" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" path="/restrito/index.jsf"/>
   <nodes xsi:type="pageflow:PFPage" name="publico/usuarioSucesso.jsf" x="122" y="562" id="pf143799847397525" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" path="/publico/usuarioSucesso.jsf"/>
@@ -30,12 +30,12 @@
   <nodes xsi:type="pageflow:PFPage" name="app/public/consultas/DashboardDividaAtiva.jsf" x="338" y="3778" id="pf143799956817458" referenceLink="//@navigationRule.5/@navigationCase.0/@toViewId|" inlinks="pf143799956817451" path="/restrito/public/consultas/DashboardDividaAtiva.jsf"/>
   <nodes xsi:type="pageflow:PFPage" name="app/public/consultas/DashboardMultas.jsf" x="338" y="4162" id="pf143799956817459" referenceLink="//@navigationRule.6/@navigationCase.0/@toViewId|" inlinks="pf143799956817452" path="/restrito/public/consultas/DashboardMultas.jsf"/>
   <nodes xsi:type="pageflow:PFPage" name="app/juridico/EmitirPeticaoInicial.jsf" x="338" y="4546" id="pf143799956817460" referenceLink="//@navigationRule.7/@navigationCase.0/@toViewId|" inlinks="pf143799956817453" path="/restrito/juridico/EmitirPeticaoInicial.jsf"/>
-  <links id="pf143799956817446" target="pf143799956817454" source="pf14379984739750" outcome="index" redirect="true"/>
-  <links id="pf143799956817447" target="pf143799956817455" source="pf14379984739750" outcome="usuarioSucesso" redirect="true"/>
-  <links id="pf143799956817448" target="pf143799956817454" source="pf14379984739750" outcome="successfulPage" redirect="true"/>
-  <links id="pf143799956817449" target="pf143799956817456" source="pf14379984739750" outcome="dashboardUsuarios" redirect="true"/>
-  <links id="pf143799956817450" target="pf143799956817457" source="pf14379984739750" outcome="usuario" redirect="true"/>
-  <links id="pf143799956817451" target="pf143799956817458" source="pf14379984739750" outcome="painelDividaAtiva" redirect="true"/>
-  <links id="pf143799956817452" target="pf143799956817459" source="pf14379984739750" outcome="painelMultas" redirect="true"/>
-  <links id="pf143799956817453" target="pf143799956817460" source="pf14379984739750" outcome="emitirPeticao" redirect="true"/>
+  <links id="pf143799956817446" target="pf143799956817454" source="pf14379984739750"/>
+  <links id="pf143799956817447" target="pf143799956817455" source="pf14379984739750"/>
+  <links id="pf143799956817448" target="pf143799956817454" source="pf14379984739750"/>
+  <links id="pf143799956817449" target="pf143799956817456" source="pf14379984739750"/>
+  <links id="pf143799956817450" target="pf143799956817457" source="pf14379984739750"/>
+  <links id="pf143799956817451" target="pf143799956817458" source="pf14379984739750"/>
+  <links id="pf143799956817452" target="pf143799956817459" source="pf14379984739750"/>
+  <links id="pf143799956817453" target="pf143799956817460" source="pf14379984739750"/>
 </pageflow:Pageflow>

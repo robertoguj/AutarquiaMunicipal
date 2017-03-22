@@ -49,11 +49,11 @@
 	</http>
 
 
-	<beans:bean id="authProvider" class="amc.scda.security.Authenticator">
+	<beans:bean id="authProvider" class="divida.ativa.security.Authenticator">
 		<aop:scoped-proxy />
 	</beans:bean>
 
-	<beans:bean id="userSession" class="amc.scda.security.UserSession"
+	<beans:bean id="userSession" class="divida.ativa.security.UserSession"
 		scope="session">
 		<aop:scoped-proxy />
 	</beans:bean>
