@@ -5,6 +5,8 @@ import java.io.Serializable;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -21,11 +23,8 @@ public class Veiculo implements Serializable {
 	private String modelo;
 	private String chassi;
 	
-	@ManyToOne(cascade=CascadeType.ALL)
-	@JoinColumn(name="pessoa_id")
-	private Pessoa pessoa;
-	
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="veiculo_id")
 	public Integer getId() {
 		return id;
@@ -34,6 +33,10 @@ public class Veiculo implements Serializable {
 	public void setId(Integer id) {
 		this.id = id;
 	}
+	
+	@ManyToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="pessoa_id")
+	private Pessoa pessoa;
 
 	public String getPlaca() {
 		return placa;
@@ -68,6 +71,7 @@ public class Veiculo implements Serializable {
 		this.chassi = chassi;
 	}
 
+	@Column(name="pessoa_id")
 	public Pessoa getPessoa() {
 		return pessoa;
 	}

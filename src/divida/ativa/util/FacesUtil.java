@@ -5,22 +5,13 @@ import java.sql.DriverManager;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
-import java.util.Map;
 
 import javax.faces.context.FacesContext;
-import javax.mail.internet.MimeMessage;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.velocity.app.VelocityEngine;
-import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.mail.javamail.MimeMessageHelper;
-import org.springframework.mail.javamail.MimeMessagePreparator;
-import org.springframework.ui.velocity.VelocityEngineUtils;
-
-import divida.ativa.model.Usuario;
 import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
@@ -28,40 +19,6 @@ import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 
 public class FacesUtil {
 
-	private JavaMailSender mailSender;
-	private VelocityEngine velocityEngine;
-
-	public void setMailSender(JavaMailSender mailSender) {
-		this.mailSender = mailSender;
-	}
-
-	public void SetVelocityEngine(VelocityEngine velocityEngine) {
-		this.velocityEngine = velocityEngine;
-	}
-
-	public void register(Usuario user) {
-		confirmarEnvio(user);
-	}
-
-	private void confirmarEnvio(final Usuario usuario) {
-		MimeMessagePreparator preparator = new MimeMessagePreparator() {
-			public void prepare(MimeMessage mimeMessage) throws Exception {
-				MimeMessageHelper message = new MimeMessageHelper(mimeMessage);
-				message.setTo(usuario.getEmail());
-				message.setSubject("Confirmação de cadastro");
-				message.setFrom("MyImage.com");
-				Map<String, Object> model = new HashMap<String, Object>();
-				model.put("profile", usuario);
-				model.put("context", getContextPath());
-				String text = VelocityEngineUtils.mergeTemplateIntoString(velocityEngine, "template/registration-confirmation.vm", "UTF-8", model);
-				message.setText(text, true);
-			}
-		};
-
-		this.mailSender.send(preparator);
-	}
-	
-	
 	public static String getContextPath() {
 		 
         HttpServletRequest req = (HttpServletRequest) FacesContext

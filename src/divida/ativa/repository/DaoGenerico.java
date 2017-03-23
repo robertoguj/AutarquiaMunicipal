@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.util.List;
 
-import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
@@ -13,7 +12,6 @@ import org.hibernate.Session;
 
 public class DaoGenerico<T, ID extends Serializable> {
 
-	@Inject
 	protected EntityManager entityManager;
 	
 	private final Class<T> classePersistence;

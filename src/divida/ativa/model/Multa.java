@@ -9,6 +9,8 @@ import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -35,6 +37,7 @@ public class Multa implements Serializable {
 	private Boolean checkboxSelecao=false;
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="multa_id")
 	public Integer getId() {
 		return id;
@@ -63,7 +66,7 @@ public class Multa implements Serializable {
 		this.dataVencimento = dataVencimento;
 	}
 
-	@Column(name = "status")
+	@Column(name="status_multa")
 	@Enumerated(EnumType.STRING)
 	public StatusMulta getStatusMulta() {
 		return statusMulta;

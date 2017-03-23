@@ -10,6 +10,8 @@ import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
@@ -38,6 +40,7 @@ public class Divida implements Serializable {
 	private Boolean checkboxSelecao=false;
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="divida_id")
 	public Integer getId() {
 		return id;
@@ -76,7 +79,7 @@ public class Divida implements Serializable {
 		this.pessoa = pessoa;
 	}
 
-	@Column(name="status")
+	@Column(name="status_divida")
 	@Enumerated(EnumType.STRING)
 	public StatusDivida getStatusDivida() {
 		return statusDivida;
