@@ -24,18 +24,51 @@ public class DividaController implements Serializable {
 	private static Logger logger = Logger.getLogger(DividaController.class);
 	
 	private Divida divida;
-	
 	private Pessoa pessoa;
-	
-	private List<Divida> lista = null;
+	private List<Divida> listarDividasNaoPagas;
+	private List<Divida> listarDividasEmRecurso;
+	private List<Divida> listarDividasLiquidadas;
+	private List<Divida> listarDividasPrescritas;
+	private List<Divida> listarDividasExecutadas;
 	
 	private Multa multa;
-	
 	private Dividas dividas;
-
 	private int numRegistros;
 	
+	public List<Divida> getListarDividasNaoPagas() {
+		if (this.listarDividasNaoPagas != null) {
+			this.listarDividasNaoPagas = dividas.encontrarDividasNaoPagas();
+		}
+		return listarDividasNaoPagas;
+	}
 	
+	public List<Divida> getListarDividasEmRecurso() {
+		if (this.listarDividasEmRecurso != null) {
+			this.listarDividasEmRecurso = dividas.encontrarDividasEmRecurso();
+		}
+		return listarDividasEmRecurso;
+	}
+	
+	public List<Divida> getListarDividasLiquidadas() {
+		if (this.listarDividasLiquidadas != null) {
+			this.listarDividasLiquidadas = dividas.encontrarDividasLiquidadas();
+		}
+		return listarDividasLiquidadas;
+	}
+
+	public List<Divida> getListarDividasPrescritas() {
+		if (this.listarDividasPrescritas != null) {
+			this.listarDividasPrescritas = dividas.encontrarDividasPrescritas();
+		}
+		return listarDividasPrescritas;
+	}
+
+	public List<Divida> getListarDividasExecutadas() {
+		if (this.listarDividasExecutadas != null) {
+			this.listarDividasExecutadas = dividas.encontrarDividasExecutadas();
+		}
+		return listarDividasExecutadas;
+	}
 	
 	
 	/*
@@ -71,6 +104,13 @@ public class DividaController implements Serializable {
 	
 	
 	
+
+	
+
+	
+
+
+
 
 	public DividaController() {
 		resetarCampos();

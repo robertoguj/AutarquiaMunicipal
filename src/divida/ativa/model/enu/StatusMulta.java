@@ -2,13 +2,13 @@ package divida.ativa.model.enu;
 
 public enum StatusMulta {
 
-	PRESCRITA (1, "Multas prescritas"),
-	NAO_PAGA (2, "Multas não pagas"),
-	PRONTA_NOTIFICACAO (3, "Multas prontas para notificação"),
-	NOTIFICADA (4, "Multas notificadas"),
-	EM_RECURSO (5, "Multa em recurso"),
-	LIQUIDADA (6, "Multas liquidadas"),
-	INSCRITA_EM_DIVIDA (7, "Multas inscritas em dívida ativa");
+	PRESCRITA (1, "Prescrita"),
+	NAO_PAGA (2, "Não paga"),
+	PRONTA_NOTIFICACAO (3, "Pronta para notificação"),
+	NOTIFICADA (4, "Notificada"),
+	EM_RECURSO (5, "Em recurso"),
+	LIQUIDADA (6, "Liquidada"),
+	INSCRITA_EM_DIVIDA (7, "Inscrita em dívida ativa");
 
 	private final int codigoStatus;
 	private final String statusMulta;

@@ -35,7 +35,7 @@
 						<div class="col-md-12 table-responsive table-red filter-right">
 							<h:dataTable
 								styleClass="table-striped table-hover table-dynamic"
-								id="naoPagas" var="divida" value="#{dividaController.naoPagas}">
+								id="naoPagas" var="divida" value="#{dividaController.listarDividasNaoPagas}">
 
 								<h:column>
 									<f:facet name="header">ID</f:facet>
@@ -96,7 +96,7 @@
 							<h:dataTable
 								styleClass="table-striped table-hover table-dynamic"
 								id="emRecurso" var="divida"
-								value="#{dividaController.emRecurso}">
+								value="#{dividaController.listarDividasEmRecurso}">
 
 								<h:column>
 									<f:facet name="header">ID</f:facet>
@@ -157,7 +157,7 @@
 							<h:dataTable
 								styleClass="table-striped table-hover table-dynamic"
 								id="liquidadas" var="divida"
-								value="#{dividaController.liquidadas}">
+								value="#{dividaController.listarDividasLiquidadas}">
 
 								<h:column>
 									<f:facet name="header">ID</f:facet>
@@ -218,7 +218,7 @@
 							<h:dataTable
 								styleClass="table-striped table-hover table-dynamic"
 								id="executadas" var="divida"
-								value="#{dividaController.executadas}">
+								value="#{dividaController.listarDividasExecutadas}">
 
 								<h:column>
 									<f:facet name="header">ID</f:facet>
@@ -279,7 +279,7 @@
 							<h:dataTable
 								styleClass="table-striped table-hover table-dynamic"
 								id="prescritas" var="divida"
-								value="#{dividaController.prescritas}">
+								value="#{dividaController.listarDividasPrescritas}">
 
 								<h:column>
 									<f:facet name="header">ID</f:facet>

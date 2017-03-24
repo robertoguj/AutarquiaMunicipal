@@ -2,11 +2,12 @@ package divida.ativa.model.enu;
 
 public enum StatusDivida {
 
-	PRE_INSCRITA(1, "Dívidas pré-inscritas"),
-	NAO_PAGA(2, "Dívidas não pagas"),
-	LIQUIDADA(3, "Dívidas liquidadas"),
-	EXECUTADA(4, "Dívidas execultadas"),
-	PRESCRITA(5, "Dívidas prescritas");
+	PRE_INSCRITA(1, "Pré-inscrita"),
+	NAO_PAGA(2, "Não paga"),
+	LIQUIDADA(3, "Liquidada"),
+	EXECUTADA(4, "Execultada"),
+	PRESCRITA(5, "Prescrita"),
+	EM_RECURSO(5, "Em recurso");
 
 	private final int codigoStatus;
 	private final String statusDivida;

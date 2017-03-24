@@ -29,11 +29,9 @@ public class Multa implements Serializable {
 	private Integer id;
 	private double valor;
 	private Date dataVencimento;
-	private StatusMulta statusMulta;
+	private StatusMulta statusAtual;
 	private Infracao infracao;
 	private Veiculo veiculo;
-	
-	@Transient
 	private Boolean checkboxSelecao=false;
 
 	@Id
@@ -66,14 +64,14 @@ public class Multa implements Serializable {
 		this.dataVencimento = dataVencimento;
 	}
 
-	@Column(name="status_multa")
+	@Column(name="status_atual")
 	@Enumerated(EnumType.STRING)
-	public StatusMulta getStatusMulta() {
-		return statusMulta;
+	public StatusMulta getStatusAtual() {
+		return statusAtual;
 	}
 
-	public void setStatusMulta(StatusMulta statusMulta) {
-		this.statusMulta = statusMulta;
+	public void setStatusAtual(StatusMulta statusAtual) {
+		this.statusAtual = statusAtual;
 	}
 
 	@Embedded
@@ -95,6 +93,7 @@ public class Multa implements Serializable {
 		this.veiculo = veiculo;
 	}
 
+	@Transient
 	public Boolean getCheckboxSelecao() {
 		return checkboxSelecao;
 	}
@@ -111,7 +110,7 @@ public class Multa implements Serializable {
 		result = prime * result + ((dataVencimento == null) ? 0 : dataVencimento.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((infracao == null) ? 0 : infracao.hashCode());
-		result = prime * result + ((statusMulta == null) ? 0 : statusMulta.hashCode());
+		result = prime * result + ((statusAtual == null) ? 0 : statusAtual.hashCode());
 		long temp;
 		temp = Double.doubleToLongBits(valor);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
@@ -148,7 +147,7 @@ public class Multa implements Serializable {
 				return false;
 		} else if (!infracao.equals(other.infracao))
 			return false;
-		if (statusMulta != other.statusMulta)
+		if (statusAtual != other.statusAtual)
 			return false;
 		if (Double.doubleToLongBits(valor) != Double.doubleToLongBits(other.valor))
 			return false;

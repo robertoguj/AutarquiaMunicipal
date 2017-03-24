@@ -32,11 +32,9 @@ public class Divida implements Serializable {
 	private Integer id;
 	private double valor;
 	private Date dataInscricao;
-	private StatusDivida statusDivida;
+	private StatusDivida statusAtual;
 	private Pessoa pessoa;
 	private List<Multa> multas;
-	
-	@Transient
 	private Boolean checkboxSelecao=false;
 
 	@Id
@@ -79,14 +77,14 @@ public class Divida implements Serializable {
 		this.pessoa = pessoa;
 	}
 
-	@Column(name="status_divida")
+	@Column(name="status_atual")
 	@Enumerated(EnumType.STRING)
-	public StatusDivida getStatusDivida() {
-		return statusDivida;
+	public StatusDivida getStatusAtual() {
+		return statusAtual;
 	}
 
-	public void setStatusDivida(StatusDivida statusDivida) {
-		this.statusDivida = statusDivida;
+	public void setStatusAtual(StatusDivida statusAtual) {
+		this.statusAtual = statusAtual;
 	}
 
 	@ManyToMany(fetch = FetchType.EAGER)
@@ -99,6 +97,7 @@ public class Divida implements Serializable {
 		this.multas = multas;
 	}
 
+	@Transient
 	public Boolean getCheckboxSelecao() {
 		return checkboxSelecao;
 	}
@@ -116,7 +115,7 @@ public class Divida implements Serializable {
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((multas == null) ? 0 : multas.hashCode());
 		result = prime * result + ((pessoa == null) ? 0 : pessoa.hashCode());
-		result = prime * result + ((statusDivida == null) ? 0 : statusDivida.hashCode());
+		result = prime * result + ((statusAtual == null) ? 0 : statusAtual.hashCode());
 		long temp;
 		temp = Double.doubleToLongBits(valor);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
@@ -157,7 +156,7 @@ public class Divida implements Serializable {
 				return false;
 		} else if (!pessoa.equals(other.pessoa))
 			return false;
-		if (statusDivida != other.statusDivida)
+		if (statusAtual != other.statusAtual)
 			return false;
 		if (Double.doubleToLongBits(valor) != Double.doubleToLongBits(other.valor))
 			return false;

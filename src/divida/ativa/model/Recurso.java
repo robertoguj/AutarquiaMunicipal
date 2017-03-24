@@ -27,7 +27,7 @@ public class Recurso implements Serializable {
 	private Integer id;
 	private String numeroProcesso;
 	private Date aberturaProcesso;
-	private StatusRecurso statusRecurso;
+	private StatusRecurso statusAtual;
 	private Multa multa;
 
 	@Id
@@ -60,14 +60,14 @@ public class Recurso implements Serializable {
 		this.numeroProcesso = numeroProcesso;
 	}
 
-	@Column(name="status_recurso")
+	@Column(name="status_atual")
 	@Enumerated(EnumType.STRING)
-	public StatusRecurso getStatusRecurso() {
-		return statusRecurso;
+	public StatusRecurso getStatusAtual() {
+		return statusAtual;
 	}
 
-	public void setStatusRecurso(StatusRecurso statusRecurso) {
-		this.statusRecurso = statusRecurso;
+	public void setStatusAtual(StatusRecurso statusAtual) {
+		this.statusAtual = statusAtual;
 	}
 
 	@OneToOne(cascade=CascadeType.ALL)
@@ -88,7 +88,7 @@ public class Recurso implements Serializable {
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((multa == null) ? 0 : multa.hashCode());
 		result = prime * result + ((numeroProcesso == null) ? 0 : numeroProcesso.hashCode());
-		result = prime * result + ((statusRecurso == null) ? 0 : statusRecurso.hashCode());
+		result = prime * result + ((statusAtual == null) ? 0 : statusAtual.hashCode());
 		return result;
 	}
 
@@ -121,7 +121,7 @@ public class Recurso implements Serializable {
 				return false;
 		} else if (!numeroProcesso.equals(other.numeroProcesso))
 			return false;
-		if (statusRecurso != other.statusRecurso)
+		if (statusAtual != other.statusAtual)
 			return false;
 		return true;
 	}

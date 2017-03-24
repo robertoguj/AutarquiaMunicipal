@@ -37,8 +37,8 @@ public class DividaService {
 	
 	public void validaLiquidacaoDivida(Divida divida) throws Exception {
 			
-			if ((divida.getStatusDivida() == StatusDivida.NAO_PAGA) || (divida.getStatusDivida() == StatusDivida.EXECUTADA)) {
-				divida.setStatusDivida(StatusDivida.LIQUIDADA);
+			if ((divida.getStatusAtual() == StatusDivida.NAO_PAGA) || (divida.getStatusAtual() == StatusDivida.EXECUTADA)) {
+				divida.setStatusAtual(StatusDivida.LIQUIDADA);
 			}
 	}
 	
@@ -64,8 +64,8 @@ public class DividaService {
 	
 	public void validaExecucaoDivida(Divida divida) throws Exception {
 
-		if (divida.getStatusDivida() == StatusDivida.NAO_PAGA) {
-				divida.setStatusDivida(StatusDivida.EXECUTADA);
+		if (divida.getStatusAtual() == StatusDivida.NAO_PAGA) {
+				divida.setStatusAtual(StatusDivida.EXECUTADA);
 			}
 					
 	}
