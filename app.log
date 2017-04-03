@@ -189,3 +189,740 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Access denied for use
  INFO [main] (DatabaseMetadata.java:120) ­ HHH000262: Table not found: recurso
  INFO [main] (DatabaseMetadata.java:120) ­ HHH000262: Table not found: veiculo
  INFO [main] (SchemaUpdate.java:240) ­ HHH000232: Schema update complete
+ INFO [main] (Version.java:37) ­ HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+ INFO [main] (Version.java:41) ­ HHH000412: Hibernate Core {4.1.8.Final}
+ INFO [main] (Environment.java:239) ­ HHH000206: hibernate.properties not found
+ INFO [main] (Environment.java:342) ­ HHH000021: Bytecode provider name : javassist
+ INFO [main] (Configuration.java:1933) ­ HHH000043: Configuring from resource: hibernate.cfg.xml
+ INFO [main] (Configuration.java:1952) ­ HHH000040: Configuration resource: hibernate.cfg.xml
+ WARN [main] (DTDEntityResolver.java:74) ­ HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+ INFO [main] (Version.java:37) ­ HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+ INFO [main] (Version.java:41) ­ HHH000412: Hibernate Core {4.1.8.Final}
+ INFO [main] (Environment.java:239) ­ HHH000206: hibernate.properties not found
+ INFO [main] (Environment.java:342) ­ HHH000021: Bytecode provider name : javassist
+ INFO [main] (Configuration.java:1933) ­ HHH000043: Configuring from resource: hibernate.cfg.xml
+ INFO [main] (Configuration.java:1952) ­ HHH000040: Configuration resource: hibernate.cfg.xml
+ WARN [main] (DTDEntityResolver.java:74) ­ HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+ INFO [main] (Version.java:37) ­ HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+ INFO [main] (Version.java:41) ­ HHH000412: Hibernate Core {4.1.8.Final}
+ INFO [main] (Environment.java:239) ­ HHH000206: hibernate.properties not found
+ INFO [main] (Environment.java:342) ­ HHH000021: Bytecode provider name : javassist
+ INFO [main] (Configuration.java:1933) ­ HHH000043: Configuring from resource: hibernate.cfg.xml
+ INFO [main] (Configuration.java:1952) ­ HHH000040: Configuration resource: hibernate.cfg.xml
+ WARN [main] (DTDEntityResolver.java:74) ­ HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+ INFO [main] (Version.java:37) ­ HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+ INFO [main] (Version.java:41) ­ HHH000412: Hibernate Core {4.1.8.Final}
+ INFO [main] (Environment.java:239) ­ HHH000206: hibernate.properties not found
+ INFO [main] (Environment.java:342) ­ HHH000021: Bytecode provider name : javassist
+ INFO [main] (Configuration.java:1933) ­ HHH000043: Configuring from resource: hibernate.cfg.xml
+ INFO [main] (Configuration.java:1952) ­ HHH000040: Configuration resource: hibernate.cfg.xml
+ WARN [main] (DTDEntityResolver.java:74) ­ HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+ INFO [main] (Version.java:37) ­ HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+ INFO [main] (Version.java:41) ­ HHH000412: Hibernate Core {4.1.8.Final}
+ INFO [main] (Environment.java:239) ­ HHH000206: hibernate.properties not found
+ INFO [main] (Environment.java:342) ­ HHH000021: Bytecode provider name : javassist
+ INFO [main] (Configuration.java:1933) ­ HHH000043: Configuring from resource: hibernate.cfg.xml
+ INFO [main] (Configuration.java:1952) ­ HHH000040: Configuration resource: hibernate.cfg.xml
+ WARN [main] (DTDEntityResolver.java:74) ­ HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+ INFO [main] (Configuration.java:2074) ­ HHH000041: Configured SessionFactory: null
+ INFO [main] (DriverManagerConnectionProviderImpl.java:96) ­ HHH000402: Using Hibernate built-in connection pool (not for production use!)
+ INFO [main] (DriverManagerConnectionProviderImpl.java:130) ­ HHH000115: Hibernate connection pool size: 20
+ INFO [main] (DriverManagerConnectionProviderImpl.java:133) ­ HHH000006: Autocommit mode: false
+ INFO [main] (DriverManagerConnectionProviderImpl.java:147) ­ HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/damdb]
+ INFO [main] (DriverManagerConnectionProviderImpl.java:152) ­ HHH000046: Connection properties: {user=root, password=****}
+ WARN [main] (JdbcServicesImpl.java:169) ­ HHH000342: Could not obtain connection to query metadata : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+ INFO [main] (Dialect.java:123) ­ HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+ INFO [main] (LobCreatorBuilder.java:85) ­ HHH000422: Disabling contextual LOB creation as connection was null
+ INFO [main] (TransactionFactoryInitiator.java:68) ­ HHH000399: Using default transaction strategy (direct JDBC transactions)
+ INFO [main] (ASTQueryTranslatorFactory.java:48) ­ HHH000397: Using ASTQueryTranslatorFactory
+ INFO [main] (SchemaUpdate.java:182) ­ HHH000228: Running hbm2ddl schema update
+ INFO [main] (SchemaUpdate.java:193) ­ HHH000102: Fetching database metadata
+ERROR [main] (SchemaUpdate.java:201) ­ HHH000319: Could not get database metadata
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1116)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:344)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2332)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2369)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2153)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:792)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:381)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:193)
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:194)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:178)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:503)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1750)
+	at divida.ativa.util.HibernateUtil.buildSessionFactory(HibernateUtil.java:18)
+	at divida.ativa.util.HibernateUtil.<clinit>(HibernateUtil.java:10)
+	at divida.ativa.util.TestaHibernate.main(TestaHibernate.java:9)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:294)
+	... 23 more
+ERROR [main] (SchemaUpdate.java:245) ­ HHH000299: Could not complete schema update
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1116)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:344)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2332)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2369)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2153)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:792)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:381)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:193)
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:194)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:178)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:503)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1750)
+	at divida.ativa.util.HibernateUtil.buildSessionFactory(HibernateUtil.java:18)
+	at divida.ativa.util.HibernateUtil.<clinit>(HibernateUtil.java:10)
+	at divida.ativa.util.TestaHibernate.main(TestaHibernate.java:9)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:294)
+	... 23 more
+ INFO [main] (Version.java:37) ­ HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+ INFO [main] (Version.java:41) ­ HHH000412: Hibernate Core {4.1.8.Final}
+ INFO [main] (Environment.java:239) ­ HHH000206: hibernate.properties not found
+ INFO [main] (Environment.java:342) ­ HHH000021: Bytecode provider name : javassist
+ INFO [main] (Configuration.java:1933) ­ HHH000043: Configuring from resource: hibernate.cfg.xml
+ INFO [main] (Configuration.java:1952) ­ HHH000040: Configuration resource: hibernate.cfg.xml
+ WARN [main] (DTDEntityResolver.java:74) ­ HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+ INFO [main] (Configuration.java:2074) ­ HHH000041: Configured SessionFactory: null
+ INFO [main] (DriverManagerConnectionProviderImpl.java:96) ­ HHH000402: Using Hibernate built-in connection pool (not for production use!)
+ INFO [main] (DriverManagerConnectionProviderImpl.java:130) ­ HHH000115: Hibernate connection pool size: 20
+ INFO [main] (DriverManagerConnectionProviderImpl.java:133) ­ HHH000006: Autocommit mode: false
+ INFO [main] (DriverManagerConnectionProviderImpl.java:147) ­ HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/damdb]
+ INFO [main] (DriverManagerConnectionProviderImpl.java:152) ­ HHH000046: Connection properties: {user=root, password=****}
+ WARN [main] (JdbcServicesImpl.java:169) ­ HHH000342: Could not obtain connection to query metadata : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+ INFO [main] (Dialect.java:123) ­ HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+ INFO [main] (LobCreatorBuilder.java:85) ­ HHH000422: Disabling contextual LOB creation as connection was null
+ INFO [main] (TransactionFactoryInitiator.java:68) ­ HHH000399: Using default transaction strategy (direct JDBC transactions)
+ INFO [main] (ASTQueryTranslatorFactory.java:48) ­ HHH000397: Using ASTQueryTranslatorFactory
+ INFO [main] (SchemaUpdate.java:182) ­ HHH000228: Running hbm2ddl schema update
+ INFO [main] (SchemaUpdate.java:193) ­ HHH000102: Fetching database metadata
+ERROR [main] (SchemaUpdate.java:201) ­ HHH000319: Could not get database metadata
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1116)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:344)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2332)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2369)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2153)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:792)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:381)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:193)
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:194)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:178)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:503)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1750)
+	at divida.ativa.util.HibernateUtil.buildSessionFactory(HibernateUtil.java:18)
+	at divida.ativa.util.HibernateUtil.<clinit>(HibernateUtil.java:10)
+	at divida.ativa.util.TestaHibernate.main(TestaHibernate.java:10)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:294)
+	... 23 more
+ERROR [main] (SchemaUpdate.java:245) ­ HHH000299: Could not complete schema update
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1116)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:344)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2332)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2369)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2153)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:792)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:381)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:193)
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:194)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:178)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:503)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1750)
+	at divida.ativa.util.HibernateUtil.buildSessionFactory(HibernateUtil.java:18)
+	at divida.ativa.util.HibernateUtil.<clinit>(HibernateUtil.java:10)
+	at divida.ativa.util.TestaHibernate.main(TestaHibernate.java:10)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:294)
+	... 23 more
+ INFO [main] (Version.java:37) ­ HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+ INFO [main] (Version.java:41) ­ HHH000412: Hibernate Core {4.1.8.Final}
+ INFO [main] (Environment.java:239) ­ HHH000206: hibernate.properties not found
+ INFO [main] (Environment.java:342) ­ HHH000021: Bytecode provider name : javassist
+ INFO [main] (Configuration.java:1933) ­ HHH000043: Configuring from resource: hibernate.cfg.xml
+ INFO [main] (Configuration.java:1952) ­ HHH000040: Configuration resource: hibernate.cfg.xml
+ WARN [main] (DTDEntityResolver.java:74) ­ HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+ INFO [main] (Configuration.java:2074) ­ HHH000041: Configured SessionFactory: null
+ INFO [main] (DriverManagerConnectionProviderImpl.java:96) ­ HHH000402: Using Hibernate built-in connection pool (not for production use!)
+ INFO [main] (DriverManagerConnectionProviderImpl.java:130) ­ HHH000115: Hibernate connection pool size: 20
+ INFO [main] (DriverManagerConnectionProviderImpl.java:133) ­ HHH000006: Autocommit mode: false
+ INFO [main] (DriverManagerConnectionProviderImpl.java:147) ­ HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/damdb]
+ INFO [main] (DriverManagerConnectionProviderImpl.java:152) ­ HHH000046: Connection properties: {user=root, password=****}
+ WARN [main] (JdbcServicesImpl.java:169) ­ HHH000342: Could not obtain connection to query metadata : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+ INFO [main] (Dialect.java:123) ­ HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+ INFO [main] (LobCreatorBuilder.java:85) ­ HHH000422: Disabling contextual LOB creation as connection was null
+ INFO [main] (TransactionFactoryInitiator.java:68) ­ HHH000399: Using default transaction strategy (direct JDBC transactions)
+ INFO [main] (ASTQueryTranslatorFactory.java:48) ­ HHH000397: Using ASTQueryTranslatorFactory
+ INFO [main] (SchemaUpdate.java:182) ­ HHH000228: Running hbm2ddl schema update
+ INFO [main] (SchemaUpdate.java:193) ­ HHH000102: Fetching database metadata
+ERROR [main] (SchemaUpdate.java:201) ­ HHH000319: Could not get database metadata
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1116)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:344)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2332)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2369)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2153)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:792)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:381)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:193)
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:194)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:178)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:503)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1750)
+	at divida.ativa.util.HibernateUtil.buildSessionFactory(HibernateUtil.java:18)
+	at divida.ativa.util.HibernateUtil.<clinit>(HibernateUtil.java:10)
+	at divida.ativa.util.TestaHibernate.main(TestaHibernate.java:10)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:294)
+	... 23 more
+ERROR [main] (SchemaUpdate.java:245) ­ HHH000299: Could not complete schema update
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1116)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:344)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2332)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2369)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2153)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:792)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:381)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:193)
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:194)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:178)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:503)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1750)
+	at divida.ativa.util.HibernateUtil.buildSessionFactory(HibernateUtil.java:18)
+	at divida.ativa.util.HibernateUtil.<clinit>(HibernateUtil.java:10)
+	at divida.ativa.util.TestaHibernate.main(TestaHibernate.java:10)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:294)
+	... 23 more
+ INFO [main] (Version.java:37) ­ HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+ INFO [main] (Version.java:41) ­ HHH000412: Hibernate Core {4.1.8.Final}
+ INFO [main] (Environment.java:239) ­ HHH000206: hibernate.properties not found
+ INFO [main] (Environment.java:342) ­ HHH000021: Bytecode provider name : javassist
+ INFO [main] (Configuration.java:1933) ­ HHH000043: Configuring from resource: hibernate.cfg.xml
+ INFO [main] (Configuration.java:1952) ­ HHH000040: Configuration resource: hibernate.cfg.xml
+ WARN [main] (DTDEntityResolver.java:74) ­ HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+ INFO [main] (Configuration.java:2074) ­ HHH000041: Configured SessionFactory: null
+ INFO [main] (DriverManagerConnectionProviderImpl.java:96) ­ HHH000402: Using Hibernate built-in connection pool (not for production use!)
+ INFO [main] (DriverManagerConnectionProviderImpl.java:130) ­ HHH000115: Hibernate connection pool size: 20
+ INFO [main] (DriverManagerConnectionProviderImpl.java:133) ­ HHH000006: Autocommit mode: false
+ INFO [main] (DriverManagerConnectionProviderImpl.java:147) ­ HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/damdb]
+ INFO [main] (DriverManagerConnectionProviderImpl.java:152) ­ HHH000046: Connection properties: {user=root, password=****}
+ WARN [main] (JdbcServicesImpl.java:169) ­ HHH000342: Could not obtain connection to query metadata : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+ INFO [main] (Dialect.java:123) ­ HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+ INFO [main] (LobCreatorBuilder.java:85) ­ HHH000422: Disabling contextual LOB creation as connection was null
+ INFO [main] (TransactionFactoryInitiator.java:68) ­ HHH000399: Using default transaction strategy (direct JDBC transactions)
+ INFO [main] (ASTQueryTranslatorFactory.java:48) ­ HHH000397: Using ASTQueryTranslatorFactory
+ INFO [main] (SchemaUpdate.java:182) ­ HHH000228: Running hbm2ddl schema update
+ INFO [main] (SchemaUpdate.java:193) ­ HHH000102: Fetching database metadata
+ERROR [main] (SchemaUpdate.java:201) ­ HHH000319: Could not get database metadata
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1116)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:344)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2332)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2369)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2153)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:792)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:381)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:193)
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:194)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:178)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:503)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1750)
+	at divida.ativa.util.HibernateUtil.buildSessionFactory(HibernateUtil.java:18)
+	at divida.ativa.util.HibernateUtil.<clinit>(HibernateUtil.java:10)
+	at divida.ativa.util.TestaHibernate.main(TestaHibernate.java:10)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:294)
+	... 23 more
+ERROR [main] (SchemaUpdate.java:245) ­ HHH000299: Could not complete schema update
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1116)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:344)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2332)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2369)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2153)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:792)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:381)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:193)
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:194)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:178)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:503)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1750)
+	at divida.ativa.util.HibernateUtil.buildSessionFactory(HibernateUtil.java:18)
+	at divida.ativa.util.HibernateUtil.<clinit>(HibernateUtil.java:10)
+	at divida.ativa.util.TestaHibernate.main(TestaHibernate.java:10)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:294)
+	... 23 more
+ INFO [main] (Version.java:37) ­ HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+ INFO [main] (Version.java:41) ­ HHH000412: Hibernate Core {4.1.8.Final}
+ INFO [main] (Environment.java:239) ­ HHH000206: hibernate.properties not found
+ INFO [main] (Environment.java:342) ­ HHH000021: Bytecode provider name : javassist
+ INFO [main] (Configuration.java:1933) ­ HHH000043: Configuring from resource: hibernate.cfg.xml
+ INFO [main] (Configuration.java:1952) ­ HHH000040: Configuration resource: hibernate.cfg.xml
+ WARN [main] (DTDEntityResolver.java:74) ­ HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+ INFO [main] (Configuration.java:2074) ­ HHH000041: Configured SessionFactory: null
+ INFO [main] (DriverManagerConnectionProviderImpl.java:96) ­ HHH000402: Using Hibernate built-in connection pool (not for production use!)
+ INFO [main] (DriverManagerConnectionProviderImpl.java:130) ­ HHH000115: Hibernate connection pool size: 20
+ INFO [main] (DriverManagerConnectionProviderImpl.java:133) ­ HHH000006: Autocommit mode: false
+ INFO [main] (DriverManagerConnectionProviderImpl.java:147) ­ HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/damdb]
+ INFO [main] (DriverManagerConnectionProviderImpl.java:152) ­ HHH000046: Connection properties: {user=root, password=****}
+ INFO [main] (Dialect.java:123) ­ HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+ INFO [main] (TransactionFactoryInitiator.java:68) ­ HHH000399: Using default transaction strategy (direct JDBC transactions)
+ INFO [main] (ASTQueryTranslatorFactory.java:48) ­ HHH000397: Using ASTQueryTranslatorFactory
+ INFO [main] (SchemaUpdate.java:182) ­ HHH000228: Running hbm2ddl schema update
+ INFO [main] (SchemaUpdate.java:193) ­ HHH000102: Fetching database metadata
+ INFO [main] (SchemaUpdate.java:205) ­ HHH000396: Updating schema
+ INFO [main] (TableMetadata.java:65) ­ HHH000261: Table found: damdb.divida
+ INFO [main] (TableMetadata.java:66) ­ HHH000037: Columns: [divida_id, status_atual, data_inscricao, pessoa_id, valor_divida]
+ INFO [main] (TableMetadata.java:68) ­ HHH000108: Foreign keys: [fkb0a37c757890c205]
+ INFO [main] (TableMetadata.java:69) ­ HHH000126: Indexes: [fkb0a37c757890c205, primary]
+ INFO [main] (TableMetadata.java:65) ­ HHH000261: Table found: damdb.dividas_multas
+ INFO [main] (TableMetadata.java:66) ­ HHH000037: Columns: [divida_id, multa_id]
+ INFO [main] (TableMetadata.java:68) ­ HHH000108: Foreign keys: [fk52e92e234864f10f, fk52e92e239da6e745]
+ INFO [main] (TableMetadata.java:69) ­ HHH000126: Indexes: [fk52e92e234864f10f, fk52e92e239da6e745]
+ INFO [main] (TableMetadata.java:65) ­ HHH000261: Table found: damdb.multa
+ INFO [main] (TableMetadata.java:66) ­ HHH000037: Columns: [veiculo_id, descricao_infracao, local_infracao, codigo_auto_infracao, status_atual, data_infracao, hora_infracao, codigo_infracao, multa_id, data_vencimento, valor_multa]
+ INFO [main] (TableMetadata.java:68) ­ HHH000108: Foreign keys: [fk636d5313dc1330f]
+ INFO [main] (TableMetadata.java:69) ­ HHH000126: Indexes: [fk636d5313dc1330f, primary]
+ INFO [main] (TableMetadata.java:65) ­ HHH000261: Table found: damdb.notificacao
+ INFO [main] (TableMetadata.java:66) ­ HHH000037: Columns: [postagem_id, divida_id, notificacao_id]
+ INFO [main] (TableMetadata.java:68) ­ HHH000108: Foreign keys: [fk7d03b31a9da6e745, fk7d03b31ac12a49e5]
+ INFO [main] (TableMetadata.java:69) ­ HHH000126: Indexes: [fk7d03b31a9da6e745, fk7d03b31ac12a49e5, primary]
+ INFO [main] (TableMetadata.java:65) ­ HHH000261: Table found: damdb.perfil
+ INFO [main] (TableMetadata.java:66) ­ HHH000037: Columns: [perfil_id, description]
+ INFO [main] (TableMetadata.java:68) ­ HHH000108: Foreign keys: []
+ INFO [main] (TableMetadata.java:69) ­ HHH000126: Indexes: [description, primary]
+ INFO [main] (TableMetadata.java:65) ­ HHH000261: Table found: damdb.pessoa
+ INFO [main] (TableMetadata.java:66) ­ HHH000037: Columns: [uf, complemento, endereco, bairro, municipio, cpf, pessoa_id, nome, cnpj, pessoa_tipo, cep]
+ INFO [main] (TableMetadata.java:68) ­ HHH000108: Foreign keys: []
+ INFO [main] (TableMetadata.java:69) ­ HHH000126: Indexes: [primary]
+ INFO [main] (TableMetadata.java:65) ­ HHH000261: Table found: damdb.postagem
+ INFO [main] (TableMetadata.java:66) ­ HHH000037: Columns: [postagem_id, aviso_recebimento, status_postagem, data_postagem]
+ INFO [main] (TableMetadata.java:68) ­ HHH000108: Foreign keys: []
+ INFO [main] (TableMetadata.java:69) ­ HHH000126: Indexes: [primary]
+ INFO [main] (TableMetadata.java:65) ­ HHH000261: Table found: damdb.recurso
+ INFO [main] (TableMetadata.java:66) ­ HHH000037: Columns: [recurso_id, numero_processo, data_abertura_processo, status_atual, multa_id]
+ INFO [main] (TableMetadata.java:68) ­ HHH000108: Foreign keys: [fk4089da494864f10f]
+ INFO [main] (TableMetadata.java:69) ­ HHH000126: Indexes: [fk4089da494864f10f, primary]
+ INFO [main] (TableMetadata.java:65) ­ HHH000261: Table found: damdb.usuario
+ INFO [main] (TableMetadata.java:66) ­ HHH000037: Columns: [password, telefone, usuario_id, cpf, nome, status_conta, email, username]
+ INFO [main] (TableMetadata.java:68) ­ HHH000108: Foreign keys: []
+ INFO [main] (TableMetadata.java:69) ­ HHH000126: Indexes: [primary, username]
+ INFO [main] (TableMetadata.java:65) ­ HHH000261: Table found: damdb.usuario_perfil
+ INFO [main] (TableMetadata.java:66) ­ HHH000037: Columns: [usuario_id, perfil_id]
+ INFO [main] (TableMetadata.java:68) ­ HHH000108: Foreign keys: [fk57cd23fd2d2b53e5, fk57cd23fdb8546aaf]
+ INFO [main] (TableMetadata.java:69) ­ HHH000126: Indexes: [fk57cd23fd2d2b53e5, fk57cd23fdb8546aaf]
+ INFO [main] (TableMetadata.java:65) ­ HHH000261: Table found: damdb.veiculo
+ INFO [main] (TableMetadata.java:66) ­ HHH000037: Columns: [veiculo_id, ano_fabricacao, pessoa_id, chassi, modelo, placa]
+ INFO [main] (TableMetadata.java:68) ­ HHH000108: Foreign keys: []
+ INFO [main] (TableMetadata.java:69) ­ HHH000126: Indexes: [primary]
+ INFO [main] (SchemaUpdate.java:240) ­ HHH000232: Schema update complete
+ INFO [main] (Version.java:37) ­ HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+ INFO [main] (Version.java:41) ­ HHH000412: Hibernate Core {4.1.8.Final}
+ INFO [main] (Environment.java:239) ­ HHH000206: hibernate.properties not found
+ INFO [main] (Environment.java:342) ­ HHH000021: Bytecode provider name : javassist
+ INFO [main] (Configuration.java:1933) ­ HHH000043: Configuring from resource: hibernate.cfg.xml
+ INFO [main] (Configuration.java:1952) ­ HHH000040: Configuration resource: hibernate.cfg.xml
+ WARN [main] (DTDEntityResolver.java:74) ­ HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+ INFO [main] (Configuration.java:2074) ­ HHH000041: Configured SessionFactory: null
+ INFO [main] (DriverManagerConnectionProviderImpl.java:96) ­ HHH000402: Using Hibernate built-in connection pool (not for production use!)
+ INFO [main] (DriverManagerConnectionProviderImpl.java:130) ­ HHH000115: Hibernate connection pool size: 20
+ INFO [main] (DriverManagerConnectionProviderImpl.java:133) ­ HHH000006: Autocommit mode: false
+ INFO [main] (DriverManagerConnectionProviderImpl.java:147) ­ HHH000401: using driver [oracle.jdbc.OracleDriver] at URL [jdbc:oracle:thin:@localhost:1521:infradb]
+ INFO [main] (DriverManagerConnectionProviderImpl.java:152) ­ HHH000046: Connection properties: {user=sys, password=****}
+ WARN [main] (JdbcServicesImpl.java:169) ­ HHH000342: Could not obtain connection to query metadata : ORA-28009: connection as SYS should be as SYSDBA or SYSOPER
+
+ INFO [main] (Dialect.java:123) ­ HHH000400: Using dialect: org.hibernate.dialect.OracleDialect
+ WARN [main] (Oracle9Dialect.java:62) ­ HHH000063: The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+ WARN [main] (OracleDialect.java:48) ­ HHH000064: The OracleDialect dialect has been deprecated; use Oracle8iDialect instead
+ INFO [main] (LobCreatorBuilder.java:85) ­ HHH000422: Disabling contextual LOB creation as connection was null
+ INFO [main] (TransactionFactoryInitiator.java:68) ­ HHH000399: Using default transaction strategy (direct JDBC transactions)
+ INFO [main] (ASTQueryTranslatorFactory.java:48) ­ HHH000397: Using ASTQueryTranslatorFactory
+ INFO [main] (SchemaUpdate.java:182) ­ HHH000228: Running hbm2ddl schema update
+ INFO [main] (SchemaUpdate.java:193) ­ HHH000102: Fetching database metadata
+ERROR [main] (SchemaUpdate.java:201) ­ HHH000319: Could not get database metadata
+java.sql.SQLException: ORA-28009: connection as SYS should be as SYSDBA or SYSOPER
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:447)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:389)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:382)
+	at oracle.jdbc.driver.T4CTTIfun.processError(T4CTTIfun.java:675)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.processError(T4CTTIoauthenticate.java:448)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:513)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:227)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:383)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:776)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:432)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:553)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:254)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:528)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:193)
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:194)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:178)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:503)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1750)
+	at divida.ativa.util.HibernateUtil.buildSessionFactory(HibernateUtil.java:18)
+	at divida.ativa.util.HibernateUtil.<clinit>(HibernateUtil.java:10)
+	at divida.ativa.util.TestaHibernate.main(TestaHibernate.java:9)
+ERROR [main] (SchemaUpdate.java:245) ­ HHH000299: Could not complete schema update
+java.sql.SQLException: ORA-28009: connection as SYS should be as SYSDBA or SYSOPER
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:447)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:389)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:382)
+	at oracle.jdbc.driver.T4CTTIfun.processError(T4CTTIfun.java:675)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.processError(T4CTTIoauthenticate.java:448)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:513)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:227)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:383)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:776)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:432)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:553)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:254)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:528)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:193)
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:194)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:178)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:503)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1750)
+	at divida.ativa.util.HibernateUtil.buildSessionFactory(HibernateUtil.java:18)
+	at divida.ativa.util.HibernateUtil.<clinit>(HibernateUtil.java:10)
+	at divida.ativa.util.TestaHibernate.main(TestaHibernate.java:9)
+ INFO [main] (Version.java:37) ­ HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+ INFO [main] (Version.java:41) ­ HHH000412: Hibernate Core {4.1.8.Final}
+ INFO [main] (Environment.java:239) ­ HHH000206: hibernate.properties not found
+ INFO [main] (Environment.java:342) ­ HHH000021: Bytecode provider name : javassist
+ INFO [main] (Configuration.java:1933) ­ HHH000043: Configuring from resource: hibernate.cfg.xml
+ INFO [main] (Configuration.java:1952) ­ HHH000040: Configuration resource: hibernate.cfg.xml
+ WARN [main] (DTDEntityResolver.java:74) ­ HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+ INFO [main] (Configuration.java:2074) ­ HHH000041: Configured SessionFactory: null
+ INFO [main] (DriverManagerConnectionProviderImpl.java:96) ­ HHH000402: Using Hibernate built-in connection pool (not for production use!)
+ INFO [main] (DriverManagerConnectionProviderImpl.java:130) ­ HHH000115: Hibernate connection pool size: 20
+ INFO [main] (DriverManagerConnectionProviderImpl.java:133) ­ HHH000006: Autocommit mode: false
+ INFO [main] (DriverManagerConnectionProviderImpl.java:147) ­ HHH000401: using driver [oracle.jdbc.OracleDriver] at URL [jdbc:oracle:thin:@localhost:1521:infradb]
+ INFO [main] (DriverManagerConnectionProviderImpl.java:152) ­ HHH000046: Connection properties: {user=system, password=****}
+ INFO [main] (Dialect.java:123) ­ HHH000400: Using dialect: org.hibernate.dialect.OracleDialect
+ WARN [main] (Oracle9Dialect.java:62) ­ HHH000063: The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+ WARN [main] (OracleDialect.java:48) ­ HHH000064: The OracleDialect dialect has been deprecated; use Oracle8iDialect instead
+ INFO [main] (TransactionFactoryInitiator.java:68) ­ HHH000399: Using default transaction strategy (direct JDBC transactions)
+ INFO [main] (ASTQueryTranslatorFactory.java:48) ­ HHH000397: Using ASTQueryTranslatorFactory
+ INFO [main] (SchemaUpdate.java:182) ­ HHH000228: Running hbm2ddl schema update
+ INFO [main] (SchemaUpdate.java:193) ­ HHH000102: Fetching database metadata
+ INFO [main] (SchemaUpdate.java:205) ­ HHH000396: Updating schema
+ INFO [main] (DatabaseMetadata.java:120) ­ HHH000262: Table not found: divida
+ERROR [main] (SchemaUpdate.java:245) ­ HHH000299: Could not complete schema update
+org.hibernate.MappingException: org.hibernate.dialect.OracleDialect does not support identity key generation
+	at org.hibernate.dialect.Dialect.getIdentityColumnString(Dialect.java:759)
+	at org.hibernate.dialect.Dialect.getIdentityColumnString(Dialect.java:749)
+	at org.hibernate.mapping.Table.sqlCreateString(Table.java:506)
+	at org.hibernate.cfg.Configuration.generateSchemaUpdateScript(Configuration.java:1140)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:212)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:178)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:503)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1750)
+	at divida.ativa.util.HibernateUtil.buildSessionFactory(HibernateUtil.java:18)
+	at divida.ativa.util.HibernateUtil.<clinit>(HibernateUtil.java:10)
+	at divida.ativa.util.TestaHibernate.main(TestaHibernate.java:9)
+ INFO [main] (Version.java:37) ­ HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+ INFO [main] (Version.java:41) ­ HHH000412: Hibernate Core {4.1.8.Final}
+ INFO [main] (Environment.java:239) ­ HHH000206: hibernate.properties not found
+ INFO [main] (Environment.java:342) ­ HHH000021: Bytecode provider name : javassist
+ INFO [main] (Configuration.java:1933) ­ HHH000043: Configuring from resource: hibernate.cfg.xml
+ INFO [main] (Configuration.java:1952) ­ HHH000040: Configuration resource: hibernate.cfg.xml
+ WARN [main] (DTDEntityResolver.java:74) ­ HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+ INFO [main] (Configuration.java:2074) ­ HHH000041: Configured SessionFactory: null
+ INFO [main] (DriverManagerConnectionProviderImpl.java:96) ­ HHH000402: Using Hibernate built-in connection pool (not for production use!)
+ INFO [main] (DriverManagerConnectionProviderImpl.java:130) ­ HHH000115: Hibernate connection pool size: 20
+ INFO [main] (DriverManagerConnectionProviderImpl.java:133) ­ HHH000006: Autocommit mode: false
+ INFO [main] (DriverManagerConnectionProviderImpl.java:147) ­ HHH000401: using driver [oracle.jdbc.OracleDriver] at URL [jdbc:oracle:thin:@localhost:1521:infradb]
+ INFO [main] (DriverManagerConnectionProviderImpl.java:152) ­ HHH000046: Connection properties: {user=system, password=****}
+ INFO [main] (Dialect.java:123) ­ HHH000400: Using dialect: org.hibernate.dialect.OracleDialect
+ WARN [main] (Oracle9Dialect.java:62) ­ HHH000063: The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+ WARN [main] (OracleDialect.java:48) ­ HHH000064: The OracleDialect dialect has been deprecated; use Oracle8iDialect instead
+ INFO [main] (TransactionFactoryInitiator.java:68) ­ HHH000399: Using default transaction strategy (direct JDBC transactions)
+ INFO [main] (ASTQueryTranslatorFactory.java:48) ­ HHH000397: Using ASTQueryTranslatorFactory
+ INFO [main] (SchemaUpdate.java:182) ­ HHH000228: Running hbm2ddl schema update
+ INFO [main] (SchemaUpdate.java:193) ­ HHH000102: Fetching database metadata
+ INFO [main] (SchemaUpdate.java:205) ­ HHH000396: Updating schema
+ INFO [main] (DatabaseMetadata.java:120) ­ HHH000262: Table not found: divida
+ INFO [main] (DatabaseMetadata.java:120) ­ HHH000262: Table not found: dividas_multas
+ INFO [main] (DatabaseMetadata.java:120) ­ HHH000262: Table not found: multa
+ INFO [main] (DatabaseMetadata.java:120) ­ HHH000262: Table not found: notificacao
+ INFO [main] (DatabaseMetadata.java:120) ­ HHH000262: Table not found: perfil
+ INFO [main] (DatabaseMetadata.java:120) ­ HHH000262: Table not found: pessoa
+ INFO [main] (DatabaseMetadata.java:120) ­ HHH000262: Table not found: postagem
+ INFO [main] (DatabaseMetadata.java:120) ­ HHH000262: Table not found: recurso
+ INFO [main] (DatabaseMetadata.java:120) ­ HHH000262: Table not found: usuario
+ INFO [main] (DatabaseMetadata.java:120) ­ HHH000262: Table not found: usuario_perfil
+ INFO [main] (DatabaseMetadata.java:120) ­ HHH000262: Table not found: veiculo
+ INFO [main] (DatabaseMetadata.java:120) ­ HHH000262: Table not found: divida
+ INFO [main] (DatabaseMetadata.java:120) ­ HHH000262: Table not found: dividas_multas
+ INFO [main] (DatabaseMetadata.java:120) ­ HHH000262: Table not found: multa
+ INFO [main] (DatabaseMetadata.java:120) ­ HHH000262: Table not found: notificacao
+ INFO [main] (DatabaseMetadata.java:120) ­ HHH000262: Table not found: perfil
+ INFO [main] (DatabaseMetadata.java:120) ­ HHH000262: Table not found: pessoa
+ INFO [main] (DatabaseMetadata.java:120) ­ HHH000262: Table not found: postagem
+ INFO [main] (DatabaseMetadata.java:120) ­ HHH000262: Table not found: recurso
+ INFO [main] (DatabaseMetadata.java:120) ­ HHH000262: Table not found: usuario
+ INFO [main] (DatabaseMetadata.java:120) ­ HHH000262: Table not found: usuario_perfil
+ INFO [main] (DatabaseMetadata.java:120) ­ HHH000262: Table not found: veiculo
+ INFO [main] (DatabaseMetadata.java:120) ­ HHH000262: Table not found: hibernate_sequence
+ERROR [main] (SchemaUpdate.java:235) ­ HHH000388: Unsuccessful: create table usuario (usuario_id number(10,0) not null, status_conta boolean, cpf varchar2(255), email varchar2(255), nome varchar2(255), password varchar2(255), telefone varchar2(255), username varchar2(255) unique, primary key (usuario_id))
+ERROR [main] (SchemaUpdate.java:236) ­ ORA-00902: tipo de dados inválido
+
+ERROR [main] (SchemaUpdate.java:235) ­ HHH000388: Unsuccessful: alter table usuario_perfil add constraint FK57CD23FDB8546AAF foreign key (usuario_id) references usuario
+ERROR [main] (SchemaUpdate.java:236) ­ ORA-00942: a tabela ou view não existe
+
+ INFO [main] (SchemaUpdate.java:240) ­ HHH000232: Schema update complete

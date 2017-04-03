@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<!-- Oracle Database
+	<persistence-unit name="MyPU" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:infradb" />
+            <property name="javax.persistence.jdbc.user" value="system" />
+            <property name="javax.persistence.jdbc.password" value="admin" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.OracleDialect" />
+            <property name="hibernate.hbm2ddl.auto" value="create-drop" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="false" />
+			<property name="hibernate.use_sql_comments" value="false" />
+			<property name="hibernate.jdbc.wrap_result_sets" value="false" />
+			<property name="hibernate.hibernate.cache.use_query_cache" value="true" />
+		</properties>
+	</persistence-unit>
+	-->
 	<persistence-unit name="MyPU" transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<properties>
@@ -9,13 +27,12 @@
 			<property name="javax.persistence.jdbc.password" value="" />
 			
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
 			<property name="hibernate.show_sql" value="true" />
 			<property name="hibernate.format_sql" value="false" />
 			<property name="hibernate.use_sql_comments" value="false" />
 			<property name="hibernate.jdbc.wrap_result_sets" value="false" />
 			<property name="hibernate.hibernate.cache.use_query_cache" value="true" />
-			<property name="hibernate.hbm2ddl.auto" value="update" />
-			<!-- create-drop -->
 		</properties>
 	</persistence-unit>
 </persistence>
